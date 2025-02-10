@@ -1,0 +1,260 @@
+---
+title: "Game Design Doc"
+about:
+  template: solana
+---
+
+# What is Exercise Your Demons
+
+Exercise Your Demons is a 2D narrative game based on the ‘good people’ from Irish fairy tales and folklore. The player takes the role of a character who is struggling to find a job but under mysterious circumstances winds up working in a gym filled with good people.
+
+## Genre 
+
+This is a cozy narrative game with some dark themes. 
+
+## Early Prototype
+
+{{< video https://www.youtube.com/watch?v=KJoaKhQFUJQ >}}
+
+# Narrative Design
+
+This is a character driven narrative where the main character is trying to get their life back together. They do this by making friends with other characters in the town. The initial brainstorming has helped shape the current narrative which will evolve over the course of the project.
+
+![](images/brain.png)
+
+For the focus of the project, I will only focus on the Hero’s Journey - Act 1 (The Known). The player will play through the ‘Meeting of the Mentor’, the mentor being St Paddy, and start crossing the Threshold with character introductions. This is to limit scope, but below the narrative as a whole is discussed. 
+
+## Game Setting
+
+The narrative takes place across multiple locations in a fictional town called Inishsióg in county Galway, Ireland. 
+
+The player can visit multiple locations including a pub, shop, restaurant and their new workplace, the gym. 
+
+The first prototype of the setting can be seen below. It's envisioned as a coastal area with multiple areas of interest for the player to visit.
+
+![](images/map.png)
+
+## Characters
+
+This section describes all the characters and their stories.
+
+### Main Character
+
+While not acknowledged at first, the main character is a changeling that has completed their purpose in life. They are searching for something new now as they grow into adulthood and move out to live on their own. In their past life, they replaced one of two twins that passed away in a car accident with their parents. It was an act of kindness to help the parents cope with their loss. This act of kindness is the reason why they are a fitting main character for this story. 
+
+Since they are a changeling, the player gets to choose if they are a male or female twin.
+
+![](images/mc.png)
+
+### Side Characters 
+
+There are multiple characters that the player gets to meet throughout the narrative. The player's goal is to meet and help them with their issues. If the player succeeds, they will grow themselves and hopefully find their goal in life. Since we’re dealing with fairies who are known to be tricksters and sometimes even bad omens, all bad endings lead to the main character’s death which needs to be avoided if you want to see the good ending.
+
+#### St Patrick
+
+This is the mentor character on our main character’s Hero’s Journey. He guides the main character in his daily duties and introduces all the good people the main character will need to befriend. He is also the proud owner of a local pub called Paddy’s Pub.
+
+![](images/paddy.png)
+
+#### Pooka
+
+The Pooka is a well known trickster who takes many forms. In this game, he will take the appearance of a goblin. His story will focus on trying to influence the character into making bad decisions. The main character needs to keep him from succeeding if they are to become better creatures.
+
+![](images/pooka.png)
+
+Good Ending – The Pooka transforms into a black steed and takes the player out for a ride. They are speedy but careful and the ride ends with the Pooka granting the player some hidden knowledge while they stargaze together.  
+
+Bad Ending – Learning nothing of manners and morality, the player rides the Pooka in horse form off a cliff reaching a dead end. The last thing you see is the Pooka’s sinister grin atop the cliff as you fall to your doom. 
+
+#### Banshee
+
+The Banshee's story is one of fear and communication problems. She is clumsy and doesn’t really have a way with words. All her life, she has been trying to save humans from themselves but can’t seem to communicate this in the right way to anyone. As you get to know her, she starts trying to make friends with all of the other creatures too.
+
+![](images/bans.png)
+
+Good Ending – You and the others watch the Banshee sing at the pub. Its not perfect but its pleasant to the ears. The happy Banshee thanks you all and fades away with a smile. Her performance had saved someone from their fate which she had premonitions about, setting her free. 
+
+Bad Ending – You find the Banshee crying on the street after the main character misses her performance, which seems to have gone awry. She’s weeping for you, having seen a pre-cognition of your demise with no way to stop it. She runs off in tears and as you make your way back home a car swerves and crashes into you, taking your life. 
+
+#### Dullahan
+
+The Dullahan is a stuck-up god of death with a knack for losing her head. She recounts stories of her past travels and asks the player for their opinions. This is a story of reflection which is something the Dullahan doesn’t seem to have a grasp on.
+
+![](images/dul.png)
+
+Good Ending – You find the Dullahan's head on the side of the foot path. This reminds you of a chilling story the Dullahan talked about having her head stolen by humans. She shows up and is hesitant, before she acts you tell her you found her head, dust it off and hand it over. She thanks you and you proceed to chat for a while. She tells you about her success with dealing with her father.  
+
+Bad Ending – As you turn around to face the Dullahan after picking her head up, you see she seems off. Something bad happened and she's out for blood. She proceeds to swiftly take your head and rides off into the night continuing to kill for the rest of eternity.
+
+# Game Mechanics
+
+This section describes all the game mechanics and how they interact. 
+
+## Character Selection
+
+At the start of the game, the player will be prompted to select one of two characters to play the game as. 
+
+## Dialogue System
+
+The game will be dialogue heavy and will have text boxes that will display text for the player to read. The text needs to be ordered correctly and possibly allow for necessary changes in scenery if the narrative requires it to.
+
+![](images/dalog.png)
+
+## Gym Spotting System
+
+This is a small rhythm game where you need to press arrow keys at the right time. Success determines if you get any friendship points with the character you're interacting with.
+
+![](images/minigame.png)
+
+## Gift Giving System
+
+
+You can buy gifts at the shop and give them to the characters. If they like it, you can get some extra friendship points. If they hate it, you will lose some points.
+
+![](images/gift.png)
+
+## Friendship System
+
+Each character you interact with has a friendship meter. When you reach the end of their story you will either get a good or a bad ending depending on how well you treated them. 
+
+This will be indicated to the player in the form of heart & anger icons coming from the characters they are interacting with.
+
+![](images/frnd.png)
+
+## Time Management
+
+As the player interacts with the characters, time will pass. When they do it at the gym, they will be paid which will allow them to buy items.
+
+# Audio Design
+
+This section describes the audio design and implementation for the game. To speed up the game development process, the audio for this game will be sourced from [[freesound.org]{.underline}](http://www.freesound.org/). Any edits will be made in Audacity. 
+
+## Mood
+
+The music and sounds should take inspiration from Irish Culture to match the theme of the project. Some influences from 8bit and 2D games are expected. 
+
+This playlist [[Instrumental mix • Irish music]{.underline}](https://www.youtube.com/watch?v=5uqcoeLR7TA&list=RDATnXflaXJpc2ggbXVzaWM&index=2) can be referenced as an inspiration 
+
+## Asset List
+
+| Description                  | Location    | Trigger                 | Category  |
+|------------------------------|-------------|-------------------------|-----------|
+| Happy Music                  | Anywhere    | Happy Character Events  | Music     |
+| Sad Music                    | Anywhere    | Sad Character Events    | Music     |
+| Default Music                | Anywhere    | Anywhere                | Music     |
+| Doorbell in shop             | Shop        | Enter/Exit Shop         | SFX       |
+| Door Opening                 | Anywhere    | Enter Location          | SFX       |
+| Door Closing                 | Anywhere    | Exit Location           | SFX       |
+| Idle Pub Chatter             | Pub         | Enter Location          | Ambiance  |
+| Buying an Item               | Shop        | Purchase Item           | SFX       |
+| Successful Interaction       | Anywhere    | Give Item/Talk/Spot     | SFX       |
+| Unsuccessful Interaction     | Anywhere    | Give Item/Talk/Spot     | SFX       |
+| Mini game songs              | Gym         | When spotting at gym    | Music     |
+| Minigame Successful Click    | Gym         | Clicks note correctly   | SFX       |
+| Minigame Unsuccessful Click  | Gym         | Fails note click        | SFX       |
+| Female Character Chatter     | Anywhere    | Talking with NPC        | Dialog    |
+| Male Character Chatter       | Anywhere    | Talking with NPC        | Dialog    |
+| Gym Equipment Moving         | Gym         | Enter Location          | Ambiance  |
+
+# SWOT Analysis 
+
+## Strengths 
+
+- Strong concept with a lot of potential. 
+- Solid foundation to start narrative writing & implementation 
+- Niche in the market - Irish Folklore in games 
+
+## Weaknesses 
+
+- Potential to Promote misinformation - requires solid research 
+- Limited narrative writing experience - allow time for rewrites 
+- A lot of scope has been cut due to time constraints so the impact of the narrative will likely suffer. 
+
+## Opportunities 
+
+- Create something unique with interesting themes and characters 
+- Increase representation of Irish myths and culture in games 
+- Has potential to teach users something new 
+
+## Threats 
+
+- Can a cut down version of my narrative answer my research question? 
+- Project timeline is short, if anything is delayed the project could be at risk.
+
+
+
+
+```{r, include = FALSE}
+install.packages("ganttrify",
+  repos = c(
+    "https://giocomai.r-universe.dev",
+    "https://cloud.r-project.org"
+  )
+)
+
+library("ganttrify")
+```
+
+# Project Management
+
+The timeline for this project is defined in the gantt chart below.
+
+```{r, echo = FALSE, warning = FALSE}
+funky_project <- tibble::tribble(
+  ~wp, ~activity, ~start_date, ~end_date,
+  "Documentation", "Weekly Journaling", "2025-02-01", "2025-04-22",
+  "Documentation", "Second Hand Research Feeding Artefact", "2025-02-01", "2025-02-28",
+  "Documentation", "Drafting Thesis", "2025-02-15", "2025-04-01",
+  "Documentation", "User Driven Evaluation", "2025-03-28", "2025-04-11",
+  "Documentation", "Finalise Thesis", "2025-04-07", "2025-05-06",
+
+  "WiP", "Design Document", "2025-02-01", "2025-02-04",
+  "WiP", "Paper Prototype", "2025-02-02", "2025-02-06",
+  "WiP", "Layout Narrative", "2025-02-04", "2025-02-08",
+  "WiP", "Tutorial Narrative", "2025-02-06", "2025-02-10",
+  "WiP", "2D Level Design", "2025-02-07", "2025-02-10",
+  "WiP", "2D Character Design", "2025-02-08", "2025-02-11",
+  "WiP", "WIP Presentation", "2025-02-09", "2025-02-12",
+  
+  "Alpha", "2D Narrative Engine", "2025-02-12", "2025-02-20",
+  "Alpha", "Protagonist Narrative", "2025-02-19", "2025-02-24",
+  "Alpha", "Banshee Narrative", "2025-02-23", "2025-02-28",
+  "Alpha", "Dullahan Narrative", "2025-02-27", "2025-03-04",
+  "Alpha", "Pooka Narrative", "2025-03-03", "2025-03-08",
+  "Alpha", "Friendship System", "2025-02-20", "2025-02-24",
+  "Alpha", "Gym Spotting Minigame", "2025-02-24", "2025-02-28",
+  "Alpha", "Audio Creation & Sourcing", "2025-02-28", "2025-03-04",
+  "Alpha", "Item Shop System", "2025-03-04", "2025-03-08",
+  "Alpha", "Alpha Presentation", "2025-03-06", "2025-03-11",
+
+  "Beta", "Narrative Revisions", "2025-03-11", "2025-03-24",
+  "Beta", "Inventory System", "2025-03-11", "2025-03-16",
+  "Beta", "Gifting System", "2025-03-15", "2025-03-20",
+  "Beta", "Audio Implementation", "2025-03-19", "2025-03-24",
+  "Beta", "Main Menu", "2025-03-11", "2025-03-16",
+  "Beta", "Options Menu", "2025-03-15", "2025-03-20",
+  "Beta", "Controls Menu", "2025-03-19", "2025-03-24",
+  "Beta", "Beta Testing", "2025-03-24", "2025-04-07",
+  "Beta", "Adjustments based on Beta Testing", "2025-03-31", "2025-04-07"
+)
+
+# ganttrify(
+#   project = funky_project,
+#   project_start_date = "2025-02",
+#   by_date = TRUE,
+#   exact_date = TRUE,
+#   font_family = "Roboto Condensed"
+# )
+```
+
+![](images/timeline.png)
+
+## Tooling 
+
+- Hand drawing & Krita – 2D Assets 
+- Raylib & C++ – Programming Stack 
+- R & Markdown – Documentation, Data Analytics & Charts 
+- Google Forms – Surveys 
+- Audacity – Audio Design 
+- Vistaprint – Branding & Merch 
+- Git & One Drive – Project & Data Storage 

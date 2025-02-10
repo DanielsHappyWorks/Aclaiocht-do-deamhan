@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Exercise Your Demons"
+  navbar:
+    left:
+      - text: "Blog"
+        href: /
+      - design.qmd
+    right:
+      - icon: github
+        href: https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan
+      - icon: youtube
+        href: https://www.youtube.com/watch?v=KJoaKhQFUJQ
+      - icon: controller
+        href: https://boopdood.itch.io/exercise-your-demons
+format:
+  html:
+    theme: cosmo
+    css: styles.css

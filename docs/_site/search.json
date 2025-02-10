@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dev Log",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 4, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nTimeline\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\nDaniel Foth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Timeline",
+    "section": "",
+    "text": "The timeline for this is defined in the gantt chart below."
+  },
+  {
+    "objectID": "design.html",
+    "href": "design.html",
+    "title": "Game Design Doc",
+    "section": "",
+    "text": "What is Exercise Your Demons"
+  }
+]

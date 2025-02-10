@@ -1,0 +1,17 @@
+{
+  "hash": "0234de7ab9835a147a7f16afad0e1762",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Timeline\"\nauthor: \"Daniel Foth\"\ndate: \"2024-12-01\"\ncategories: [news]\n---\n\n\n\n\nThe timeline for this is defined in the gantt chart below.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

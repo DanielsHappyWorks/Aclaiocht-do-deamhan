@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.exe
+*.dsym
+main
+/docs/.quarto/

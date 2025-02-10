@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.534">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Exercise Your Demons - Game Design Doc</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Exercise Your Demons</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./design.html" aria-current="page"> 
+<span class="menu-text">Game Design Doc</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/watch?v=KJoaKhQFUJQ"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://boopdood.itch.io/exercise-your-demons"> <i class="bi bi-controller" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<div class="quarto-about-solana column-body content">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Game Design Doc</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header> 
+      <div class="about-contents"><main class="content" id="quarto-document-content">
+<section id="what-is-exercise-your-demons" class="level1">
+<h1>What is Exercise Your Demons</h1>
+<p>Exercise Your Demons is a 2D narrative game based on the ‘good people’ from Irish fairy tales and folklore. The player takes the role of a character who is struggling to find a job but under mysterious circumstances winds up working in a gym filled with good people.</p>
+<section id="genre" class="level2">
+<h2 data-anchor-id="genre">Genre</h2>
+<p>This is a cozy narrative game with some dark themes.</p>
+</section>
+<section id="early-prototype" class="level2">
+<h2 data-anchor-id="early-prototype">Early Prototype</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/KJoaKhQFUJQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+<section id="narrative-design" class="level1">
+<h1>Narrative Design</h1>
+<p>This is a character driven narrative where the main character is trying to get their life back together. They do this by making friends with other characters in the town. The initial brainstorming has helped shape the current narrative which will evolve over the course of the project.</p>
+<p><img src="images/brain.png" class="img-fluid"></p>
+<p>For the focus of the project, I will only focus on the Hero’s Journey - Act 1 (The Known). The player will play through the ‘Meeting of the Mentor’, the mentor being St Paddy, and start crossing the Threshold with character introductions. This is to limit scope, but below the narrative as a whole is discussed.</p>
+<section id="game-setting" class="level2">
+<h2 data-anchor-id="game-setting">Game Setting</h2>
+<p>The narrative takes place across multiple locations in a fictional town called Inishsióg in county Galway, Ireland.</p>
+<p>The player can visit multiple locations including a pub, shop, restaurant and their new workplace, the gym.</p>
+<p>The first prototype of the setting can be seen below. It’s envisioned as a coastal area with multiple areas of interest for the player to visit.</p>
+<p><img src="images/map.png" class="img-fluid"></p>
+</section>
+<section id="characters" class="level2">
+<h2 data-anchor-id="characters">Characters</h2>
+<p>This section describes all the characters and their stories.</p>
+<section id="main-character" class="level3">
+<h3 data-anchor-id="main-character">Main Character</h3>
+<p>While not acknowledged at first, the main character is a changeling that has completed their purpose in life. They are searching for something new now as they grow into adulthood and move out to live on their own. In their past life, they replaced one of two twins that passed away in a car accident with their parents. It was an act of kindness to help the parents cope with their loss. This act of kindness is the reason why they are a fitting main character for this story.</p>
+<p>Since they are a changeling, the player gets to choose if they are a male or female twin.</p>
+<p><img src="images/mc.png" class="img-fluid"></p>
+</section>
+<section id="side-characters" class="level3">
+<h3 data-anchor-id="side-characters">Side Characters</h3>
+<p>There are multiple characters that the player gets to meet throughout the narrative. The player’s goal is to meet and help them with their issues. If the player succeeds, they will grow themselves and hopefully find their goal in life. Since we’re dealing with fairies who are known to be tricksters and sometimes even bad omens, all bad endings lead to the main character’s death which needs to be avoided if you want to see the good ending.</p>
+<section id="st-patrick" class="level4">
+<h4 data-anchor-id="st-patrick">St Patrick</h4>
+<p>This is the mentor character on our main character’s Hero’s Journey. He guides the main character in his daily duties and introduces all the good people the main character will need to befriend. He is also the proud owner of a local pub called Paddy’s Pub.</p>
+<p><img src="images/paddy.png" class="img-fluid"></p>
+</section>
+<section id="pooka" class="level4">
+<h4 data-anchor-id="pooka">Pooka</h4>
+<p>The Pooka is a well known trickster who takes many forms. In this game, he will take the appearance of a goblin. His story will focus on trying to influence the character into making bad decisions. The main character needs to keep him from succeeding if they are to become better creatures.</p>
+<p><img src="images/pooka.png" class="img-fluid"></p>
+<p>Good Ending – The Pooka transforms into a black steed and takes the player out for a ride. They are speedy but careful and the ride ends with the Pooka granting the player some hidden knowledge while they stargaze together.</p>
+<p>Bad Ending – Learning nothing of manners and morality, the player rides the Pooka in horse form off a cliff reaching a dead end. The last thing you see is the Pooka’s sinister grin atop the cliff as you fall to your doom.</p>
+</section>
+<section id="banshee" class="level4">
+<h4 data-anchor-id="banshee">Banshee</h4>
+<p>The Banshee’s story is one of fear and communication problems. She is clumsy and doesn’t really have a way with words. All her life, she has been trying to save humans from themselves but can’t seem to communicate this in the right way to anyone. As you get to know her, she starts trying to make friends with all of the other creatures too.</p>
+<p><img src="images/bans.png" class="img-fluid"></p>
+<p>Good Ending – You and the others watch the Banshee sing at the pub. Its not perfect but its pleasant to the ears. The happy Banshee thanks you all and fades away with a smile. Her performance had saved someone from their fate which she had premonitions about, setting her free.</p>
+<p>Bad Ending – You find the Banshee crying on the street after the main character misses her performance, which seems to have gone awry. She’s weeping for you, having seen a pre-cognition of your demise with no way to stop it. She runs off in tears and as you make your way back home a car swerves and crashes into you, taking your life.</p>
+</section>
+<section id="dullahan" class="level4">
+<h4 data-anchor-id="dullahan">Dullahan</h4>
+<p>The Dullahan is a stuck-up god of death with a knack for losing her head. She recounts stories of her past travels and asks the player for their opinions. This is a story of reflection which is something the Dullahan doesn’t seem to have a grasp on.</p>
+<p><img src="images/dul.png" class="img-fluid"></p>
+<p>Good Ending – You find the Dullahan’s head on the side of the foot path. This reminds you of a chilling story the Dullahan talked about having her head stolen by humans. She shows up and is hesitant, before she acts you tell her you found her head, dust it off and hand it over. She thanks you and you proceed to chat for a while. She tells you about her success with dealing with her father.</p>
+<p>Bad Ending – As you turn around to face the Dullahan after picking her head up, you see she seems off. Something bad happened and she’s out for blood. She proceeds to swiftly take your head and rides off into the night continuing to kill for the rest of eternity.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="game-mechanics" class="level1">
+<h1>Game Mechanics</h1>
+<p>This section describes all the game mechanics and how they interact.</p>
+<section id="character-selection" class="level2">
+<h2 data-anchor-id="character-selection">Character Selection</h2>
+<p>At the start of the game, the player will be prompted to select one of two characters to play the game as.</p>
+</section>
+<section id="dialogue-system" class="level2">
+<h2 data-anchor-id="dialogue-system">Dialogue System</h2>
+<p>The game will be dialogue heavy and will have text boxes that will display text for the player to read. The text needs to be ordered correctly and possibly allow for necessary changes in scenery if the narrative requires it to.</p>
+<p><img src="images/dalog.png" class="img-fluid"></p>
+</section>
+<section id="gym-spotting-system" class="level2">
+<h2 data-anchor-id="gym-spotting-system">Gym Spotting System</h2>
+<p>This is a small rhythm game where you need to press arrow keys at the right time. Success determines if you get any friendship points with the character you’re interacting with.</p>
+<p><img src="images/minigame.png" class="img-fluid"></p>
+</section>
+<section id="gift-giving-system" class="level2">
+<h2 data-anchor-id="gift-giving-system">Gift Giving System</h2>
+<p>You can buy gifts at the shop and give them to the characters. If they like it, you can get some extra friendship points. If they hate it, you will lose some points.</p>
+<p><img src="images/gift.png" class="img-fluid"></p>
+</section>
+<section id="friendship-system" class="level2">
+<h2 data-anchor-id="friendship-system">Friendship System</h2>
+<p>Each character you interact with has a friendship meter. When you reach the end of their story you will either get a good or a bad ending depending on how well you treated them.</p>
+<p>This will be indicated to the player in the form of heart &amp; anger icons coming from the characters they are interacting with.</p>
+<p><img src="images/frnd.png" class="img-fluid"></p>
+</section>
+<section id="time-management" class="level2">
+<h2 data-anchor-id="time-management">Time Management</h2>
+<p>As the player interacts with the characters, time will pass. When they do it at the gym, they will be paid which will allow them to buy items.</p>
+</section>
+</section>
+<section id="audio-design" class="level1">
+<h1>Audio Design</h1>
+<p>This section describes the audio design and implementation for the game. To speed up the game development process, the audio for this game will be sourced from <a href="http://www.freesound.org/"><u>freesound.org</u></a>. Any edits will be made in Audacity.</p>
+<section id="mood" class="level2">
+<h2 data-anchor-id="mood">Mood</h2>
+<p>The music and sounds should take inspiration from Irish Culture to match the theme of the project. Some influences from 8bit and 2D games are expected.</p>
+<p>This playlist <a href="https://www.youtube.com/watch?v=5uqcoeLR7TA&amp;list=RDATnXflaXJpc2ggbXVzaWM&amp;index=2"><u>Instrumental mix • Irish music</u></a> can be referenced as an inspiration</p>
+</section>
+<section id="asset-list" class="level2">
+<h2 data-anchor-id="asset-list">Asset List</h2>
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 16%">
+<col style="width: 31%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Location</th>
+<th>Trigger</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Happy Music</td>
+<td>Anywhere</td>
+<td>Happy Character Events</td>
+<td>Music</td>
+</tr>
+<tr class="even">
+<td>Sad Music</td>
+<td>Anywhere</td>
+<td>Sad Character Events</td>
+<td>Music</td>
+</tr>
+<tr class="odd">
+<td>Default Music</td>
+<td>Anywhere</td>
+<td>Anywhere</td>
+<td>Music</td>
+</tr>
+<tr class="even">
+<td>Doorbell in shop</td>
+<td>Shop</td>
+<td>Enter/Exit Shop</td>
+<td>SFX</td>
+</tr>
+<tr class="odd">
+<td>Door Opening</td>
+<td>Anywhere</td>
+<td>Enter Location</td>
+<td>SFX</td>
+</tr>
+<tr class="even">
+<td>Door Closing</td>
+<td>Anywhere</td>
+<td>Exit Location</td>
+<td>SFX</td>
+</tr>
+<tr class="odd">
+<td>Idle Pub Chatter</td>
+<td>Pub</td>
+<td>Enter Location</td>
+<td>Ambiance</td>
+</tr>
+<tr class="even">
+<td>Buying an Item</td>
+<td>Shop</td>
+<td>Purchase Item</td>
+<td>SFX</td>
+</tr>
+<tr class="odd">
+<td>Successful Interaction</td>
+<td>Anywhere</td>
+<td>Give Item/Talk/Spot</td>
+<td>SFX</td>
+</tr>
+<tr class="even">
+<td>Unsuccessful Interaction</td>
+<td>Anywhere</td>
+<td>Give Item/Talk/Spot</td>
+<td>SFX</td>
+</tr>
+<tr class="odd">
+<td>Mini game songs</td>
+<td>Gym</td>
+<td>When spotting at gym</td>
+<td>Music</td>
+</tr>
+<tr class="even">
+<td>Minigame Successful Click</td>
+<td>Gym</td>
+<td>Clicks note correctly</td>
+<td>SFX</td>
+</tr>
+<tr class="odd">
+<td>Minigame Unsuccessful Click</td>
+<td>Gym</td>
+<td>Fails note click</td>
+<td>SFX</td>
+</tr>
+<tr class="even">
+<td>Female Character Chatter</td>
+<td>Anywhere</td>
+<td>Talking with NPC</td>
+<td>Dialog</td>
+</tr>
+<tr class="odd">
+<td>Male Character Chatter</td>
+<td>Anywhere</td>
+<td>Talking with NPC</td>
+<td>Dialog</td>
+</tr>
+<tr class="even">
+<td>Gym Equipment Moving</td>
+<td>Gym</td>
+<td>Enter Location</td>
+<td>Ambiance</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="swot-analysis" class="level1">
+<h1>SWOT Analysis</h1>
+<section id="strengths" class="level2">
+<h2 data-anchor-id="strengths">Strengths</h2>
+<ul>
+<li>Strong concept with a lot of potential.</li>
+<li>Solid foundation to start narrative writing &amp; implementation</li>
+<li>Niche in the market - Irish Folklore in games</li>
+</ul>
+</section>
+<section id="weaknesses" class="level2">
+<h2 data-anchor-id="weaknesses">Weaknesses</h2>
+<ul>
+<li>Potential to Promote misinformation - requires solid research</li>
+<li>Limited narrative writing experience - allow time for rewrites</li>
+<li>A lot of scope has been cut due to time constraints so the impact of the narrative will likely suffer.</li>
+</ul>
+</section>
+<section id="opportunities" class="level2">
+<h2 data-anchor-id="opportunities">Opportunities</h2>
+<ul>
+<li>Create something unique with interesting themes and characters</li>
+<li>Increase representation of Irish myths and culture in games</li>
+<li>Has potential to teach users something new</li>
+</ul>
+</section>
+<section id="threats" class="level2">
+<h2 data-anchor-id="threats">Threats</h2>
+<ul>
+<li>Can a cut down version of my narrative answer my research question?</li>
+<li>Project timeline is short, if anything is delayed the project could be at risk.</li>
+</ul>
+</section>
+</section>
+<section id="project-management" class="level1">
+<h1>Project Management</h1>
+<p>The timeline for this project is defined in the gantt chart below.</p>
+<p><img src="images/timeline.png" class="img-fluid"></p>
+<section id="tooling" class="level2">
+<h2 data-anchor-id="tooling">Tooling</h2>
+<ul>
+<li>Hand drawing &amp; Krita – 2D Assets</li>
+<li>Raylib &amp; C++ – Programming Stack</li>
+<li>R &amp; Markdown – Documentation, Data Analytics &amp; Charts</li>
+<li>Google Forms – Surveys</li>
+<li>Audacity – Audio Design</li>
+<li>Vistaprint – Branding &amp; Merch</li>
+<li>Git &amp; One Drive – Project &amp; Data Storage</li>
+</ul>
+
+
+</section>
+</section>
+</main></div>
+    </div>
+  </div>
+</div>
+ <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
