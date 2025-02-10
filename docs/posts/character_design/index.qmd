@@ -1,7 +1,8 @@
 ---
 title: "Character & Map Design"
-date: "2024-02-09"
+date: "2025-02-09"
 categories: [assets, design]
+image: "../../images/mc.png"
 ---
 
 TODO describe asset design process and show off assets

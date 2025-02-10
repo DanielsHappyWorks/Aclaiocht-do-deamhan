@@ -1,7 +1,8 @@
 ---
 title: "Paper Prototype"
-date: "2024-02-05"
+date: "2025-02-07"
 categories: [concept, design]
+image: "../../images/map.png"
 ---
 
 The Paper Prototype defines the interactions for the game and has been reviewed for use in the Design Document. No changes to the original prototype were made as it's a well defined starting point for the project.

@@ -1,0 +1,8 @@
+---
+title: "Refining Concept Reasearch Question"
+date: "2025-02-05"
+categories: [concept, research]
+image: "../../images/brain.png"
+---
+
+TODO discuss how the question changed

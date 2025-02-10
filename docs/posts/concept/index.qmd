@@ -1,7 +1,8 @@
 ---
 title: "Game Concept"
-date: "2024-01-29"
+date: "2025-01-29"
 categories: [concept, design]
+image: "../../images/timeline.png"
 ---
 
 TODO describe concept creation
