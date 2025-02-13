@@ -1,36 +1,17 @@
-#include "raylib.h"
+#include "game.h"
 
-//See https://github.com/raysan5/raygui
+// See https://github.com/raysan5/raygui
 #define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
 
 int main()
 {
-    InitWindow(832, 624, "Exercise Your Demons");
-    SetTargetFPS(60);
+    Game game = Game();
 
-    bool showMessageBox = false;
-
-    while (!WindowShouldClose())
+    while (game.isRunning())
     {
-        // Draw
-        //----------------------------------------------------------------------------------
-        BeginDrawing();
-            ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
-
-            if (GuiButton((Rectangle){ 24, 24, 120, 30 }, "#191#Show Message")) showMessageBox = true;
-
-            if (showMessageBox)
-            {
-                int result = GuiMessageBox((Rectangle){ 85, 70, 250, 100 },
-                    "#191#Message Box", "Hi! This is a message!", "Nice;Cool");
-
-                if (result >= 0) showMessageBox = false;
-            }
-
-        EndDrawing();
+        game.run();
     }
 
-    CloseWindow();
     return 0;
 }
