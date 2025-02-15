@@ -1,8 +1,53 @@
 ---
-title: "Game Concept"
+title: "Initial Concept"
 date: "2025-01-29"
 categories: [concept, design]
 image: "../../images/timeline.png"
 ---
 
-TODO describe concept creation
+This blog entry discusses the initial concept for a game called "Exercise your Demons".
+
+It is a 2D narrative time management game where you work at a gym and help Fairies from Irish Folklore exercise and overcome their problems.
+
+You befriend the creatures while spotting them at the gym and bumping into them outside of work.
+
+Your goal is to help them improve, overcome their weakness and pass on from this plane of existence.
+
+Failure will have dire consequences for both you and the Fairies.
+
+# Vibe Board
+
+This mood board looks at games with similar styles to help define the artistic direction of the game.
+
+![](big_mood.png)
+
+# Stakeholders
+
+- Cozy Gamers (Wife)
+- Gamers interested in Narrative or Irish Folklore
+- DkIT Faculty who are reviewing the game artifact and thesis
+
+## User Personas
+
+User personas were created to better understand the needs of people that could be playing this game.
+
+![](up1.png)
+
+![](up2.png)
+
+# Project Management
+
+The project will last about 10 weeks of development while also preparing a thesis.
+
+After the game is user tested another 2-3 weeks will be spent concluding on the effects of the thesis on the success of the game.
+
+## Project Management
+
+- Hand drawing & Krita – 2D Assets
+- Raylib & C++ – Programming Stack
+- Trello – Kanban Board for task management
+- R & Markdown – Documentation, Data Analytics & Charts
+- Google Forms - Surveys
+- Audacity – Audio Design
+- Vistaprint – Branding & Merch
+- Git & One Drive – Project & Data Storage

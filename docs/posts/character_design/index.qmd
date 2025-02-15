@@ -1,8 +1,48 @@
 ---
 title: "Character & Map Design"
 date: "2025-02-09"
-categories: [assets, design]
+categories: [assets, design, characters, environment]
 image: "../../images/mc.png"
 ---
 
-TODO describe asset design process and show off assets
+This week was mostly spent designing the 2D assets. I have made a decision to use physical media scans as the assets in the game. This provided a cool effect for the prototype and I can build on top of that. All assets are colored in using paint markers which gives them a nice mat finish.
+
+Since there is a lot of time constraints for this project I will limit the amount of assets I make and try to re-use as much as possible. This will likely mean no fully animated characters either. For now I expect they will waddle around like South Park characters with limited movement. Time constraints are forcing me to get creative here.
+
+# Characters
+
+After much deliberation I have settled on the core cast of the game. This includes:
+
+- Main Character
+- St Patrick
+- Pooka
+- Banshee
+- Dullahan
+
+The cast is still mostly lacking proper names but they will interact in a small fictitious town called Inishsióg in county Galway.
+
+As part of the [Design Document](/design.html) I hope to further refine these.
+
+The main character can be either male or female, the designs are:
+
+![](../../images/mc.png)
+
+The side character designs are:
+
+![](../../images/paddy.png)
+![](../../images/bans.png)
+![](../../images/pooka.png)
+![](../../images/dul.png)
+
+# Environment
+
+The map is one of a coastal area.
+
+![](./map.png)
+
+All of the buildings will be separate sprites layered on top of the map. This way they can be highlighted using code later.
+
+![](./gym.png)
+![](./pub.png)
+![](./sentra.png)
+![](./supperwacks.png)

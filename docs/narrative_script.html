@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise Your Demons - Dev Log</title>
+<title>Exercise Your Demons - Game Script</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,12 +30,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -68,73 +65,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -181,184 +120,83 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Dev Log</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="assets">assets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="characters">characters <span class="quarto-category-count">(1)</span></div><div class="category" data-category="concept">concept <span class="quarto-category-count">(3)</span></div><div class="category" data-category="design">design <span class="quarto-category-count">(3)</span></div><div class="category" data-category="environment">environment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="research">research <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<div class="quarto-about-solana column-body content">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Game Script</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header> 
+      <div class="about-contents"><main class="content" id="quarto-document-content">
+<section id="tutorialintroductions" class="level1">
+<h1>Tutorial/Introductions</h1>
+<p><strong>INT. GYM - DAY - TRIGGER: Character Creation Completed</strong></p>
+<p>Plays after the character creation acting as a tutorial for the game while introducing the PLAYER to ST. PADDY, their new job and the banshee. The PLAYER is limited to working at this time.</p>
+<center>
+<p><em>PLAYER</em></p>
+<p>(Inner Monologue)</p>
+<p>TEST TEST TEST</p>
+<p><br></p>
+<p><em>PLAYER</em></p>
+<p>(Inner Monologue)</p>
+TEST TEST TEST
+</center>
+<p>The next day they will have choice of where they want to head during the day.</p>
+<p><strong>INT. GYM - DAY/NIGHT - TRIGGER: Entered the gym to work a second time</strong></p>
+<p><strong>INT. GYM - DAY - TRIGGER: Entered the gym to work a third time</strong></p>
+</section>
+<section id="player-events" class="level1">
+<h1>Player Events</h1>
+<p><strong>INT. HOME - MORNING - TRIGGER: Morning after meeting the banshee</strong></p>
+<p><strong>INT. HOME - MORNING - TRIGGER: Morning after meeting the pooka</strong></p>
+<p><strong>INT. HOME - MORNING - TRIGGER: Morning after meeting the dullaghan</strong></p>
+<p><strong>INT. HOME - MORNING - TRIGGER: On completing 1/3 of the character events</strong></p>
+<p><strong>INT. HOME - MORNING - TRIGGER: On completing 1/2 of the character events</strong></p>
+<p><strong>INT. HOME - MORNING - TRIGGER: On completing 2/3 of the character events</strong></p>
+<p><strong>INT. HOME - MORNING - TRIGGER: On completing all character endings</strong></p>
+</section>
+<section id="banshee-events---chaointe-doran" class="level1">
+<h1>Banshee Events - Chaointe Doran</h1>
+<p>The banshees name is Chaointe Doran. It roughly translates to Lamenting Wonderer.</p>
+<p><strong>INT. GYM - DAY - TRIGGER: First Day At Work</strong></p>
+<p><strong>INT. PUB - Night - TRIGGER: First event completed</strong></p>
+<p><strong>INT. CAFE - DAY - TRIGGER: Second event completed, Met Pooka</strong></p>
+<p><strong>INT. GYM - DAY/NIGHT - TRIGGER: Third event completed, Met Dullahan</strong></p>
+<p><strong>EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed</strong></p>
+</section>
+<section id="pooka-events---púca-cleasaí" class="level1">
+<h1>Pooka Events - Púca Cleasaí</h1>
+<p>The pookas name is Púca Cleasaí. It roughly translates to Goblin Trickster.</p>
+<p><strong>INT. GYM - DAY/NIGHT - TRIGGER: Second Day At Work</strong></p>
+<p><strong>INT. RESTAURANT - DAY - TRIGGER: First event completed</strong></p>
+<p><strong>INT. GYM - DAY/NIGHT - TRIGGER: Second event completed</strong></p>
+<p><strong>INT. RESTAURANT - DAY - TRIGGER: Third event completed</strong></p>
+<p><strong>INT. FOREST - NIGHT (Forced) - TRIGGER: Fourth event completed</strong></p>
+</section>
+<section id="dullahan-events---crom-dubh" class="level1">
+<h1>Dullahan Events - Crom Dubh</h1>
+<p>The dullahans name is Crom Dubh as its known the be the Embodiment of this Celtic God.</p>
+<p><strong>INT. GYM - DAY/NIGHT - TRIGGER: Third Day At Work</strong></p>
+<p><strong>INT. PUB - NIGHT - TRIGGER: First event completed</strong></p>
+<p><strong>INT. GYM - DAY/NIGHT - TRIGGER: Second event completed</strong></p>
+<p><strong>INT. PUB - NIGHT - TRIGGER: Third event completed</strong></p>
+<p><strong>EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed</strong></p>
 
 
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="assets,design,characters,environment" data-listing-date-sort="1739059200000" data-listing-file-modified-sort="1739647051818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
-<div class="thumbnail">
-<p><a href="./posts/character_design/index.html" class="no-external"></a></p><a href="./posts/character_design/index.html" class="no-external">
-<p><img src="./images/mc.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/character_design/index.html" class="no-external"></a></p>
+</section>
+</main></div>
+    </div>
+  </div>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/character_design/index.html" class="no-external">Character &amp; Map Design</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/character_design/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('assets'); return false;">
-assets
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('characters'); return false;">
-characters
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('environment'); return false;">
-environment
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/character_design/index.html" class="no-external">This week was mostly spent designing the 2D assets. I have made a decision to use physical media scans as the assets in the game. This provided a cool effect for the…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/character_design/index.html" class="no-external">
-<div class="listing-date">
-Feb 9, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="concept,design" data-listing-date-sort="1738886400000" data-listing-file-modified-sort="1739225214031" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
-<div class="thumbnail">
-<p><a href="./posts/paper_prototype/index.html" class="no-external"></a></p><a href="./posts/paper_prototype/index.html" class="no-external">
-<p><img src="./images/map.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/paper_prototype/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/paper_prototype/index.html" class="no-external">Paper Prototype</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/paper_prototype/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('concept'); return false;">
-concept
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/paper_prototype/index.html" class="no-external">The Paper Prototype defines the interactions for the game and has been reviewed for use in the Design Document. No changes to the original prototype were made as it’s a well…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/paper_prototype/index.html" class="no-external">
-<div class="listing-date">
-Feb 7, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="concept,research" data-listing-date-sort="1738713600000" data-listing-file-modified-sort="1739644340468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="374">
-<div class="thumbnail">
-<p><a href="./posts/refining_question/index.html" class="no-external"></a></p><a href="./posts/refining_question/index.html" class="no-external">
-<p><img src="./images/brain.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/refining_question/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/refining_question/index.html" class="no-external">Refining Concept Reasearch Question</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/refining_question/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('concept'); return false;">
-concept
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
-research
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/refining_question/index.html" class="no-external">The research question started as “How can Irish Fairies and Folklore be used to create a complex character driven narrative emphasizing self-improvement?” at the start of…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/refining_question/index.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="concept,design" data-listing-date-sort="1738108800000" data-listing-file-modified-sort="1739645677247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="229">
-<div class="thumbnail">
-<p><a href="./posts/concept/index.html" class="no-external"></a></p><a href="./posts/concept/index.html" class="no-external">
-<p><img src="./images/timeline.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/concept/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/concept/index.html" class="no-external">Initial Concept</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/concept/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('concept'); return false;">
-concept
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/concept/index.html" class="no-external">This blog entry discusses the initial concept for a game called “Exercise your Demons”.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/concept/index.html" class="no-external">
-<div class="listing-date">
-Jan 29, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -379,13 +217,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

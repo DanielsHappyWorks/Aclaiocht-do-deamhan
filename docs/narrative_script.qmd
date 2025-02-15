@@ -1,0 +1,100 @@
+---
+title: "Game Script"
+about:
+  template: solana
+---
+
+# Tutorial/Introductions
+
+**INT. GYM - DAY - TRIGGER: Character Creation Completed**
+
+Plays after the character creation acting as a tutorial for the game while introducing the PLAYER to ST. PADDY, their new job and the banshee. The PLAYER is limited to working at this time.
+
+<center>
+*PLAYER*
+
+(Inner Monologue)
+
+TEST TEST TEST
+
+</br>
+
+*PLAYER*
+
+(Inner Monologue)
+
+TEST TEST TEST
+</center>
+
+The next day they will have choice of where they want to head during the day.
+
+**INT. GYM - DAY/NIGHT - TRIGGER: Entered the gym to work a second time**
+
+**INT. GYM - DAY - TRIGGER: Entered the gym to work a third time**
+
+# Player Events
+
+**INT. HOME - MORNING - TRIGGER: Morning after meeting the banshee**
+
+**INT. HOME - MORNING - TRIGGER: Morning after meeting the pooka**
+
+**INT. HOME - MORNING - TRIGGER: Morning after meeting the dullaghan**
+
+**INT. HOME - MORNING - TRIGGER: On completing 1/3 of the character events**
+
+**INT. HOME - MORNING - TRIGGER: On completing 1/2 of the character events**
+
+**INT. HOME - MORNING - TRIGGER: On completing 2/3 of the character events**
+
+**INT. HOME - MORNING - TRIGGER: On completing all character endings**
+
+# Banshee Events - Chaointe Doran
+
+The banshees name is Chaointe Doran. It roughly translates to Lamenting Wonderer.
+
+**INT. GYM - DAY - TRIGGER: First Day At Work**
+
+**INT. PUB - Night - TRIGGER: First event completed**
+
+**INT. CAFE - DAY - TRIGGER: Second event completed, Met Pooka**
+
+**INT. GYM - DAY/NIGHT - TRIGGER: Third event completed, Met Dullahan**
+
+**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed**
+
+# Pooka Events - Púca Cleasaí
+
+The pookas name is Púca Cleasaí. It roughly translates to Goblin Trickster.
+
+**INT. GYM - DAY/NIGHT - TRIGGER: Second Day At Work**
+
+**INT. RESTAURANT - DAY - TRIGGER: First event completed**
+
+**INT. GYM - DAY/NIGHT - TRIGGER: Second event completed, Met Dullahan**
+
+**INT. RESTAURANT - DAY - TRIGGER: Third event completed**
+
+**INT. FOREST - NIGHT (Forced) - TRIGGER: Fourth event completed**
+
+# Dullahan Events - Crom Dubh
+
+The dullahans name is Crom Dubh as its known the be the Embodiment of this Celtic God.
+
+**INT. GYM - DAY/NIGHT - TRIGGER: Third Day At Work**
+
+**INT. PUB - NIGHT - TRIGGER: First event completed**
+
+**INT. GYM - DAY/NIGHT - TRIGGER: Second event completed**
+
+**INT. PUB - NIGHT - TRIGGER: Third event completed**
+
+**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed**
+
+# Influences and Narrative decisions
+
+# References
+- Curran, B. and Whitson, A. (2007) A field guide to Irish Fairies. Belfast: Appletree Press.
+- Quinn, S. (2024) The Faerie Isle: Tales and Traditions of Ireland’s Forgotten Folklore. London: Walker Books Ltd.
+- Jackson, J.K. and Fitzgerald, K. (2022) Irish folk & fairy tales: Fables, folklore & ancient stories. London: Flame Tree Publishing.
+- Yeats, W.B. (1888) Irish fairy tales and Folklore. New York, NY: Clydesdale Press.
+
