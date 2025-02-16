@@ -1,5 +1,7 @@
 #include "game.h"
 #include "raygui.h"
+#include "characterSelectScene.h"
+#include "player.h"
 
 // When set to true renders in-game debug options
 #define DEBUG false
@@ -18,8 +20,8 @@ Game::Game()
     sentra = LoadTexture("assets/images/locations/sentra.png");
     supperwacks = LoadTexture("assets/images/locations/supperwacks.png");
     pub = LoadTexture("assets/images/locations/pub.png");
-    
-    player = LoadTexture("assets/images/characters/mc/player_front_female.png");
+
+    currentScene = new CharacterSelectScene();
 }
 
 Game::~Game()
@@ -29,13 +31,20 @@ Game::~Game()
     UnloadTexture(sentra);
     UnloadTexture(supperwacks);
     UnloadTexture(pub);
-    UnloadTexture(player);
     CloseWindow();
+
+    //TODO cleanup scene!!!!!
 }
 
 void Game::update()
 {
-    
+    if (currentScene != nullptr) {
+        currentScene->update();
+
+        if (currentScene->isDone()) {
+            currentScene = nullptr;
+        }
+    }
 }
 
 void Game::draw()
@@ -43,21 +52,26 @@ void Game::draw()
     BeginDrawing();
     ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
 
-    DrawTextureEx(background, (Vector2){0, 0}, 0.0f, 1.0f, WHITE);
-    DrawTextureEx(gym, (Vector2){550, 20}, 0.0f, 1.0f, WHITE);
-    DrawTextureEx(sentra, (Vector2){70, 260}, 0.0f, 1.0f, WHITE);
-    DrawTextureEx(supperwacks, (Vector2){180, -30}, 0.0f, 1.0f, WHITE);
-    DrawTextureEx(pub, (Vector2){385, 320}, 0.0f, 1.0f, WHITE);
-    DrawTextureEx(player, (Vector2){300, 200}, 0.0f, 0.35f, WHITE);
+    if (currentScene != nullptr) {
+        currentScene->draw();
+    } else {
 
-    if (GuiButton((Rectangle){ 24, 24, 120, 30 }, "#191#Show Message")) showMessageBox = true;
+        DrawTextureEx(background, (Vector2){0, 0}, 0.0f, 1.0f, WHITE);
+        DrawTextureEx(gym, (Vector2){550, 20}, 0.0f, 1.0f, WHITE);
+        DrawTextureEx(sentra, (Vector2){70, 260}, 0.0f, 1.0f, WHITE);
+        DrawTextureEx(supperwacks, (Vector2){180, -30}, 0.0f, 1.0f, WHITE);
+        DrawTextureEx(pub, (Vector2){385, 320}, 0.0f, 1.0f, WHITE);
+        DrawTextureEx(Player::GetInstance()->getCurrentSprite(), (Vector2){300, 200}, 0.0f, 0.35f, WHITE);
 
-    if (showMessageBox)
-    {
-        int result = GuiMessageBox((Rectangle){ 85, 70, 250, 100 },
-            "#191#Message Box", "Hi! This is a message!", "Nice;Cool");
+        if (GuiButton((Rectangle){ 24, 24, 120, 30 }, "#191#Show Message")) showMessageBox = true;
 
-        if (result >= 0) showMessageBox = false;
+        if (showMessageBox)
+        {
+            int result = GuiMessageBox((Rectangle){ 85, 70, 250, 100 },
+                "#191#Message Box", "Hi! This is a message!", "Nice;Cool");
+
+            if (result >= 0) showMessageBox = false;
+        }
     }
 
     DrawText("@BoopDood", screenWidth - 130, screenHeight - 35, 20, BLUE);

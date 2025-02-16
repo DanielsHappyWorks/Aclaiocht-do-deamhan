@@ -2577,8 +2577,7 @@ int GuiTextBox(Rectangle bounds, char *text, int bufferSize, bool editMode)
                     int prevCodepointSize = 0;
                     GetCodepointPrevious(text + textBoxCursorIndex, &prevCodepointSize);
 
-                    // Move backward text from cursor position
-                    for (int i = (textBoxCursorIndex - prevCodepointSize); i < textLength; i++) text[i] = text[i + prevCodepointSize];
+                    // Move backward text from cursor position                    for (int i = (textBoxCursorIndex - prevCodepointSize); i < textLength; i++) text[i] = text[i + prevCodepointSize];
 
                     // Prevent cursor index from decrementing past 0
                     if (textBoxCursorIndex > 0)

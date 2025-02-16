@@ -1,5 +1,6 @@
 #pragma once
 #include "raylib.h"
+#include "scene.h"
 
 class Game {
     private:
@@ -12,7 +13,7 @@ class Game {
         Texture2D supperwacks;
         Texture2D pub;
 
-        Texture2D player;
+        Scene* currentScene;
 
         void update();
         void draw();
