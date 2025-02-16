@@ -13,12 +13,15 @@ class Player {
 
         Texture2D male_front;
         Texture2D male_back;
-        Texture2D male_side;
+        Texture2D male_side_l;
+        Texture2D male_side_r;
     
         Texture2D female_front;
         Texture2D female_back;
-        Texture2D female_side;
+        Texture2D female_side_l;
+        Texture2D female_side_r;
 
+        Texture2D currentSprite;
     public:
         Player(Player &other) = delete;
         void operator=(const Player &) = delete;
@@ -26,4 +29,5 @@ class Player {
 
         Texture2D getCurrentSprite();
         void setDetails(bool gender, char* name);
+        void animateCharacter(Vector2 movement, Vector2 currentPos, Vector2 nextPos);
 };

@@ -6,13 +6,8 @@ class Game {
     private:
         int screenWidth;
         int screenHeight;
-        bool showMessageBox;
-        Texture2D background;
-        Texture2D gym;
-        Texture2D sentra;
-        Texture2D supperwacks;
-        Texture2D pub;
 
+        Scene* defaultScene;
         Scene* currentScene;
 
         void update();

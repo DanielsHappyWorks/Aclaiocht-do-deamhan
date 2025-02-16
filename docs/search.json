@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Dev Log",
     "section": "",
-    "text": "Character & Map Design\n\n\n\n\n\n\nassets\n\n\ndesign\n\n\ncharacters\n\n\nenvironment\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPaper Prototype\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRefining Concept Reasearch Question\n\n\n\n\n\n\nconcept\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Concept\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "First Steps to Greatness\n\n\n\n\n\n\nprogramming\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter & Map Design\n\n\n\n\n\n\nassets\n\n\ndesign\n\n\ncharacters\n\n\nenvironment\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPaper Prototype\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRefining Concept Reasearch Question\n\n\n\n\n\n\nconcept\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Concept\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/concept/index.html",
@@ -180,5 +180,12 @@
     "title": "Initial Concept",
     "section": "Project Management",
     "text": "Project Management\n\nHand drawing & Krita – 2D Assets\nRaylib & C++ – Programming Stack\nTrello – Kanban Board for task management\nR & Markdown – Documentation, Data Analytics & Charts\nGoogle Forms - Surveys\nAudacity – Audio Design\nVistaprint – Branding & Merch\nGit & One Drive – Project & Data Storage"
+  },
+  {
+    "objectID": "posts/waddle_waddle/index.html",
+    "href": "posts/waddle_waddle/index.html",
+    "title": "First Steps to Greatness",
+    "section": "",
+    "text": "This week I managed to add 2 features to the game: the character selection and player movement on the overworld.\n\nCharacter Selection\nThe character selection uses UI elements from Raygui which made the development a lot faster. The visuals on this menu could use some work and maybe revisited in the future if time allows but the menu itself serves its purpose.\nWhile re-watching the demo below, I realised I tried to click on the character directly to select them. I may also need to reconsider some usability aspects of my UI design.\n\n\nPlayer Movement\nThe player movement works well. The animations can definitely be refined. The glaring issue I’ll have to come back to here is re-using the movement in location scenes as currently all code lives in the overworld scene. Small steps will get me where I need to go eventually.\n\n\nShort Reflection\nTo challenge myself, I decided to use raylib with C++ for the project. Using an engine would probably have been a bit faster in retrospect but this is keeping me engaged in the technical aspects. So far, the coding is fun and not too challenging. It was a good idea to focus the thesis on an area I’m less versed in. It helps that I’m already somewhat familiar with raylib through my other project called House of Cards.\nAs I add more, I’m continuously re-factoring and find myself spending a lot of time cleaning up after myself due to some questionable code choices. Time constraints are forcing me to be creative and take some shortcuts so I can keep making visible progress but that seems to be the thing that drives me into a corner causing said re-factors.\n\n\nFirst steps towards a narrative game\nThe first steps have been taken towards being able to create a narrative game. I still need to do some work around entering locations and spawning NPCs but once this is done I can start working on dialogue engine implementation.\nHere is a quick demo of the game so far."
   }
 ]

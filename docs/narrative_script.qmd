@@ -60,7 +60,9 @@ The banshees name is Chaointe Doran. It roughly translates to Lamenting Wonderer
 
 **INT. GYM - DAY/NIGHT - TRIGGER: Third event completed, Met Dullahan**
 
-**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed**
+**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Reached**
+
+**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Not Reached**
 
 # Pooka Events - Púca Cleasaí
 
@@ -74,7 +76,9 @@ The pookas name is Púca Cleasaí. It roughly translates to Goblin Trickster.
 
 **INT. RESTAURANT - DAY - TRIGGER: Third event completed**
 
-**INT. FOREST - NIGHT (Forced) - TRIGGER: Fourth event completed**
+**INT. FOREST - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Reached**
+
+**INT. FOREST - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Not Reached**
 
 # Dullahan Events - Crom Dubh
 
@@ -88,7 +92,9 @@ The dullahans name is Crom Dubh as its known the be the Embodiment of this Celti
 
 **INT. PUB - NIGHT - TRIGGER: Third event completed**
 
-**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed**
+**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Reached**
+
+**EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Not Reached**
 
 # Influences and Narrative decisions
 
