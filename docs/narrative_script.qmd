@@ -211,42 +211,94 @@ I'll leave ya to it so. Am off to take care of da pub.
 # Player Events
 
 ### **INT. HOME - MORNING - TRIGGER: Morning after meeting the banshee**
+The PLAYER reflects on their meeting with CHAOINTE.
+
+#### Good Choice
 <center>
-*Thank god this place took me in, after the last job laid me off I couldn't land a thing.*
+
+***PLAYER***
+
+<span style="color:SlateGray">*I woke up early with my muscles aching from the exercise. It feels good to have exercised yesterday. The sleep felt so much better than usual.*</span>
+
+<span style="color:SlateGray">*Chaointe was so nice. I should make sure exercise with her again soon. I really got to learn more from her if I'm going to do a good job at the gym.*</span>
+
+<span style="color:SlateGray">*Alright time to put this new found energy to good use. Should I go to work or visit the town? Paddy doesn't seem to mind which shifts I take.*</span>
+
+</center>
+
+#### Bad Choice
+<center>
+
+***PLAYER*** 
+
+<span style="color:SlateGray">*I woke up early with my muscles aching from the exercise. My sleep was awful and I'm aching so much*</span>
+
+<span style="color:SlateGray">*I still feel weird about the interaction I've had with Chaointe. Maybe I can still make it up to her*</span>
+
+<span style="color:SlateGray">*Ehhh, I guess I should get up and try to go to work. The parents would be so disappointing If I failed at another job. I wouldn't be able to face uncle Colin after this either.*</span>
+
+</center>
+
+### **INT. HOME - MORNING - TRIGGER: Morning after meeting the pooka**
+The PLAYER reflects on their meeting with PUCA.
+
+#### Good Choice
+<center>
 </center>
 </br>
 
-### **INT. HOME - MORNING - TRIGGER: Morning after meeting the pooka**
+#### Bad Choice
+
 <center>
 *Not to judge but he looks kinda like a garden gnome.*
 </center>
 </br>
 
 ### **INT. HOME - MORNING - TRIGGER: Morning after meeting the dullaghan**
-<center>
+The PLAYER reflects on their meeting with Crom.
 
+#### Good Choice
+<center>
+</center>
+</br>
+
+#### Bad Choice
+
+<center>
 </center>
 </br>
 
 ### **INT. HOME - MORNING - TRIGGER: On completing 1/3 of the character events**
+
+The PLAYER has well and truly accepted their role at the gym. It's starting to seem like they may have found a place where they belong. The PLAYER and ST. PADDY have a chat with some banter while PADDY checks in on the PLAYER.
+
 <center>
 
 </center>
 </br>
 
 ### **INT. HOME - MORNING - TRIGGER: On completing 1/2 of the character events**
+
+The PLAYER meets paddy they catch up. They discuss the players success so far but conflict arises as ST. PADDY is looking to retire and move on from managing the gym.
+
 <center>
 
 </center>
 </br>
 
 ### **INT. HOME - MORNING - TRIGGER: On completing 2/3 of the character events**
+
+The retirement is looming. The PLAYER and ST. PADDY have a heated discussion about the gym. The PLAYER is willing to take over but PADDY is not sure if a changeling is fit for the job revealing the main characters true nature. Doubt settles in and the conflict is at its peak. The players past is also revealed.
+
 <center>
 
 </center>
 </br>
 
 ### **INT. HOME - MORNING - TRIGGER: On completing all character endings**
+
+On successful completion of all character events without bad endings, The PLAYER and ST. PADDY meet once more. PADDY is impressed with the players determination to help others and decides that the PLAYER is fit to take over. The story comes to a close.
+
 <center>
 
 </center>
@@ -259,7 +311,84 @@ The banshees name is Chaointe Doran. It roughly translates to Lamenting Wonderer
 ### **INT. GYM - DAY - TRIGGER: First Day At Work**
 <center>
 
+***PLAYER***
+
+Hey, my name is {{NAME}}. I'm new here. how can I help you today?
+
+***CHAOINTE***
+
+H-Hi, I-i'm C-Chaointe Doran. It's nice to meet you {{NAME}}. I'm here to work out. W-would you like to join me please?
+
+***PLAYER***
+
+Yeah sure.
+
+<span style="color:SlateGray">*We started our workout. An uncomfortable silence loomed over us and the exercising feels excruciating. Chaointe is fidgety and looks like she has something to say but isn't. I should break the silence.*</span>
+
 </center>
+
+#### **PLAYER CHOICE:** As I keep doing I blurt out:
+
+##### **A.** This exercise is tough, how are you managing?
+
+<center>
+
+***CHAOINTE***
+
+I'm doing well b-but you seem to be struggling a bit. Y-Your form is off. You don't do this often do you?
+
+***PLAYER***
+
+Yeah your right, I don't work out much so I may not be the best option to look after this place.
+
+***CHAOINTE***
+
+Don't worry, it will take some effort but I'm sure you'll improve in no time.
+
+***PLAYER***
+
+<span style="color:SlateGray">*Chaointe helped me improve my form and as we continued to exercise it was exhausting but it felt much better.*</span>
+
+Thanks so much, this feels a lot better now.
+
+***CHAOINTE***
+
+N-no problem. Thanks for working out with me. L-let's do it again soon.
+
+***PLAYER***
+
+Looking forward to it. See you soon.
+
+<span style="color:SlateGray">*Chaointe left with a spring in her step. I finish cleaning up and head home to sleep*</span>
+
+</center>
+
+##### **B.** Whats up? Spit it out already!
+
+<center>
+
+***CHAOINTE***
+
+I-it's n-nothing. I'm so s-sorry.
+
+***PLAYER***
+
+No need to apologize. Let's keep working.
+
+<span style="color:SlateGray">*The awkward silence continued for the remainder of the workout. I'm exhausted and aching all over*</span>
+
+Phew, It's good to be done.
+
+***CHAOINTE***
+
+Y-yeah, I need to head off now. Bye.
+
+***PLAYER***
+
+<span style="color:SlateGray">*Chaointe left swiftly leaving you wondering what she had to say. I finish cleaning up and head home to sleep*</span>
+
+</center>
+
 </br>
 
 ### **INT. PUB - Night - TRIGGER: First event completed**
@@ -367,8 +496,11 @@ The dullahans name is Crom Dubh as its known the be the Embodiment of this Celti
 </br>
 
 ### **EXT. STREET - NIGHT (Forced) - TRIGGER: Fourth event completed, Friendship Threshold Not Reached**
+<center>
 
-# Influences and Narrative decisions
+</center>
+</br>
+
 
 # References
 - Curran, B. and Whitson, A. (2007) A field guide to Irish Fairies. Belfast: Appletree Press.
