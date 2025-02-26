@@ -26,7 +26,7 @@ Player->Player: Reflection in Interaction next morning
 
 This is the expected sequence of events that will take place for the beta release of the game. The events are not grouped in chronological order but instead are detailed in order of character interactions to make it easier to code these into the game. 
 
-![](../../images/narr_seq.svg)
+![](./images/narr_seq.svg)
 
 # Introductions
 
