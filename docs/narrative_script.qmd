@@ -4,6 +4,12 @@ about:
   template: solana
 ---
 
+# Sequence Diagram
+
+This is the expected sequence of events that will take place for the beta release of the game.
+
+![](../../images/narr_seq.svg)
+
 # Introductions
 
 ### **INT. GYM - DAY - TRIGGER: Character Creation Completed**
