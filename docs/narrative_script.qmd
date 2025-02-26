@@ -6,7 +6,25 @@ about:
 
 # Sequence Diagram
 
-This is the expected sequence of events that will take place for the beta release of the game.
+<!--
+
+https://bramp.github.io/js-sequence-diagrams/
+
+Introductions->Player: Game introduction plays
+Player->Banshee: PLAYER meets CHAOINTE
+Player->Player: Reflection in Interaction next morning
+Player->Introductions: PLAYER goes to gym
+Introductions->Player: PUCA introduction plays
+Player->Pooka: PLAYER meets PUCA
+Player->Player: Reflection in Interaction next morning
+Player->Introductions: PLAYER goes to gym
+Introductions->Player: CROM introduction plays
+Player->Dullahan: PLAYER meets CROM
+Player->Player: Reflection in Interaction next morning
+
+-->
+
+This is the expected sequence of events that will take place for the beta release of the game. The events are not grouped in chronological order but instead are detailed in order of character interactions to make it easier to code these into the game. 
 
 ![](../../images/narr_seq.svg)
 
@@ -122,31 +140,31 @@ The Player enters the Gym to work for a second time. St. Paddy introduces the se
 
 ***ST. PADDY***
 
-Welcome back, good to have ya here again. Ready for another day at work.
+Welcome back, good to have ya here again. Ready for another day at work?
 
 ***PLAYER***
 
-<span style="color:SlateGray">*He sounds way too happy to see me. Something tells me hes about to run off again and leave me to deal with the shortie in the corner.*</span>
+<span style="color:SlateGray">*He sounds way too happy to see me. Something tells me he's about to run off again and leave me to deal with the shortie in the corner.*</span>
 
 Aye Aye Captain!
 
 ***ST. PADDY***
 
-Lovely enthusiasm, I see your already staring down Monsieur Púca Cleasaí.
+Lovely enthusiasm, I see you're already staring down Monsieur Púca Cleasaí.
 
 Ya know its rude to stare right, tho he'd do the same. All I can do is hope your not two peas in a pod.
 
-He's a bit of a trickster you see. Whatever you do don't let him push you about ok.
+He's a bit of a trickster you see. Whatever you do, don't let him push you about OK.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I nodded back at Paddy and wondered if this guy might be a kindred spirit*</span>
+<span style="color:SlateGray">*I nodded back at Paddy and wondered if this guy might be a kindred spirit.*</span>
 
 ***ST. PADDY***
 
 With this one you have to make sure you don't let the peer pressure get to you. Don't want to do things you'll regret after all.
 
-If your not up for this your always free to leave and come back another day.
+If you're not up for this your always free to leave and come back another day.
 
 Alright, am off to my home sweet home for a pint.
 
@@ -169,7 +187,7 @@ The Player enters the Gym to work for a third time. St. Paddy introduces the thi
 
 ***PLAYER***
 
-Ahhh, T-that parson's h-head i-is...
+A-Ahhh, t-that parson's h-head i-is...
 
 <span style="color:SlateGray">*Before I could finish my sentence, Paddy put his hand over my mouth to stop me. All I could see was the severed head glaring at me from a distance.*</span>
 
@@ -183,9 +201,9 @@ C'mere to me, whatever your about to yell stuff it down deep and don't. We don't
 
 ***ST. PADDY***
 
-Calm down kid, I'm sure you've realised it by know. Everyone who comes here ain't exactly human but they are good people.
+Calm down kid, I'm sure you've realized it by know. Everyone who comes here ain't exactly human but they are good people.
 
-Our little lady over there is the headless rider herself, Corm Dubh. Try not to cross her as she has a tenancy for violence.
+Our little lady over there is the headless rider herself, Crom Dubh. Try not to cross her as she's got a tendency for violence.
 
 ***PLAYER***
 
@@ -193,11 +211,11 @@ Our little lady over there is the headless rider herself, Corm Dubh. Try not to 
 
 ***ST. PADDY***
 
-Yeah you'll be fine. Today might be a tough day on the job but you've got this after all you already meet some inhuman guests of ours. Just make sure to apologize for that outburst.
+Yeah, you'll be fine. Today might be a tough day on the job but you've got this, after all you already meet some inhuman guests of ours. Just make sure to apologize for that outburst.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I guess I'm gonna need to figure out whats up with this town. It's so odd that I may just fit right in. These misfits may be my kind of odd but should i really be here?*</span>
+<span style="color:SlateGray">*I guess I'm gonna need to figure out whats up with this town. It's so odd that I may just fit right in. These misfits may be my kind of odd but should I really be here?*</span>
 
 W-will do. Sorry for making things uncomfortable.
 
@@ -209,7 +227,7 @@ I'll leave ya to it so. Am off to take care of da pub.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*No humming today. I really soured the mood. Not a great way to start another day on the job. I should at least go and apologize*</span>
+<span style="color:SlateGray">*No humming today. I really soured the mood. Not a great way to start another day on the job. I should at least go and apologize.*</span>
 
 </center>
 </br>
@@ -250,13 +268,26 @@ The PLAYER reflects on their meeting with PUCA.
 
 #### Good Choice
 <center>
+
+***PLAYER***
+
+<span style="color:SlateGray">*We made a bit of a mess yesterday with Púca. Can't believe I got tricked into it for the mans enjoyment. I'm glad we sorted it out so quickly.*</span>
+
+<span style="color:SlateGray">*Leaving the gym in a better state then we started was great. We got to clean some stuff that doesn't usually get done.*</span>
+
 </center>
 </br>
 
 #### Bad Choice
 
 <center>
-*Not to judge but he looks kinda like a garden gnome.*
+
+***PLAYER*** 
+
+<span style="color:SlateGray">*That little garden gnome of a man had me doing to much extra work last night. I can't believe I spent so much extra time cleaning up that mess on my own.*</span>
+
+<span style="color:SlateGray">*I hope Paddy isn't too annoyed with the slight re-modelling. I couldn't fix it all alone.*</span>
+
 </center>
 </br>
 
@@ -265,12 +296,26 @@ The PLAYER reflects on their meeting with Crom.
 
 #### Good Choice
 <center>
+
+***PLAYER***
+
+<span style="color:SlateGray">*I should meet Crom again. She must have some interesting stories to tell being a dullahan and all.*</span>
+
+<span style="color:SlateGray">*I wonder what the other gym goers are. It's a delicate subject so I should take care.*</span>
+
 </center>
 </br>
 
 #### Bad Choice
 
 <center>
+
+***PLAYER***
+
+<span style="color:SlateGray">*I gotta make sure my head doesn't come off next time I meet Crom. She seems like shes got a violent streak going.*</span>
+
+<span style="color:SlateGray">*I wonder what creatures the other gym goers are. I should avoid offending them too.*</span>
+
 </center>
 </br>
 
@@ -498,7 +543,6 @@ Good lad. Lets do this!
 <span style="color:SlateGray">*We painstakingly moved everything at the gym at Púca's whim. What seemed a good idea initially turned into a big mess. I looked around and everything was placed haphazardly. I beautiful gym got turned into a tripping hazard on my watch.*</span>
 
 </center>
-</br>
 
 #### **PLAYER CHOICE:** What should I do now?
 
@@ -550,9 +594,9 @@ Yeah, fine work today
 
 </center>
 
-</br>
-
 ##### Common Dialog Post Decision
+
+<center>
 
 ***PUCA***
 
@@ -561,6 +605,9 @@ That was hard work lad. Let's have some fun again sometime. See you soon.
 ***PLAYER***
 
 Bye, See ya around.
+
+</center>
+</br>
 
 ### **INT. RESTAURANT - DAY - TRIGGER: First event completed**
 
@@ -612,7 +659,102 @@ N/A - Not in scope for beta release
 The dullahans name is Crom Dubh as its known the be the Embodiment of this Celtic God.
 
 ### **INT. GYM - DAY/NIGHT - TRIGGER: Third Day At Work**
+
 <center>
+
+***CROM***
+
+Hello Mister "A-Ahhh, t-that parson's h-head i-is..." detatched. I'm Crom Dubh.
+
+You've probably already heard of me but who might you be?
+
+***PLAYER***
+
+H-Hi, I'm {{NAME}}. Just your average Joe who started working here recently.
+
+***CROM***
+
+Average...Interesting...You seem to have gotten over headless solders quicker then most. So what do you need?
+
+</center>
+
+#### **PLAYER CHOICE:** Crom doesn't seem to worried about my outburst. What should I do?
+
+##### **A.** Apologise, reflecting on your moment of panic.
+
+<center>
+
+***PLAYER***
+
+I'm so sorry about my panicked outburst earlier. I assumed the worst. I thought someone had died.
+
+***CROM***
+
+Interesting, people usually jump like that from fear when they see me.
+
+***PLAYER***
+
+Well there was probably a small bit of that too when I seen you move.
+
+***CROM***
+
+That's OK, you seem like an honest fellow. You also took the time to apologies to me too.
+
+***PLAYER***
+
+Thanks for being so accepting of my mistake. It won't happen again.
+
+***CROM***
+
+No problem. I do love a good jump scare. Twas a bit of fun.
+
+***PLAYER***
+
+<span style="color:SlateGray">*The apology went well. It seems like Crom is well used to this kind of thing. Makes me wonder what kind of life she must lead.*</span>
+
+Do you need help with anything today?
+
+***CROM***
+
+No, just wrapping up my exercises. I'll be done and gone soon. Let's chat again some other day.
+
+***PLAYER***
+
+Sounds good.
+
+<span style="color:SlateGray">*I left Crom to her own devices while I tidied up and filled out some paperwork. Once she left I wrapped up too.*</span>
+
+</center>
+
+##### **B.** Ask to hold her head.
+
+<center>
+
+***PLAYER***
+
+Could I maybe hold your head?
+
+***CROM***
+
+NO!...How dare you make such an insolent request. You must have a death wish.
+
+***PLAYER***
+
+<span style="color:SlateGray">*I just made a bad situation worse. Crom is staring daggers at me and I worry my head may not stay on its solders for long either.*</span>
+
+S-Sorry, I-I just...
+
+***CROM***
+
+You just what!? My patience is running thin. You ruined my exercising session. I should have you're head for this.
+
+Your lucky Patrick is in charge here. I owe him a debt of gratitude so I'll let this one slide.
+
+I'm heading off before anything else comes out of that fun-sized brain of yours.
+
+***PLAYER***
+
+<span style="color:SlateGray">*Corm stomped away while I stood there in silence to avoid making things worse. Paddy, my savior I have failed thee. I tidied up and left for the day.*</span>
 
 </center>
 </br>

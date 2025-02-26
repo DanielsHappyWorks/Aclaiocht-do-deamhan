@@ -1,5 +1,5 @@
 ---
-title: "Dev Log"
+title: "Production Journal"
 listing:
   contents: posts
   sort: "date desc"
