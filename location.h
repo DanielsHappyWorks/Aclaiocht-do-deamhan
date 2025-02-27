@@ -7,6 +7,7 @@ class Location {
         std::string name;
         std::string type;
         Vector2 overworldLocation;
+        Rectangle exit;
 
         Texture2D building;
         Texture2D background;
@@ -18,4 +19,6 @@ class Location {
 
         std::string getName();
         std::string getType();
+        Rectangle getExit();
+        Rectangle getBuildingRect();
 };

@@ -15,4 +15,5 @@ class OverworldScene : public Scene {
         void update();
         void draw();
         bool isDone();
+        void debug();
 };

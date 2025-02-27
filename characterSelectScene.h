@@ -18,4 +18,5 @@ class CharacterSelectScene : public Scene {
         void update();
         void draw();
         bool isDone();
+        void debug();
 };

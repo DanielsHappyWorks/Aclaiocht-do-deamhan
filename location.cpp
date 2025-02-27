@@ -8,6 +8,7 @@ Location::Location(std::string building, std::string background, std::string nam
 
     this->background = LoadTexture(background.c_str());
     this->building = LoadTexture(building.c_str());
+    this->exit = {350, 570, 120, 30};
 }
 
 Location::~Location() {
@@ -29,4 +30,13 @@ std::string Location::getName() {
 
 std::string Location::getType() {
     return type;
+}
+
+Rectangle Location::getExit(){
+    return exit;
+}
+
+Rectangle Location::getBuildingRect(){
+    float buffer = 20.0f;
+    return {overworldLocation.x + buffer, overworldLocation.y + buffer, building.width - buffer*2, building.height - buffer*2};
 }

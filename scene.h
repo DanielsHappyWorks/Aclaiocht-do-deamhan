@@ -5,4 +5,5 @@ class Scene {
         virtual bool isDone() = 0;
         virtual void update() = 0;
         virtual void draw() = 0;
+        virtual void debug() = 0;
 };

@@ -3,6 +3,9 @@
 #include "inputManager.h"
 #include "locationFactory.h"
 #include "raymath.h"
+#include "inputManager.h"
+#include "locationScene.h"
+#include "sceneManager.h"
 #include <string>
 
 OverworldScene::OverworldScene() {
@@ -18,34 +21,14 @@ OverworldScene::~OverworldScene() {
 }
 
 void OverworldScene::update() {
-    Vector2 movement = InputManager::GetInstance()->getMovement();
-    movement = Vector2Scale(movement, playerSpeed);
-    movement = Vector2Scale(movement, GetFrameTime());
+    playerPos = Player::GetInstance()->move(playerPos, playerSpeed, playerScale);
 
-    Vector2 nextPos = Vector2Add(playerPos, movement);
-
-    if (nextPos.x <= 0) {
-        nextPos.x = 0;
-    }
-
-    if (nextPos.y <= 0) {
-        nextPos.y = 0;
-    }
-
-    Texture2D playerSprite = Player::GetInstance()->getCurrentSprite();
-
-    if (nextPos.x >= GetScreenWidth() - playerSprite.width * playerScale) {
-        nextPos.x = GetScreenWidth() - playerSprite.width * playerScale;
-    }
-
-    if (nextPos.y >= GetScreenHeight() - playerSprite.height * playerScale) {
-        nextPos.y = GetScreenHeight() - playerSprite.height * playerScale;
-    }
-
-    Player::GetInstance()->animateCharacter(movement, playerPos, nextPos);
-
-    if (nextPos.x != 0) {
-        playerPos = nextPos;
+    if (InputManager::GetInstance()->isInteracting()) {
+        for (Location* loc : LocationFactory::GetInstance()->getLocations()) {
+            if (CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), loc->getBuildingRect())) {
+                SceneManager::GetInstance()->setCurrentScene(new LocationScene(loc));
+            }
+        }
     }
 }
 
@@ -55,10 +38,18 @@ void OverworldScene::draw() {
     for (Location* loc : LocationFactory::GetInstance()->getLocations()) {
         loc->drawBuilding();
     }
- 
-    DrawTextureEx(Player::GetInstance()->getCurrentSprite(), playerPos, 0.0f, playerScale, WHITE);
+
+    Player::GetInstance()->draw(playerPos, playerScale);
 }
 
 bool OverworldScene::isDone() {
     return false;
+}
+
+void OverworldScene::debug() {
+    DrawRectangleLinesEx(Player::GetInstance()->getCollisionRect(playerPos, playerScale), 2.0f, GREEN);
+
+    for (Location* loc : LocationFactory::GetInstance()->getLocations()) {
+        DrawRectangleLinesEx(loc->getBuildingRect(), 2.0f, GREEN);
+    }
 }

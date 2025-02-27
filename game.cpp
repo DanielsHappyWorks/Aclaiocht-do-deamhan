@@ -1,13 +1,12 @@
 #include "game.h"
 #include "raygui.h"
-#include "characterSelectScene.h"
-#include "overworldScene.h"
-#include "locationScene.h"
+#include "scene.h"
 #include "locationFactory.h"
 #include "player.h"
+#include "sceneManager.h"
 
 // When set to true renders in-game debug options
-#define DEBUG false
+#define DEBUG true
 
 Game::Game()
 {
@@ -16,10 +15,6 @@ Game::Game()
 
     InitWindow(screenWidth, screenHeight, "Exercise Your Demons");
     SetTargetFPS(60);
-
-    defaultScene = new OverworldScene();
-    currentScene = new CharacterSelectScene();
-    nextScene = new LocationScene(LocationFactory::GetInstance()->getByType("Gym"));
 }
 
 Game::~Game()
@@ -31,17 +26,8 @@ Game::~Game()
 
 void Game::update()
 {
-    if (currentScene != nullptr) {
-        currentScene->update();
-
-        if (currentScene->isDone() && nextScene != nullptr) {
-            currentScene = nextScene;
-            nextScene = nullptr;
-        }
-        if (currentScene->isDone()) {
-            currentScene = defaultScene;
-        }
-    }
+    currentScene = SceneManager::GetInstance()->getCurrentScene();
+    currentScene->update();
 }
 
 void Game::draw()
@@ -54,8 +40,9 @@ void Game::draw()
     DrawText("@BoopDood", screenWidth - 130, screenHeight - 35, 20, BLUE);
 
     if (DEBUG) {
-        //TODO draw any debug tools
+        currentScene->debug();
     }
+
     EndDrawing();
 }
 

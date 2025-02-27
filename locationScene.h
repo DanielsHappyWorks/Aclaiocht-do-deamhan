@@ -10,10 +10,13 @@ class LocationScene : public Scene {
         Vector2 playerPos;
         float playerSpeed;
         float playerScale;
+
+        bool done;
     public:
         LocationScene(Location* location);
         ~LocationScene();
         void update();
         void draw();
         bool isDone();
+        void debug();
 };

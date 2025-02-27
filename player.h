@@ -30,4 +30,7 @@ class Player {
         Texture2D getCurrentSprite();
         void setDetails(bool gender, char* name);
         void animateCharacter(Vector2 movement, Vector2 currentPos, Vector2 nextPos);
+        Vector2 move(Vector2 playerPos, float playerSpeed, float playerScale);
+        void draw(Vector2 playerPos, float playerScale);
+        Rectangle getCollisionRect(Vector2 playerPos, float playerScale);
 };
