@@ -9,6 +9,7 @@ class Game {
 
         Scene* defaultScene;
         Scene* currentScene;
+        Scene* nextScene;
 
         void update();
         void draw();

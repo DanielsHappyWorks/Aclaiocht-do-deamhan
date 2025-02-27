@@ -2,6 +2,8 @@
 #include "raygui.h"
 #include "characterSelectScene.h"
 #include "overworldScene.h"
+#include "locationScene.h"
+#include "locationFactory.h"
 #include "player.h"
 
 // When set to true renders in-game debug options
@@ -17,6 +19,7 @@ Game::Game()
 
     defaultScene = new OverworldScene();
     currentScene = new CharacterSelectScene();
+    nextScene = new LocationScene(LocationFactory::GetInstance()->getByType("Gym"));
 }
 
 Game::~Game()
@@ -31,6 +34,10 @@ void Game::update()
     if (currentScene != nullptr) {
         currentScene->update();
 
+        if (currentScene->isDone() && nextScene != nullptr) {
+            currentScene = nextScene;
+            nextScene = nullptr;
+        }
         if (currentScene->isDone()) {
             currentScene = defaultScene;
         }

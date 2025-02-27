@@ -1,23 +1,21 @@
-#include "overworldScene.h"
+#include "locationScene.h"
 #include "player.h"
 #include "inputManager.h"
-#include "locationFactory.h"
 #include "raymath.h"
 #include <string>
 
-OverworldScene::OverworldScene() {
+LocationScene::LocationScene(Location* location) {
+    this->location = location;
     playerPos = {406, 218};
     playerSpeed = 160;
-    playerScale = 0.35f;
-
-    background = LoadTexture("assets/images/locations/map.png");
+    playerScale = 0.7f;
 }
 
-OverworldScene::~OverworldScene() {
-    UnloadTexture(background);
+LocationScene::~LocationScene() {
+
 }
 
-void OverworldScene::update() {
+void LocationScene::update() {
     Vector2 movement = InputManager::GetInstance()->getMovement();
     movement = Vector2Scale(movement, playerSpeed);
     movement = Vector2Scale(movement, GetFrameTime());
@@ -49,16 +47,11 @@ void OverworldScene::update() {
     }
 }
 
-void OverworldScene::draw() {
-    DrawTextureEx(background, (Vector2){0, 0}, 0.0f, 1.0f, WHITE);
-
-    for (Location* loc : LocationFactory::GetInstance()->getLocations()) {
-        loc->drawBuilding();
-    }
- 
+void LocationScene::draw() {
+    location->drawInterior();
     DrawTextureEx(Player::GetInstance()->getCurrentSprite(), playerPos, 0.0f, playerScale, WHITE);
 }
 
-bool OverworldScene::isDone() {
+bool LocationScene::isDone() {
     return false;
 }

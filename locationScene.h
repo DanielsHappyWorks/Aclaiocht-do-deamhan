@@ -1,17 +1,18 @@
 #pragma once
 #include "scene.h"
+#include "location.h"
 #include "raylib.h"
 
-class OverworldScene : public Scene {
+class LocationScene : public Scene {
     private:
-        Texture2D background;
+        Location* location;
         
         Vector2 playerPos;
         float playerSpeed;
         float playerScale;
     public:
-        OverworldScene();
-        ~OverworldScene();
+        LocationScene(Location* location);
+        ~LocationScene();
         void update();
         void draw();
         bool isDone();
