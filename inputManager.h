@@ -14,4 +14,5 @@ class InputManager {
 
         Vector2 getMovement();
         bool isInteracting();
+        bool isClickRect(Rectangle rect);
 };

@@ -4,6 +4,7 @@
 #include "locationScene.h"
 #include "locationFactory.h"
 #include "sceneManager.h"
+#include "inputManager.h"
 
 CharacterSelectScene::CharacterSelectScene()
 {
@@ -19,8 +20,13 @@ CharacterSelectScene::~CharacterSelectScene()
 
 void CharacterSelectScene::update()
 {
-    // TODO update player
-    // TODO notify game of scene completion
+    if (InputManager::GetInstance()->isClickRect({(float)GetScreenWidth() / 3 - maleBody.width / 2, 100, (float)maleBody.width, (float)maleBody.height})) {
+        toggleSliderActive = false;
+        selectedGender = false;
+    } else if (InputManager::GetInstance()->isClickRect({(float)GetScreenWidth() / 3 * 2 - femaleBody.width / 2, 100, (float)femaleBody.width, (float)femaleBody.height})) {
+        toggleSliderActive = true;
+        selectedGender = true;
+    }
 }
 
 void CharacterSelectScene::draw()

@@ -41,7 +41,15 @@ Vector2 InputManager::getMovement() {
 }
 
 bool InputManager::isInteracting() {
-    if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_E)){
+    if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_E) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
+        return true;
+    }
+
+    return false;
+}
+
+bool InputManager::isClickRect(Rectangle rect) {
+    if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), rect)) {
         return true;
     }
 
