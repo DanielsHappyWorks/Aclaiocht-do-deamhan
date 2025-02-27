@@ -21,12 +21,20 @@ Game::~Game()
 {
     CloseWindow();
 
-    //TODO cleanup scene!!!!!
+    //TODO cleanup?
 }
 
 void Game::update()
 {
+    //TODO migrate this to scene manager!
+    overlayScene = SceneManager::GetInstance()->getSceneOverlay();
     currentScene = SceneManager::GetInstance()->getCurrentScene();
+
+    if (overlayScene != nullptr) {
+        overlayScene->update();
+        return;
+    }
+
     currentScene->update();
 }
 
@@ -36,6 +44,10 @@ void Game::draw()
     ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
 
     currentScene->draw();
+
+    if (overlayScene != nullptr) {
+        overlayScene->draw();
+    }
 
     DrawText("@BoopDood", screenWidth - 130, screenHeight - 35, 20, BLUE);
 

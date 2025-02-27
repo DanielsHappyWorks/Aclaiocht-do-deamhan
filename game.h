@@ -7,9 +7,8 @@ class Game {
         int screenWidth;
         int screenHeight;
 
-        Scene* defaultScene;
         Scene* currentScene;
-        Scene* nextScene;
+        Scene* overlayScene;
 
         void update();
         void draw();

@@ -12,6 +12,8 @@ class SceneManager {
         Scene* defaultScene;
         Scene* currentScene;
         Scene* nextScene;
+
+        Scene* overlayScene;
     public:
         SceneManager(SceneManager &other) = delete;
         void operator=(const SceneManager &) = delete;
@@ -19,4 +21,6 @@ class SceneManager {
 
         Scene* getCurrentScene();
         void setCurrentScene(Scene* scene);
+        Scene* getSceneOverlay();
+        void setSceneOverlay(Scene* scene);
 };

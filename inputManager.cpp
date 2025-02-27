@@ -41,7 +41,7 @@ Vector2 InputManager::getMovement() {
 }
 
 bool InputManager::isInteracting() {
-    if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_E) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
+    if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_E) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         return true;
     }
 

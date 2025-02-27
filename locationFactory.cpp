@@ -1,4 +1,5 @@
 #include "locationFactory.h"
+#include "narrativeSceneFactory.h"
 
 LocationFactory* LocationFactory::locationFactory = nullptr;
 
@@ -19,7 +20,8 @@ LocationFactory::LocationFactory() {
             "assets/images/locations/gym_indoor.png",
             "Tír na Sioga",
             "Gym",
-            {550, 20}
+            {550, 20},
+            NarrativeSceneFactory::GetInstance()->getGymEvents()
     ));
 
     locations.push_back(
@@ -28,7 +30,8 @@ LocationFactory::LocationFactory() {
             "assets/images/locations/gym_indoor.png",
             "Sentra",
             "Item Shop",
-            {70, 260}
+            {70, 260},
+            {}
     ));
 
     locations.push_back(
@@ -37,7 +40,8 @@ LocationFactory::LocationFactory() {
             "assets/images/locations/gym_indoor.png",
             "Supperwacks",
             "Restaurant",
-            {180, -30}
+            {180, -30},
+            {}
     ));
 
     locations.push_back(
@@ -46,7 +50,8 @@ LocationFactory::LocationFactory() {
             "assets/images/locations/gym_indoor.png",
             "Paddys Pub",
             "Pub",
-            {385, 320}
+            {385, 320},
+            {}
     ));
 }
 

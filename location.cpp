@@ -1,7 +1,8 @@
 #include "location.h"
+#include "sceneManager.h"
 
 
-Location::Location(std::string building, std::string background, std::string name, std::string type, Vector2 overworldLocation) {
+Location::Location(std::string building, std::string background, std::string name, std::string type, Vector2 overworldLocation, std::vector<NarrativeScene*> events) {
     this->name = name;
     this->type = type;
     this->overworldLocation = overworldLocation;
@@ -9,6 +10,8 @@ Location::Location(std::string building, std::string background, std::string nam
     this->background = LoadTexture(background.c_str());
     this->building = LoadTexture(building.c_str());
     this->exit = {350, 570, 120, 30};
+    this->events = events;
+    this->currentEvent = 0;
 }
 
 Location::~Location() {
@@ -39,4 +42,15 @@ Rectangle Location::getExit(){
 Rectangle Location::getBuildingRect(){
     float buffer = 20.0f;
     return {overworldLocation.x + buffer, overworldLocation.y + buffer, building.width - buffer*2, building.height - buffer*2};
+}
+
+void Location::playAnyForcedEvents() {
+    if (events.size() <= currentEvent) {
+        return;
+    }
+
+    if (events[currentEvent]->isForced()) {
+        SceneManager::GetInstance()->setSceneOverlay(events[currentEvent]);
+        currentEvent++;
+    }
 }

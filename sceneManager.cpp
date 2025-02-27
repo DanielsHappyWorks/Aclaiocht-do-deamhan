@@ -15,6 +15,7 @@ SceneManager *SceneManager::GetInstance()
 }
 
 SceneManager::SceneManager() {
+    overlayScene = nullptr;
     defaultScene = new OverworldScene();
     currentScene = new CharacterSelectScene();
 }
@@ -44,4 +45,22 @@ Scene* SceneManager::getCurrentScene() {
 void SceneManager::setCurrentScene(Scene* scene) {
     //this->nextScene->destroy();
     this->nextScene = scene;
+}
+
+
+//TODO maybe change the scene to a stack?
+Scene* SceneManager::getSceneOverlay() {
+    if (overlayScene == nullptr) {
+        return overlayScene;
+    }
+
+    if (overlayScene->isDone()) {
+        overlayScene = nullptr;
+    }
+
+    return overlayScene;
+}
+
+void SceneManager::setSceneOverlay(Scene* scene) {
+    overlayScene = scene;
 }

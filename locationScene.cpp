@@ -22,6 +22,8 @@ void LocationScene::update() {
     if (InputManager::GetInstance()->isInteracting() && CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), location->getExit())) {
         done = true;
     }
+
+    location->playAnyForcedEvents();
 }
 
 void LocationScene::draw() {
