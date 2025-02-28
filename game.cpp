@@ -4,9 +4,10 @@
 #include "locationFactory.h"
 #include "player.h"
 #include "sceneManager.h"
+#include "fontManager.h"
 
 // When set to true renders in-game debug options
-#define DEBUG true
+#define DEBUG false
 
 Game::Game()
 {
@@ -15,6 +16,9 @@ Game::Game()
 
     InitWindow(screenWidth, screenHeight, "Exercise Your Demons");
     SetTargetFPS(60);
+
+    GuiSetFont(FontManager::GetInstance()->getFont());
+    GuiSetStyle(DEFAULT, TEXT_SIZE, 18); 
 }
 
 Game::~Game()
@@ -49,10 +53,11 @@ void Game::draw()
         overlayScene->draw();
     }
 
-    DrawText("@BoopDood", screenWidth - 130, screenHeight - 35, 20, BLUE);
+    DrawTextEx(FontManager::GetInstance()->getFont(), "@BoopDood", {(float)screenWidth - 130, (float)screenHeight - 35}, 20, FontManager::GetInstance()->getSpacing(), BLUE);
 
     if (DEBUG) {
         currentScene->debug();
+        DrawFPS(screenWidth - 80, 10);
     }
 
     EndDrawing();

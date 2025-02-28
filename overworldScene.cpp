@@ -9,7 +9,7 @@
 #include <string>
 
 OverworldScene::OverworldScene() {
-    playerPos = {406, 218};
+    playerPos = {420, 250};
     playerSpeed = 160;
     playerScale = 0.35f;
 

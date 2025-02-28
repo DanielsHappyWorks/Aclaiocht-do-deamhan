@@ -2,16 +2,17 @@
 #include "sceneManager.h"
 
 
-Location::Location(std::string building, std::string background, std::string name, std::string type, Vector2 overworldLocation, std::vector<NarrativeScene*> events) {
+Location::Location(std::string building, std::string background, std::string name, std::string type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart) {
     this->name = name;
     this->type = type;
     this->overworldLocation = overworldLocation;
 
     this->background = LoadTexture(background.c_str());
     this->building = LoadTexture(building.c_str());
-    this->exit = {350, 570, 120, 30};
+    this->exit = exit;
     this->events = events;
     this->currentEvent = 0;
+    this->playerStart = playerStart; 
 }
 
 Location::~Location() {
@@ -35,11 +36,15 @@ std::string Location::getType() {
     return type;
 }
 
-Rectangle Location::getExit(){
+Rectangle Location::getExit() {
     return exit;
 }
 
-Rectangle Location::getBuildingRect(){
+Vector2 Location::getPlayerStart() {
+    return playerStart;
+}
+
+Rectangle Location::getBuildingRect() {
     float buffer = 20.0f;
     return {overworldLocation.x + buffer, overworldLocation.y + buffer, building.width - buffer*2, building.height - buffer*2};
 }

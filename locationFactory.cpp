@@ -21,37 +21,45 @@ LocationFactory::LocationFactory() {
             "Tír na Sioga",
             "Gym",
             {550, 20},
-            NarrativeSceneFactory::GetInstance()->getGymEvents()
+            {350, 500, 120, 100},
+            NarrativeSceneFactory::GetInstance()->getGymEvents(),
+            {415, 600}
     ));
 
     locations.push_back(
         new Location(
             "assets/images/locations/sentra.png",
-            "assets/images/locations/gym_indoor.png",
+            "assets/images/locations/sentra_indoor.png",
             "Sentra",
             "Item Shop",
             {70, 260},
-            {}
+            {310, 490, 140, 110},
+            {},
+            {365, 600}
     ));
 
     locations.push_back(
         new Location(
             "assets/images/locations/supperwacks.png",
-            "assets/images/locations/gym_indoor.png",
+            "assets/images/locations/supperwacks_indoor.png",
             "Supperwacks",
             "Restaurant",
             {180, -30},
-            {}
+            {680, 260, 120, 120},
+            {},
+            {750, 350}
     ));
 
     locations.push_back(
         new Location(
             "assets/images/locations/pub.png",
-            "assets/images/locations/gym_indoor.png",
+            "assets/images/locations/pub_indoor.png",
             "Paddys Pub",
             "Pub",
             {385, 320},
-            {}
+            {0, 280, 130, 130},
+            {},
+            {70, 370}
     ));
 }
 

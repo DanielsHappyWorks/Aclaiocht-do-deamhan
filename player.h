@@ -22,6 +22,11 @@ class Player {
         Texture2D female_side_r;
 
         Texture2D currentSprite;
+
+        float bop_factor;
+        float bop_speed;
+        float swagger;
+        float swagger_speed;
     public:
         Player(Player &other) = delete;
         void operator=(const Player &) = delete;

@@ -7,8 +7,8 @@
 LocationScene::LocationScene(Location* location) {
     this->location = location;
     this->done = false;
-    playerPos = {406, 218};
-    playerSpeed = 160;
+    playerPos = location->getPlayerStart();
+    playerSpeed = 210;
     playerScale = 0.7f;
 }
 
@@ -19,7 +19,9 @@ LocationScene::~LocationScene() {
 void LocationScene::update() {
     playerPos = Player::GetInstance()->move(playerPos, playerSpeed, playerScale);
 
-    if (InputManager::GetInstance()->isInteracting() && CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), location->getExit())) {
+    if (InputManager::GetInstance()->isInteracting() && 
+        (CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), location->getExit()) || 
+            InputManager::GetInstance()->isClickRect(location->getExit()))) {
         done = true;
     }
 
