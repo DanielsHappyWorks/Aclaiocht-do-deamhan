@@ -44,6 +44,10 @@ void NarrativeScene::draw() {
 }
 
 bool NarrativeScene::isDone() {
+    if (done) {
+        SoundManager::GetInstance()->playMusic(MUSIC_DAY);
+    }
+
     return done;
 }
 

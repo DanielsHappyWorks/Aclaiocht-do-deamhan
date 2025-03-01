@@ -19,11 +19,12 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
     gymEvents.push_back(new NarrativeScene({
         //TODO string replacemensts
         //TODO pass the character ref????
-        new TextNode("PLAYER", "Finally arrived. Uncle Colin really pulled through for me here."),
-        new TextNode("PLAYER", "Not sure I could have landed this gig without him."),
-        new TextNode("ST. PADDY", "Ahh you finally made it. The name is Paddy."),
-        new TextNode("ST. PADDY", "I'm the manager of this here joint. Tír na Síoga we call it."),
-        new TextNode("PLAYER", "I'm {{NAME}}, thank you for taking me on on such short notice.")
+        new TextNode("PLAYER", "Finally arrived. Uncle Colin really pulled through for me here.", GRAY),
+        new TextNode("PLAYER", "Not sure I could have landed this gig without him.", GRAY),
+        new MoodNode(MUSIC_SHINNANIGANS),
+        new TextNode("ST. PADDY", "Ahh you finally made it. The name is Paddy.", BLACK),
+        new TextNode("ST. PADDY", "I'm the manager of this here joint. Tír na Síoga we call it.", BLACK),
+        new TextNode("PLAYER", "I'm {{NAME}}, thank you for taking me on on such short notice.", BLACK)
     }, new LocationCondition("Gym"), true));
 
 

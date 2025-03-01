@@ -5,6 +5,7 @@
 #include "player.h"
 #include "sceneManager.h"
 #include "fontManager.h"
+#include "soundManager.h"
 
 // When set to true renders in-game debug options
 #define DEBUG false
@@ -18,7 +19,7 @@ Game::Game()
     SetTargetFPS(60);
 
     GuiSetFont(FontManager::GetInstance()->getFont());
-    GuiSetStyle(DEFAULT, TEXT_SIZE, 18); 
+    GuiSetStyle(DEFAULT, TEXT_SIZE, 18);
 }
 
 Game::~Game()
@@ -30,6 +31,8 @@ Game::~Game()
 
 void Game::update()
 {
+    SoundManager::GetInstance()->update();
+
     //TODO migrate this to scene manager!
     overlayScene = SceneManager::GetInstance()->getSceneOverlay();
     currentScene = SceneManager::GetInstance()->getCurrentScene();
