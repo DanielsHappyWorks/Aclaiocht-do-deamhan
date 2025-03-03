@@ -97,10 +97,9 @@ void CharacterSelectScene::draw()
 
 bool CharacterSelectScene::isDone()
 {
-    Player::GetInstance()->setDetails(selectedGender, name);
-
     if (characterCompleted)
     {
+        Player::GetInstance()->setDetails(selectedGender, name);
         SceneManager::GetInstance()->setCurrentScene(new LocationScene(LocationFactory::GetInstance()->getByType("Gym")));
     }
 

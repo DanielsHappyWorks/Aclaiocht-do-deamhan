@@ -30,6 +30,8 @@ Player::Player() {
     bop_factor = 1.0f;
     swagger = 0.0f;
     swagger_speed = 0.5f;
+
+    character = new Character(name, PLAYER, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
 }
 
 Player::~Player() {
@@ -48,6 +50,12 @@ void Player::setDetails(bool gender, char* name) {
     this->currentSprite = gender ? female_front : male_front;
     this->gender = gender;
     this->name = name;
+
+    if (gender) {
+        character = new Character(name, PLAYER, {}, {}, "assets/images/characters/mc/player_front_female.png", "assets/images/characters/mc/player_side_female.png");
+    } else {
+        character = new Character(name, PLAYER, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
+    }
 }
 
 Texture2D Player::getCurrentSprite() {
@@ -130,4 +138,8 @@ void Player::animateCharacter(Vector2 movement, Vector2 currentPos, Vector2 next
 
 Rectangle Player::getCollisionRect(Vector2 playerPos, float playerScale) {
     return {playerPos.x - currentSprite.width/2 * playerScale, playerPos.y - currentSprite.height * playerScale, currentSprite.width * playerScale, currentSprite.height * playerScale};
+}
+
+Character* Player::getCharacter() {
+    return character;
 }

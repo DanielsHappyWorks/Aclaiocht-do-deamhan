@@ -23,7 +23,7 @@ url("./bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("woff");
   line-height: 1;
   vertical-align: -.125em;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: DARKGRAYscale;
 }
 
 .bi-123::before { content: "\f67f"; }

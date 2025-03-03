@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "raylib.h"
+#include "character.h"
 
 class Player {
     protected:
@@ -23,6 +24,8 @@ class Player {
 
         Texture2D currentSprite;
 
+        Character* character;
+
         float bop_factor;
         float bop_speed;
         float swagger;
@@ -38,4 +41,5 @@ class Player {
         Vector2 move(Vector2 playerPos, float playerSpeed, float playerScale);
         void draw(Vector2 playerPos, float playerScale);
         Rectangle getCollisionRect(Vector2 playerPos, float playerScale);
+        Character* getCharacter();
 };

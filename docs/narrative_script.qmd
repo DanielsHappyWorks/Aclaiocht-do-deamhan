@@ -37,7 +37,7 @@ Plays after the character creation acting as a tutorial for the game while intro
 <center>
 ***PLAYER***
 
-<span style="color:SlateGray">*Finally arrived. Uncle Colin really pulled through for me here. Not sure I could have landed this gig without him. Better make sure to thank him soon. 'Tis been hard the last few weeks.*</span>
+<span style="color:SlateDARKGRAY">*Finally arrived. Uncle Colin really pulled through for me here. Not sure I could have landed this gig without him. Better make sure to thank him soon. 'Tis been hard the last few weeks.*</span>
 
 ***ST. PADDY***
 
@@ -58,7 +58,7 @@ Good chap that one. What are your thoughts on the place so far? We have some goo
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Land of the Fairies on Fairy Island, what a name! I hope this place isn't filled with nutcases.*</span>
+<span style="color:SlateDARKGRAY">*Land of the Fairies on Fairy Island, what a name! I hope this place isn't filled with nutcases.*</span>
 
 Only had a quick look around after the boat from Galway arrived. Seems a nice and quaint island.
 
@@ -70,7 +70,7 @@ Grand, let's put you right to work so.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Need to put my best foot forward here, can't put this opportunity to waste.*</span>
+<span style="color:SlateDARKGRAY">*Need to put my best foot forward here, can't put this opportunity to waste.*</span>
 
 Sounds good, where should I start?
 
@@ -84,7 +84,7 @@ Make sure to treat 'em well, they need good people to spend some time with.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Ugh, I was hoping for a more low-key role here. Blending in with the wallpaper would be nice. Meeting new people is a real tough ask but I can't let me family down again.*</span>
+<span style="color:SlateDARKGRAY">*Ugh, I was hoping for a more low-key role here. Blending in with the wallpaper would be nice. Meeting new people is a real tough ask but I can't let me family down again.*</span>
 
 Ok, I'll do my best.
 
@@ -106,7 +106,7 @@ If you take it slow, I'm sure she'll warm up to ya in no time.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Wow shes a looker but she does seem fidgety about my presence here. If Paddy didn't point her out I'm not sure I'd have seen her. Her presence seems so faint.*</span>
+<span style="color:SlateDARKGRAY">*Wow shes a looker but she does seem fidgety about my presence here. If Paddy didn't point her out I'm not sure I'd have seen her. Her presence seems so faint.*</span>
 
 ***ST. PADDY***
 
@@ -114,7 +114,7 @@ The people she gets to know don't stick around for long so take care to be a goo
 
 ***PLAYER***
 
-<span style="color:SlateGray">*The way he said that first part sent chills down my spine. 'Tis odd but it can't be that bad right?*</span>
+<span style="color:SlateDARKGRAY">*The way he said that first part sent chills down my spine. 'Tis odd but it can't be that bad right?*</span>
 
 ***ST. PADDY***
 
@@ -124,7 +124,7 @@ Take care now, am off to cater my pride and joy so. Oh ho ho! Paddy's Pub we'll 
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Paddy waddled off humming such a joyful tune; I wonder what it was. Alright time to get to it. It's not like Chaointe bites, right?!*</span>
+<span style="color:SlateDARKGRAY">*Paddy waddled off humming such a joyful tune; I wonder what it was. Alright time to get to it. It's not like Chaointe bites, right?!*</span>
 
 </center>
 
@@ -144,7 +144,7 @@ Welcome back, good to have ya here again. Ready for another day at work?
 
 ***PLAYER***
 
-<span style="color:SlateGray">*He sounds way too happy to see me. Something tells me he's about to run off again and leave me to deal with the shortie in the corner.*</span>
+<span style="color:SlateDARKGRAY">*He sounds way too happy to see me. Something tells me he's about to run off again and leave me to deal with the shortie in the corner.*</span>
 
 Aye Aye Captain!
 
@@ -158,7 +158,7 @@ He's a bit of a trickster you see. Whatever you do, don't let him push you about
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I nodded back at Paddy and wondered if this guy might be a kindred spirit.*</span>
+<span style="color:SlateDARKGRAY">*I nodded back at Paddy and wondered if this guy might be a kindred spirit.*</span>
 
 ***ST. PADDY***
 
@@ -170,7 +170,7 @@ Alright, am off to my home sweet home for a pint.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*What a man, so much joy but hes only got the pub on his mind. I wonder if I'll ever have a place like that.*</span>
+<span style="color:SlateDARKGRAY">*What a man, so much joy but hes only got the pub on his mind. I wonder if I'll ever have a place like that.*</span>
 
 See you soon boss!
 </center>
@@ -189,7 +189,7 @@ The Player enters the Gym to work for a third time. St. Paddy introduces the thi
 
 A-Ahhh, t-that parson's h-head i-is...
 
-<span style="color:SlateGray">*Before I could finish my sentence, Paddy put his hand over my mouth to stop me. All I could see was the severed head glaring at me from a distance.*</span>
+<span style="color:SlateDARKGRAY">*Before I could finish my sentence, Paddy put his hand over my mouth to stop me. All I could see was the severed head glaring at me from a distance.*</span>
 
 ***ST. PADDY***
 
@@ -197,7 +197,7 @@ C'mere to me, whatever your about to yell stuff it down deep and don't. We don't
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I gulped holding my fear back. Paddy's demeanour shifted from the usual happy go lucky caring self. What is this, should I leg it while I still can?*</span>
+<span style="color:SlateDARKGRAY">*I gulped holding my fear back. Paddy's demeanour shifted from the usual happy go lucky caring self. What is this, should I leg it while I still can?*</span>
 
 ***ST. PADDY***
 
@@ -207,7 +207,7 @@ Our little lady over there is the headless rider herself, Crom Dubh. Try not to 
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Paddy is right, I already knew this place was odd. Knowing I'm not seeing a dead body has put me slightly at ease.*</span>
+<span style="color:SlateDARKGRAY">*Paddy is right, I already knew this place was odd. Knowing I'm not seeing a dead body has put me slightly at ease.*</span>
 
 ***ST. PADDY***
 
@@ -215,7 +215,7 @@ Yeah, you'll be fine. Today might be a tough day on the job but you've got this,
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I guess I'm gonna need to figure out whats up with this town. It's so odd that I may just fit right in. These misfits may be my kind of odd but should I really be here?*</span>
+<span style="color:SlateDARKGRAY">*I guess I'm gonna need to figure out whats up with this town. It's so odd that I may just fit right in. These misfits may be my kind of odd but should I really be here?*</span>
 
 W-will do. Sorry for making things uncomfortable.
 
@@ -227,7 +227,7 @@ I'll leave ya to it so. Am off to take care of da pub.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*No humming today. I really soured the mood. Not a great way to start another day on the job. I should at least go and apologize.*</span>
+<span style="color:SlateDARKGRAY">*No humming today. I really soured the mood. Not a great way to start another day on the job. I should at least go and apologize.*</span>
 
 </center>
 </br>
@@ -242,11 +242,11 @@ The PLAYER reflects on their meeting with CHAOINTE.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I woke up early with my muscles aching from the exercise. It feels good to have exercised yesterday. The sleep felt so much better than usual.*</span>
+<span style="color:SlateDARKGRAY">*I woke up early with my muscles aching from the exercise. It feels good to have exercised yesterday. The sleep felt so much better than usual.*</span>
 
-<span style="color:SlateGray">*Chaointe was so nice. I should make sure to exercise with her again soon. I really got to learn more from her if I'm going to do a good job at the gym.*</span>
+<span style="color:SlateDARKGRAY">*Chaointe was so nice. I should make sure to exercise with her again soon. I really got to learn more from her if I'm going to do a good job at the gym.*</span>
 
-<span style="color:SlateGray">*Alright! Time to put this new found energy to good use. Should I go to work or visit the town? Paddy doesn't seem to mind which shifts I take.*</span>
+<span style="color:SlateDARKGRAY">*Alright! Time to put this new found energy to good use. Should I go to work or visit the town? Paddy doesn't seem to mind which shifts I take.*</span>
 
 </center>
 
@@ -255,11 +255,11 @@ The PLAYER reflects on their meeting with CHAOINTE.
 
 ***PLAYER*** 
 
-<span style="color:SlateGray">*I woke up early with my muscles aching from the exercise. My sleep was awful and I'm aching so much.*</span>
+<span style="color:SlateDARKGRAY">*I woke up early with my muscles aching from the exercise. My sleep was awful and I'm aching so much.*</span>
 
-<span style="color:SlateGray">*I still feel weird about the interaction I've had with Chaointe. Maybe I can still make it up to her.*</span>
+<span style="color:SlateDARKGRAY">*I still feel weird about the interaction I've had with Chaointe. Maybe I can still make it up to her.*</span>
 
-<span style="color:SlateGray">*Ehhh, I guess I should get up and try to get out of bed. The parents would be so disappointed If I failed at another job. I wouldn't be able to face uncle Colin after this either.*</span>
+<span style="color:SlateDARKGRAY">*Ehhh, I guess I should get up and try to get out of bed. The parents would be so disappointed If I failed at another job. I wouldn't be able to face uncle Colin after this either.*</span>
 
 </center>
 
@@ -271,9 +271,9 @@ The PLAYER reflects on their meeting with PUCA.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*We made a bit of a mess yesterday with Púca. Can't believe I got tricked into it for the mans enjoyment. I'm glad we sorted it out so quickly.*</span>
+<span style="color:SlateDARKGRAY">*We made a bit of a mess yesterday with Púca. Can't believe I got tricked into it for the mans enjoyment. I'm glad we sorted it out so quickly.*</span>
 
-<span style="color:SlateGray">*Leaving the gym in a better state then we started was great. We got to clean some stuff that doesn't usually get done.*</span>
+<span style="color:SlateDARKGRAY">*Leaving the gym in a better state then we started was great. We got to clean some stuff that doesn't usually get done.*</span>
 
 </center>
 </br>
@@ -284,9 +284,9 @@ The PLAYER reflects on their meeting with PUCA.
 
 ***PLAYER*** 
 
-<span style="color:SlateGray">*That little garden gnome of a man had me doing to much extra work last night. I can't believe I spent so much extra time cleaning up that mess on my own.*</span>
+<span style="color:SlateDARKGRAY">*That little garden gnome of a man had me doing to much extra work last night. I can't believe I spent so much extra time cleaning up that mess on my own.*</span>
 
-<span style="color:SlateGray">*I hope Paddy isn't too annoyed with the slight re-modelling. I couldn't fix it all alone.*</span>
+<span style="color:SlateDARKGRAY">*I hope Paddy isn't too annoyed with the slight re-modelling. I couldn't fix it all alone.*</span>
 
 </center>
 </br>
@@ -299,9 +299,9 @@ The PLAYER reflects on their meeting with Crom.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I should meet Crom again. She must have some interesting stories to tell being a dullahan and all.*</span>
+<span style="color:SlateDARKGRAY">*I should meet Crom again. She must have some interesting stories to tell being a dullahan and all.*</span>
 
-<span style="color:SlateGray">*I wonder what the other gym goers are. It's a delicate subject so I should take care.*</span>
+<span style="color:SlateDARKGRAY">*I wonder what the other gym goers are. It's a delicate subject so I should take care.*</span>
 
 </center>
 </br>
@@ -312,9 +312,9 @@ The PLAYER reflects on their meeting with Crom.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I gotta make sure my head doesn't come off next time I meet Crom. She seems like shes got a violent streak going.*</span>
+<span style="color:SlateDARKGRAY">*I gotta make sure my head doesn't come off next time I meet Crom. She seems like shes got a violent streak going.*</span>
 
-<span style="color:SlateGray">*I wonder what creatures the other gym goers are. I should avoid offending them too.*</span>
+<span style="color:SlateDARKGRAY">*I wonder what creatures the other gym goers are. I should avoid offending them too.*</span>
 
 </center>
 </br>
@@ -386,7 +386,7 @@ H-Hi, I-I'm C-Chaointe Doran. It's nice to meet you {{NAME}}. I'm here to work o
 
 Yeah sure.
 
-<span style="color:SlateGray">*We started our workout. An uncomfortable silence loomed over us and the exercising feels excruciating. Chaointe is fidgety and looks like she has something to say but isn't comfortable. I should break the silence.*</span>
+<span style="color:SlateDARKGRAY">*We started our workout. An uncomfortable silence loomed over us and the exercising feels excruciating. Chaointe is fidgety and looks like she has something to say but isn't comfortable. I should break the silence.*</span>
 
 </center>
 
@@ -410,7 +410,7 @@ Don't worry, it will take some effort but I'm sure you'll improve in no time.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Chaointe helped me improve my form and as we continued to exercise, it was exhausting but it felt much better.*</span>
+<span style="color:SlateDARKGRAY">*Chaointe helped me improve my form and as we continued to exercise, it was exhausting but it felt much better.*</span>
 
 Thanks so much, this feels a lot better now.
 
@@ -422,7 +422,7 @@ N-no problem. Thanks for working out with me. L-let's do it again.
 
 Looking forward to it. See you soon.
 
-<span style="color:SlateGray">*Chaointe left with a spring in her step. I finish cleaning up and head home to sleep*</span>
+<span style="color:SlateDARKGRAY">*Chaointe left with a spring in her step. I finish cleaning up and head home to sleep*</span>
 
 </center>
 
@@ -438,7 +438,7 @@ I-it's n-nothing. I'm so s-sorry.
 
 No need to apologize. Let's keep pumping iron.
 
-<span style="color:SlateGray">*The awkward silence continued for the remainder of the workout. I'm exhausted and aching all over.*</span>
+<span style="color:SlateDARKGRAY">*The awkward silence continued for the remainder of the workout. I'm exhausted and aching all over.*</span>
 
 Phew, glad that's done.
 
@@ -448,7 +448,7 @@ Y-yeah, I need to head off now. Bye.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Chaointe left swiftly, leaving me wondering what she had to say. I finish cleaning up and head home to sleep*</span>
+<span style="color:SlateDARKGRAY">*Chaointe left swiftly, leaving me wondering what she had to say. I finish cleaning up and head home to sleep*</span>
 
 </center>
 
@@ -520,7 +520,7 @@ I'm the mighty Púca Cleasaí. Havn't sen you around before; you new here?
 
 ***PLAYER***
 
-<span style="color:SlateGray">*For someone so short he seems to hold himself in high regard. It'd be nice to have his confidence.*</span>
+<span style="color:SlateDARKGRAY">*For someone so short he seems to hold himself in high regard. It'd be nice to have his confidence.*</span>
 
 Yeah, started recently and am here to help you out if needed.
 
@@ -530,7 +530,7 @@ Good stuff. Since yar here to help lets sort this mess here out. This gym could 
 
 ***PLAYER***
 
-<span style="color:SlateGray">*The commandeering Púca didn't need to convince me. I good swooped up by his charisma and didn't think to question him at all.*</span>
+<span style="color:SlateDARKGRAY">*The commandeering Púca didn't need to convince me. I good swooped up by his charisma and didn't think to question him at all.*</span>
 
 Alright lets get to work.
 
@@ -540,7 +540,7 @@ Good lad. Lets do this!
 
 ***PLAYER***
 
-<span style="color:SlateGray">*We painstakingly moved everything at the gym at Púca's whim. What seemed a good idea initially turned into a big mess. I looked around and everything was placed haphazardly. I beautiful gym got turned into a tripping hazard on my watch.*</span>
+<span style="color:SlateDARKGRAY">*We painstakingly moved everything at the gym at Púca's whim. What seemed a good idea initially turned into a big mess. I looked around and everything was placed haphazardly. I beautiful gym got turned into a tripping hazard on my watch.*</span>
 
 </center>
 
@@ -562,7 +562,7 @@ B-But its so much fun messing with Paddy like this.
 
 Messing?! Have some cop on that's not how we should treat people!
 
-<span style="color:SlateGray">*My mind was rushing. I don't like confrontation. Púca seemed impressed that I stood up to him as if he was messing with me and not Paddy.*</span>
+<span style="color:SlateDARKGRAY">*My mind was rushing. I don't like confrontation. Púca seemed impressed that I stood up to him as if he was messing with me and not Paddy.*</span>
 
 ***PUCA***
 
@@ -572,7 +572,7 @@ Alright, alright let's sort this out so. Twas fun while it lasted.
 
 Thanks.
 
-<span style="color:SlateGray">*We worked hard to fix the mess. It took longer than expecetd but the place was cleaner than before we started.*</span>
+<span style="color:SlateDARKGRAY">*We worked hard to fix the mess. It took longer than expecetd but the place was cleaner than before we started.*</span>
 
 </center>
 
@@ -582,7 +582,7 @@ Thanks.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*We continued to work. The mess became worse. I'm in for it now. It's time to wrap this up before It gets even worse.*</span>
+<span style="color:SlateDARKGRAY">*We continued to work. The mess became worse. I'm in for it now. It's time to wrap this up before It gets even worse.*</span>
 
 There this should do it.
 
@@ -590,7 +590,7 @@ There this should do it.
 
 Yeah, fine work today
 
-<span style="color:SlateGray">*Púca was grinning at me. He knows exactly what we had done here yet he also seems to be unsatisfied. Maybe I should have stopped him. I'll tidy the place up before I head off for the day.*</span>
+<span style="color:SlateDARKGRAY">*Púca was grinning at me. He knows exactly what we had done here yet he also seems to be unsatisfied. Maybe I should have stopped him. I'll tidy the place up before I head off for the day.*</span>
 
 </center>
 
@@ -710,7 +710,7 @@ No problem. I do love a good jump scare. Twas a bit of fun.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*The apology went well. It seems like Crom is well used to this kind of thing. Makes me wonder what kind of life she must lead.*</span>
+<span style="color:SlateDARKGRAY">*The apology went well. It seems like Crom is well used to this kind of thing. Makes me wonder what kind of life she must lead.*</span>
 
 Do you need help with anything today?
 
@@ -722,7 +722,7 @@ No, just wrapping up my exercises. I'll be done and gone soon. Let's chat again 
 
 Sounds good.
 
-<span style="color:SlateGray">*I left Crom to her own devices while I tidied up and filled out some paperwork. Once she left I wrapped up too.*</span>
+<span style="color:SlateDARKGRAY">*I left Crom to her own devices while I tidied up and filled out some paperwork. Once she left I wrapped up too.*</span>
 
 </center>
 
@@ -740,7 +740,7 @@ NO!...How dare you make such an insolent request. You must have a death wish.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*I just made a bad situation worse. Crom is staring daggers at me and I worry my head may not stay on its solders for long either.*</span>
+<span style="color:SlateDARKGRAY">*I just made a bad situation worse. Crom is staring daggers at me and I worry my head may not stay on its solders for long either.*</span>
 
 S-Sorry, I-I just...
 
@@ -754,7 +754,7 @@ I'm heading off before anything else comes out of that fun-sized brain of yours.
 
 ***PLAYER***
 
-<span style="color:SlateGray">*Corm stomped away while I stood there in silence to avoid making things worse. Paddy, my savior I have failed thee. I tidied up and left for the day.*</span>
+<span style="color:SlateDARKGRAY">*Corm stomped away while I stood there in silence to avoid making things worse. Paddy, my savior I have failed thee. I tidied up and left for the day.*</span>
 
 </center>
 </br>

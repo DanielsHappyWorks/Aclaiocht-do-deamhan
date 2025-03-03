@@ -32,7 +32,7 @@ SoundManager::SoundManager() {
     timePlayed = 0.0f;
     currentMusic = MUSIC_NULL;
 
-    volume = 0.5f;
+    volume = 0.0f;
 
     playMusic(MUSIC_DAY);
 }

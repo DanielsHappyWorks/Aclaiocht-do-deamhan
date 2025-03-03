@@ -3959,7 +3959,7 @@ void GuiSetTooltip(const char *tooltip) { guiTooltipPtr = tooltip; }
 
 // Load raygui style file (.rgs)
 // NOTE: By default a binary file is expected, that file could contain a custom font,
-// in that case, custom font image atlas is GRAY+ALPHA and pixel data can be compressed (DEFLATE)
+// in that case, custom font image atlas is DARKGRAY+ALPHA and pixel data can be compressed (DEFLATE)
 void GuiLoadStyle(const char *fileName)
 {
     #define MAX_LINE_BUFFER_SIZE    256

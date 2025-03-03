@@ -2,6 +2,7 @@
 #include <vector>
 #include "raylib.h"
 #include "narrativeScene.h"
+#include "narrativeNode.h"
 
 class NarrativeSceneFactory {
     protected:
