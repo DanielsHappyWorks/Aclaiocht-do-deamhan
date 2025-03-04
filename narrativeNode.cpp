@@ -30,6 +30,10 @@ void TextNode::draw() {
     drawDialogBox(character->getName(), text, color);
 }
 
+NodeType TextNode::getType() {
+    return TEXT_NODE;
+}
+
 MoodNode::MoodNode(Song song) {
     this->song = song;
 }
@@ -39,6 +43,10 @@ bool MoodNode::isDone() {
     return true;
 }
 void MoodNode::draw() { }
+
+NodeType MoodNode::getType() {
+    return MOOD_NODE;
+}
 
 ChoiceNode::ChoiceNode(std::string question, std::string goodPrompt, std::vector<NarrativeNode*> goodDialog, std::string badPrompt, std::vector<NarrativeNode*> badDialog) {
     this->question = question;
@@ -52,4 +60,82 @@ bool ChoiceNode::isDone() {
 }
 void ChoiceNode::draw() {
     drawDialogBox("PLAYER", question, DARKGRAY);
+}
+
+NodeType ChoiceNode::getType() {
+    return CHOICE_NODE;
+}
+
+std::vector<NarrativeNode*> ChoiceNode::getChosenDialog() {
+    if (selected) {
+        return goodDialog;
+    } else {
+        return badDialog;
+    }
+}
+
+AddCharacterNode::AddCharacterNode(Character* character) {
+    this->character = character;
+}
+
+bool AddCharacterNode::isDone() {
+    return true;
+}
+
+void AddCharacterNode::draw() {}
+
+NodeType AddCharacterNode::getType() {
+    return ADD_CHARACTER_NODE;
+}
+
+Character* AddCharacterNode::getCharacter() {
+    return character;
+}
+
+RemoveCharacterNode::RemoveCharacterNode(Character* character) {
+    this->character = character;
+}
+
+bool RemoveCharacterNode::isDone() {
+    return true;
+}
+
+void RemoveCharacterNode::draw() {}
+
+NodeType RemoveCharacterNode::getType() {
+    return REMOVE_CHARACTER_NODE;
+}
+
+Character* RemoveCharacterNode::getCharacter() {
+    return character;
+}
+
+AddBackgroundNode::AddBackgroundNode(Color color) {
+    this->color = color;
+}
+
+bool AddBackgroundNode::isDone() {
+    return true;
+}
+
+void AddBackgroundNode::draw() { }
+
+Color AddBackgroundNode::getColor() {
+    return color;
+}
+
+NodeType AddBackgroundNode::getType() {
+    return ADD_BACKGROUND_NODE;
+}
+
+RemoveBackgroundNode::RemoveBackgroundNode() {}
+
+bool RemoveBackgroundNode::isDone() {
+    return true;
+}
+
+void RemoveBackgroundNode::draw() {}
+
+NodeType RemoveBackgroundNode::getType() {
+    return REMOVE_BACKGROUND_NODE;
 }

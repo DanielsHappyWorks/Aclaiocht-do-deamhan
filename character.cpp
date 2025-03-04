@@ -39,3 +39,30 @@ CharDialogChoices Character::getChoice(int index) {
     return choices[index];
 }
 
+int Character::getFriendship() {
+    return friendship;
+}
+
+//TODO fix locations & and make this per character configurable
+Vector2 Character::getPosAtLoc(LocEnum loc) {
+    switch (loc) {
+        case PUB:
+            return {GetScreenWidth()/2, GetScreenHeight()/2};
+        case SHOP:
+            return {GetScreenWidth()/2, GetScreenHeight()/2};
+        case RESTAURANT:
+            return {GetScreenWidth()/2, GetScreenHeight()/2};
+        case GYM:
+            return {GetScreenWidth()/2, GetScreenHeight()/2};
+        default:
+            return {0, 0};
+    }
+}
+
+Rectangle Character::getCollisionRect(float scale) {
+    return {getPosAtLoc(getCurrentLoc()).x, getPosAtLoc(getCurrentLoc()).y, (float)front.width * scale, (float)front.height * scale};
+}
+
+int Character::getCurrentEvent() {
+    return choices.size();
+}

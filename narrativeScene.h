@@ -1,6 +1,6 @@
 #pragma once
 #include "scene.h"
-#include "raylib.h"
+#include "rayxtend.h"
 #include "condition.h"
 #include "narrativeNode.h"
 #include <vector>
@@ -13,6 +13,11 @@ class NarrativeScene : public Scene {
         bool forced;
         bool done;
         int currentElement;
+        std::vector<Character*> characters;
+        Color color = {255,255,255,0};
+
+        void addCharacter(Character* character);
+        void removeCharacter(Character* character);
     public:
         NarrativeScene(std::vector<NarrativeNode*> narrativeElements);
         NarrativeScene(std::vector<NarrativeNode*> narrativeElements, Condition* condition);

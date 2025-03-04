@@ -2,7 +2,7 @@
 #include "sceneManager.h"
 
 
-Location::Location(std::string building, std::string background, std::string name, std::string type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart) {
+Location::Location(std::string building, std::string background, std::string name, LocEnum type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart) {
     this->name = name;
     this->type = type;
     this->overworldLocation = overworldLocation;
@@ -32,7 +32,7 @@ std::string Location::getName() {
     return name;
 }
 
-std::string Location::getType() {
+LocEnum Location::getType() {
     return type;
 }
 

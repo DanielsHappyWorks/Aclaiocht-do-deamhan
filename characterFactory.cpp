@@ -74,3 +74,31 @@ Character* CharacterFactory::getCharacter(CharEnum charEnum) {
             return nullptr;
     }
 }
+
+std::vector<Character*> CharacterFactory::getCharactersAtLoc(LocEnum loc) {
+    std::vector<Character*> characters;
+    for (Character* character : getCharacters()) {
+        if (character->getCurrentLoc() == loc) {
+            characters.push_back(character);
+        }
+    }
+
+    return characters;
+}
+
+bool CharacterFactory::isNarrativeSceneReady(CharEnum charEnum) {
+    std::vector<NarrativeScene*> scenes = NarrativeSceneFactory::GetInstance()->getCharacterEvents(charEnum);
+    Character* character = getCharacter(charEnum);
+
+    if (scenes.size() <= character->getCurrentEvent()) {
+        return false;
+    }
+
+    return scenes[character->getCurrentEvent()]->isReady();
+}
+
+NarrativeScene* CharacterFactory::getNarrativeScene(CharEnum charEnum) {
+    Character* character = getCharacter(charEnum);
+    std::vector<NarrativeScene*> scenes = NarrativeSceneFactory::GetInstance()->getCharacterEvents(character->getType());
+    return scenes[character->getCurrentEvent()];
+}

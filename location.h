@@ -7,7 +7,7 @@
 class Location {
     protected:
         std::string name;
-        std::string type;
+        LocEnum type;
         Vector2 overworldLocation;
         std::vector<NarrativeScene*> events;
         Rectangle exit;
@@ -17,13 +17,13 @@ class Location {
         Texture2D building;
         Texture2D background;
     public:
-        Location(std::string building, std::string background, std::string name, std::string type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart);
+        Location(std::string building, std::string background, std::string name, LocEnum type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart);
         ~Location();
         void drawBuilding();
         void drawInterior();
 
         std::string getName();
-        std::string getType();
+        LocEnum getType();
         Rectangle getExit();
         Vector2 getPlayerStart();
         Rectangle getBuildingRect();

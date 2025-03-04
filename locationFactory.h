@@ -16,5 +16,5 @@ class LocationFactory {
         static LocationFactory *GetInstance();
 
         std::list<Location*> getLocations();
-        Location* getByType(std::string type);
+        Location* getByType(LocEnum type);
 };

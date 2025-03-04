@@ -28,4 +28,9 @@ class Character {
         LocEnum getCurrentLoc();
         CharDialogChoices getChoice(int index);
         int getFriendship();
+
+        Vector2 getPosAtLoc(LocEnum loc);
+        Rectangle getCollisionRect(float scale);
+
+        int getCurrentEvent();
 };

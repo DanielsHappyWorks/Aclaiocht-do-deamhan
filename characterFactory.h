@@ -2,6 +2,7 @@
 #include <list>
 #include "raylib.h"
 #include "character.h"
+#include "narrativeScene.h"
 
 class CharacterFactory {
     protected:
@@ -20,4 +21,8 @@ class CharacterFactory {
 
         std::list<Character*> getCharacters();
         Character* getCharacter(CharEnum charEnum);
+        std::vector<Character*> getCharactersAtLoc(LocEnum loc);
+
+        bool isNarrativeSceneReady(CharEnum charEnum);
+        NarrativeScene* getNarrativeScene(CharEnum charEnum);
 };

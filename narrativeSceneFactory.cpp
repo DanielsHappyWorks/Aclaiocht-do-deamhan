@@ -43,6 +43,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "Finally arrived. Uncle Colin really pulled through for me here.", DARKGRAY),
         new TextNode(player, "Not sure I could have landed this gig without him.", DARKGRAY),
         new TextNode(player, "Tis been hard the last few weeks.", DARKGRAY),
+        new AddCharacterNode(paddy),
         new TextNode(paddy, "Ahh you finally made it. The name is Paddy.", BLACK),
         new TextNode(paddy, "I'm the manager of this here joint. Tír na Síoga we call it.", BLACK),
         new TextNode(player, "I'm {{NAME}}, thank you for taking me on on such short notice.", BLACK),
@@ -70,6 +71,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "Yep, leave it to me!", BLACK),
         new TextNode(paddy, "Alright, we don't get many people in here.", BLACK),
         new TextNode(paddy, "It's rare to see more than one person come in sometimes.", BLACK),
+        new AddCharacterNode(banshee),
         new TextNode(paddy, "Seems like today Chaointe Doran dropped by. ", BLACK),
         new TextNode(paddy, "She's a timid spirit that struggles with conversation but she really likes to talk.", BLACK),
         new TextNode(paddy, "If you take it slow, I'm sure she'll warm up to ya in no time.", BLACK),
@@ -77,9 +79,11 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "If Paddy didn't point her out I'm not sure I'd have seen her.", DARKGRAY),
         new TextNode(player, "Her presence seems so faint.", DARKGRAY),
         new TextNode(paddy, "Your job today is to introduce yourself and help her out.", BLACK),
+        new RemoveCharacterNode(banshee),
         new TextNode(paddy, "O' am countin' on ya, good luck kid.", BLACK),
         new TextNode(paddy, "Take care now, am off to cater my pride and joy so.", BLACK),
         new TextNode(paddy, "Oh ho ho! Paddy's Pub we'll make you great again now that I have more time.", BLACK),
+        new RemoveCharacterNode(paddy),
         new TextNode(player, "Paddy waddled off humming such a joyful tune; I wonder what it was.", DARKGRAY),
         new TextNode(player, "Alright time to get to it. It's not like Chaointe bites, right?!", DARKGRAY),
         new TextNode(player, "The next day they will have a choice of where they want to head during the day.", DARKGRAY),
@@ -87,6 +91,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
 
 
     bansheeEvents = {new NarrativeScene({
+        new AddCharacterNode(banshee),
         new TextNode(player, "Hey, my name is {{NAME}}. I'm new here. How can I help you today?", BLACK),
         new TextNode(banshee, "H-Hi, I-I'm C-Chaointe Doran. It's nice to meet you {{NAME}}.", BLACK),
         new TextNode(banshee, "I'm here to work out. W-would you like to join me please?", BLACK),
@@ -108,6 +113,8 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
                 new TextNode(player, "Thanks so much, this feels a lot better now.", BLACK),
                 new TextNode(banshee, "N-no problem. Thanks for working out with me. L-let's do it again.", BLACK),
                 new TextNode(player, "Looking forward to it. See you soon.", BLACK),
+                new RemoveCharacterNode(banshee),
+                new AddBackgroundNode(BLACK),
                 new TextNode(player, "Chaointe left with a spring in her step. I finish cleaning up and head home to sleep.", DARKGRAY),
             },
             "Whats up? Spit it out already!",
@@ -119,7 +126,9 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
                 new TextNode(player, "I'm exhausted and aching all over.", DARKGRAY),
                 new TextNode(player, "Phew, glad that's done.", BLACK),
                 new TextNode(banshee, "Y-yeah, I need to head off now. Bye.", BLACK),
+                new RemoveCharacterNode(banshee),
                 new TextNode(player, "Chaointe left swiftly, leaving me wondering what she had to say.", DARKGRAY),
+                new AddBackgroundNode(BLACK),
                 new TextNode(player, "I finish cleaning up and head home to sleep.", DARKGRAY),
             })
     }, new CharacterAtLocationCondition(banshee, GYM), false)};
@@ -151,4 +160,21 @@ std::vector<NarrativeScene*> NarrativeSceneFactory::getPookaEvents() {
 
 std::vector<NarrativeScene*> NarrativeSceneFactory::getDullahanEvents() {
     return dullahanEvents;
+}
+
+std::vector<NarrativeScene*> NarrativeSceneFactory::getCharacterEvents(CharEnum charEnum) {
+    switch (charEnum) {
+        case PLAYER:
+            return playerEvents;
+        case PADDY:
+            return gymEvents;
+        case BANSHEE:
+            return bansheeEvents;
+        case POOKA:
+            return pookaEvents;
+        case DULLAHAN:
+            return dullahanEvents;
+        default:
+            return {};
+    }
 }
