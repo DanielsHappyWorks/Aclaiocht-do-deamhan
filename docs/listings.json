@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/alpha_delivery/index.html",
+      "/posts/narrative_engine/index.html",
+      "/posts/visual_improvements/index.html",
       "/posts/narrative_script/index.html",
       "/posts/waddle_waddle/index.html",
       "/posts/character_design/index.html",

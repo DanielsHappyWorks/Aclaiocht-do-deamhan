@@ -1,0 +1,32 @@
+---
+title: "Visual & Audio Improvements"
+date: "2025-03-01"
+categories: [programming, design]
+image: "image.gif"
+---
+
+The narrative engine has proven very complicated with no visual feedback. It felt like I was not making any progress so I took a here and there to add some flare to the game.
+
+Here is a demo of the visuals so far:
+
+![](image.gif)
+
+# Character Animations
+
+Character animations without animated sprites was a challenge. The characters pivot point needed to change but raylib didn't automatically so I extended texture drawing to support this. I'm very happy with this.
+
+![](pivot.png)
+
+Once this was done making the character squish and stretch and rotate over time was simple. I still need to extend this to texture boundaries to make collisions simpler when drawing using pivots but this can be done later as needed.
+
+# Character Selection
+
+Reusing the pivot work from the character animation work, I added a sun and clouds to the character select which was now also re-purposed into the main menu. This was simple enough but it did so much towards making the menu much more professional.
+
+# Game Locations
+
+All locations have different backgrounds now so they are easier to tell apart. This makes testing easier. The locations are still missing items but that's refinement work for the beta stage of the project.
+
+# Audio Improvements
+
+I added an audio manager with music made by Joel Steudler. This actually helped me In the narrative engine as now I can change music in scenes to match the mood. This has added some much needed depth to my game. Sound effects still need to be implemented but the audio manager has support for these making my life easier in the future.

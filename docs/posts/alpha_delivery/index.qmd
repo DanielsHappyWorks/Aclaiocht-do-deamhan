@@ -1,0 +1,16 @@
+---
+title: "Alpha Delivery"
+date: "2025-03-10"
+categories: [demo]
+image: "waddle.gif"
+---
+
+TODO write content closer to alpha
+
+This is the first project delivery. I took some time to create demos, update my timeline and resolve some minor issues to make the game more appealing.
+
+# Demo
+
+# Reflection
+
+# Beta - Next steps

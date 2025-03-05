@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Production Journal",
     "section": "",
-    "text": "First Draft\n\n\n\n\n\n\nnarrative\n\n\nassets\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Steps to Greatness\n\n\n\n\n\n\nprogramming\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter & Map Design\n\n\n\n\n\n\nassets\n\n\ndesign\n\n\ncharacters\n\n\nenvironment\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPaper Prototype\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRefining Concept Reasearch Question\n\n\n\n\n\n\nconcept\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Concept\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Alpha Delivery\n\n\n\n\n\n\ndemo\n\n\n\n\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNarrative Engine\n\n\n\n\n\n\nprogramming\n\n\nnarrative\n\n\n\n\n\n\n\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nVisual & Audio Improvements\n\n\n\n\n\n\nprogramming\n\n\ndesign\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nScript: First Draft\n\n\n\n\n\n\nnarrative\n\n\nassets\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter Select & Movement\n\n\n\n\n\n\nprogramming\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter & Map Design\n\n\n\n\n\n\nassets\n\n\ndesign\n\n\ncharacters\n\n\nenvironment\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPaper Prototype\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRefining Concept Reasearch Question\n\n\n\n\n\n\nconcept\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Concept\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/concept/index.html",
@@ -184,7 +184,7 @@
   {
     "objectID": "posts/waddle_waddle/index.html",
     "href": "posts/waddle_waddle/index.html",
-    "title": "First Steps to Greatness",
+    "title": "Character Select & Movement",
     "section": "",
     "text": "This week I managed to add 2 features to the game: the character selection and player movement on the overworld.\n\nCharacter Selection\nThe character selection uses UI elements from Raygui which made the development a lot faster. The visuals on this menu could use some work and maybe revisited in the future if time allows but the menu itself serves its purpose.\nWhile re-watching the demo below, I realised I tried to click on the character directly to select them. I may also need to reconsider some usability aspects of my UI design.\n\n\nPlayer Movement\nThe player movement works well. The animations can definitely be refined. The glaring issue I’ll have to come back to here is re-using the movement in location scenes as currently all code lives in the overworld scene. Small steps will get me where I need to go eventually.\n\n\nShort Reflection\nTo challenge myself, I decided to use raylib with C++ for the project. Using an engine would probably have been a bit faster in retrospect but this is keeping me engaged in the technical aspects. So far, the coding is fun and not too challenging. It was a good idea to focus the thesis on an area I’m less versed in. It helps that I’m already somewhat familiar with raylib through my other project called House of Cards.\nAs I add more, I’m continuously re-factoring and find myself spending a lot of time cleaning up after myself due to some questionable code choices. Time constraints are forcing me to be creative and take some shortcuts so I can keep making visible progress but that seems to be the thing that drives me into a corner causing said re-factors.\n\n\nFirst steps towards a narrative game\nThe first steps have been taken towards being able to create a narrative game. I still need to do some work around entering locations and spawning NPCs but once this is done I can start working on dialogue engine implementation.\nHere is a quick demo of the game so far."
   },
@@ -198,22 +198,57 @@
   {
     "objectID": "posts/narrative_script/index.html",
     "href": "posts/narrative_script/index.html",
-    "title": "First Draft",
+    "title": "Script: First Draft",
     "section": "",
     "text": "The latest narrative script is available here.\nAfter a lot of work, the first draft is completed and ready to be put into the game which will be my next focus. I’m satisfied with the work so far and all of the events are ready. I could have used more time to flesh some of these out but due to time constraints, I need to move along to narrative implementation for now. I’m hoping to revisit this in the near future to maybe add some more depth and see if I can squeeze another event or two into the game."
   },
   {
     "objectID": "posts/narrative_script/index.html#a-field-guide-to-irish-fairies-by-curran-b.-and-whitson-a",
     "href": "posts/narrative_script/index.html#a-field-guide-to-irish-fairies-by-curran-b.-and-whitson-a",
-    "title": "First Draft",
+    "title": "Script: First Draft",
     "section": "A field guide to Irish Fairies by Curran, B. and Whitson, A",
     "text": "A field guide to Irish Fairies by Curran, B. and Whitson, A\nThis is a pocket-sized book with excellent descriptions. It sits at the core of what I believe the creatures might act like. The descriptions are easy to grasp and understand, making it a great introduction for any of the creatures I was learning about."
   },
   {
     "objectID": "posts/narrative_script/index.html#the-faerie-isle-tales-and-traditions-of-irelands-forgotten-folklore-by-quinn-s",
     "href": "posts/narrative_script/index.html#the-faerie-isle-tales-and-traditions-of-irelands-forgotten-folklore-by-quinn-s",
-    "title": "First Draft",
+    "title": "Script: First Draft",
     "section": "The Faerie Isle: Tales and Traditions of Ireland’s Forgotten Folklore by Quinn, S",
     "text": "The Faerie Isle: Tales and Traditions of Ireland’s Forgotten Folklore by Quinn, S\nThis book is similar to the one described above but it’s a lot more visually stunning. I used it as a cross reference against the book above to make sure the information I had seemed correct. Tales and Folklore tend to evolve with time and comparing and contrasting these two was a great tool to make sure I was getting crucial information right."
+  },
+  {
+    "objectID": "posts/narrative_engine/index.html",
+    "href": "posts/narrative_engine/index.html",
+    "title": "Narrative Engine",
+    "section": "",
+    "text": "A lot of work has gone into the system that runs the narrative in my game. It’s complicated and was the biggest challenge but with perseverance I’m finally in a position where I can copy my script into the game quickly and see my work paying off.\nHere is a demo of this system with the proofread dialog for Chaointe Doran."
+  },
+  {
+    "objectID": "posts/narrative_engine/index.html#not-everything-is-supported",
+    "href": "posts/narrative_engine/index.html#not-everything-is-supported",
+    "title": "Narrative Engine",
+    "section": "Not everything is supported",
+    "text": "Not everything is supported\nThe system still has some pitfalls. It doesn’t support everything I need it too for the other character narratives that need to be integrated. For example forced character events are not available. These things are not needed for the Alpha & Beta though so I’m not worried. If something is missing when I go to add Púca’s and Crom’s events it won’t take long as the system has proven to be very extendable with new narrative nodes."
+  },
+  {
+    "objectID": "posts/narrative_engine/index.html#visual-fidelity",
+    "href": "posts/narrative_engine/index.html#visual-fidelity",
+    "title": "Narrative Engine",
+    "section": "Visual Fidelity",
+    "text": "Visual Fidelity\nThe focus was on making the backed work. The visuals still need refinement. The TextNode is especially poor. The text overflows and the font is hard to read. My goal I to refine this in the beta dev cycle. I took a stab at this already but needed to move on as the script is not fully integrated yet and that takes priority."
+  },
+  {
+    "objectID": "posts/visual_improvements/index.html",
+    "href": "posts/visual_improvements/index.html",
+    "title": "Visual & Audio Improvements",
+    "section": "",
+    "text": "The narrative engine has proven very complicated with no visual feedback. It felt like I was not making any progress so I took a here and there to add some flare to the game.\nHere is a demo of the visuals so far:\n\n\nCharacter Animations\nCharacter animations without animated sprites was a challenge. The characters pivot point needed to change but raylib didn’t automatically so I extended texture drawing to support this. I’m very happy with this.\n\nOnce this was done making the character squish and stretch and rotate over time was simple. I still need to extend this to texture boundaries to make collisions simpler when drawing using pivots but this can be done later as needed.\n\n\nCharacter Selection\nReusing the pivot work from the character animation work, I added a sun and clouds to the character select which was now also re-purposed into the main menu. This was simple enough but it did so much towards making the menu much more professional.\n\n\nGame Locations\nAll locations have different backgrounds now so they are easier to tell apart. This makes testing easier. The locations are still missing items but that’s refinement work for the beta stage of the project.\n\n\nAudio Improvements\nI added an audio manager with music made by Joel Steudler. This actually helped me In the narrative engine as now I can change music in scenes to match the mood. This has added some much needed depth to my game. Sound effects still need to be implemented but the audio manager has support for these making my life easier in the future."
+  },
+  {
+    "objectID": "posts/alpha_delivery/index.html",
+    "href": "posts/alpha_delivery/index.html",
+    "title": "Alpha Delivery",
+    "section": "",
+    "text": "TODO write content closer to alpha\nThis is the first project delivery. I took some time to create demos, update my timeline and resolve some minor issues to make the game more appealing.\n\nDemo\n\n\nReflection\n\n\nBeta - Next steps"
   }
 ]

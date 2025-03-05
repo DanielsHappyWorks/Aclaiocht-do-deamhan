@@ -1,0 +1,49 @@
+---
+title: "Narrative Engine"
+date: "2025-03-08"
+categories: [programming, narrative]
+image: "image.gif"
+---
+
+A lot of work has gone into the system that runs the narrative in my game. It's complicated and was the biggest challenge but with perseverance I'm finally in a position where I can copy my script into the game quickly and see my work paying off.
+
+Here is a demo of this system with the proofread dialog for Chaointe Doran.
+
+![](image.gif)
+
+# Architecture
+
+The narrative engine extends the scene system I use to navigate the world. There is a Narrative Scene that renders all of the Narrative Nodes associated with Characters & Locations. For this to fully function all Character & Location definitions needed to be added into the game.
+
+The nodes that are currently supported are:
+
+- TextNode: Displays dialog.
+- ChoiceNode: Allows the player to make a narrative choice while keeping track of the selections for future use.
+- AddCharacterNode: Adds a character to the narrative scene showing them standing behind the dialog.
+- RemoveCharacterNode: Removes a character in the scene.
+- MoodNode: Sets the mood by changing the music playing in the background.
+- AddBackgroundNode: Sets a background color to override the location the scene takes place in. This can be extended to Textures later but ther isn't time to make bespoke drawings for scenes.
+- RemoveBackgroundNode: Removes a background displaying the current location.
+
+Each narrative event known as a NarrativeScene also has Conditions and an isForced parameter.
+
+Conditions are used to limit when a scene can be activated and are easily extendible. They currently include:
+
+- CharacterAtLocationCondition: Checks if a specific character is at a location.
+- MetCharacterCondition: Checks if the player has completed a specific character event and distinguishes between the choice made.
+
+IsForced forces scenes to play when a specific condition is meet allowing us to trigger scenes as needed without player input.
+
+All of the above is letting me add the narrative script in minutes. Once I get around to proofreading the rest of the script adding it in for the beta should be simple. I managed to solve the most difficult problem I faced allowing me to iterate quickly from here on. It unfortunately took longer then expected. 
+
+# Limitations & Future Work
+
+This section describes some current limitations of the narrative engine at this point in time.
+
+## Not everything is supported
+
+The system still has some pitfalls. It doesn't support everything I need it too for the other character narratives that need to be integrated. For example forced character events are not available. These things are not needed for the Alpha & Beta though so I'm not worried. If something is missing when I go to add Púca’s and Crom's events it won't take long as the system has proven to be very extendable with new narrative nodes.
+
+## Visual Fidelity
+
+The focus was on making the backed work. The visuals still need refinement. The TextNode is especially poor. The text overflows and the font is hard to read. My goal I to refine this in the beta dev cycle. I took a stab at this already but needed to move on as the script is not fully integrated yet and that takes priority.

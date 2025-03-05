@@ -1,5 +1,5 @@
 ---
-title: "First Draft"
+title: "Script: First Draft"
 date: "2025-02-26"
 categories: [narrative, assets, design]
 image: "../../images/narr_seq.svg"

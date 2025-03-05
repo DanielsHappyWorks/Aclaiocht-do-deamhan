@@ -8,7 +8,7 @@
 #include "soundManager.h"
 
 // When set to true renders in-game debug options
-#define DEBUG true
+#define DEBUG false
 
 Game::Game()
 {
