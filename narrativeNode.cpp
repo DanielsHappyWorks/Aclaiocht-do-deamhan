@@ -20,10 +20,20 @@ TextNode::TextNode(Character* character, std::string text, Color color) {
 }
 
 bool TextNode::isDone() {
-    return (InputManager::GetInstance()->isInteracting());
+    bool isDone = (InputManager::GetInstance()->isInteracting());
+    if (isDone) {
+        SoundManager::GetInstance()->stopSound(character->getSound());
+    }
+    return isDone;
 }
 
 void TextNode::draw() {
+    //TODO specify dialog type instead of color
+    if (!dialog && color.r == BLACK.r && color.g == BLACK.g && color.b == BLACK.b) {
+        SoundManager::GetInstance()->playSound(character->getSound());
+        dialog = true;
+    }
+
     if (text.find("{{NAME}}") != std::string::npos) {
         text = text.replace(text.find("{{NAME}}"), 8, Player::GetInstance()->getCharacter()->getName());
     }
@@ -54,12 +64,28 @@ ChoiceNode::ChoiceNode(std::string question, std::string goodPrompt, std::vector
     this->goodDialog = goodDialog;
     this->badPrompt = badPrompt;
     this->badDialog = badDialog;
+    this->selected = true;
+    this->done = false;
 }
 bool ChoiceNode::isDone() {
     return done;
 }
 void ChoiceNode::draw() {
-    drawDialogBox("PLAYER", question, DARKGRAY);
+    drawDialogBox(Player::GetInstance()->getCharacter()->getName(), question, DARKGRAY);
+
+    float btnPadding = 80;
+
+    if (GuiButton({btnPadding, (float)GetScreenHeight()/3*2 + 70, (float)GetScreenWidth() - btnPadding*2, 30}, goodPrompt.c_str())) {
+        SoundManager::GetInstance()->playSound(SFX_CLICK);
+        selected = true;
+        done = true;
+    }
+
+    if (GuiButton({btnPadding, (float)GetScreenHeight()/3*2 + 110, (float)GetScreenWidth() - btnPadding*2, 30}, badPrompt.c_str())) {
+        SoundManager::GetInstance()->playSound(SFX_ERROR);
+        selected = false;
+        done = true;
+    }
 }
 
 NodeType ChoiceNode::getType() {
@@ -138,4 +164,18 @@ void RemoveBackgroundNode::draw() {}
 
 NodeType RemoveBackgroundNode::getType() {
     return REMOVE_BACKGROUND_NODE;
+}
+
+PassTimeNode::PassTimeNode(Time time) {
+    this->time = time;
+}
+
+bool PassTimeNode::isDone() {
+    return true;
+}
+
+void PassTimeNode::draw() {}
+
+NodeType PassTimeNode::getType() {
+    return PASS_TIME_NODE;
 }

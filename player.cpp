@@ -2,6 +2,7 @@
 #include "raymath.h"
 #include "inputManager.h"
 #include "rayxtend.h"
+#include "soundManager.h"
 
 Player* Player::player = nullptr;
 
@@ -31,7 +32,7 @@ Player::Player() {
     swagger = 0.0f;
     swagger_speed = 0.5f;
 
-    character = new Character(name, PLAYER, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
+    character = new Character(name, PLAYER, SFX_DIALOG_MALE, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
 }
 
 Player::~Player() {
@@ -52,9 +53,9 @@ void Player::setDetails(bool gender, char* name) {
     this->name = name;
 
     if (gender) {
-        character = new Character(name, PLAYER, {}, {}, "assets/images/characters/mc/player_front_female.png", "assets/images/characters/mc/player_side_female.png");
+        character = new Character(name, PLAYER, SFX_DIALOG_FEMALE, {}, {}, "assets/images/characters/mc/player_front_female.png", "assets/images/characters/mc/player_side_female.png");
     } else {
-        character = new Character(name, PLAYER, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
+        character = new Character(name, PLAYER, SFX_DIALOG_MALE, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
     }
 }
 
@@ -114,9 +115,14 @@ void Player::draw(Vector2 playerPos, float playerScale) {
 void Player::animateCharacter(Vector2 movement, Vector2 currentPos, Vector2 nextPos) {
     if (Vector2Equals(currentPos, nextPos)) {
         //idle
+        SoundManager::GetInstance()->stopSound(SFX_WALK);
         currentSprite = gender ? female_front : male_front;
         swagger = 0.0f;
         return;
+    }
+
+    if (!SoundManager::GetInstance()->isPlaying(SFX_WALK)) {
+        SoundManager::GetInstance()->playSound(SFX_WALK);
     }
 
     if (swagger >= 5.0f || swagger <= -5.0f) {

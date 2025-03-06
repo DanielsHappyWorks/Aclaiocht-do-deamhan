@@ -1,8 +1,9 @@
 #include "character.h"
 
-Character::Character(std::string name, CharEnum type, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side) {
+Character::Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side) {
     this->name = name;
     this->type = type;
+    this->sound = sound;
     this->dayLocations = dayLocations;
     this->nightLocations = nightLocations;
     this->front = LoadTexture(front.c_str());
@@ -25,6 +26,9 @@ std::string Character::getName() {
 }
 CharEnum Character::getType() { 
     return type;
+}
+SFX Character::getSound() {
+    return sound;
 }
 LocEnum Character::getCurrentLoc() {
     //TODO get day/night cycle!

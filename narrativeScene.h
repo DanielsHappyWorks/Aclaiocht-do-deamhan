@@ -12,6 +12,7 @@ class NarrativeScene : public Scene {
         Condition* condition;
         bool forced;
         bool done;
+        bool doneAtLoc;
         int currentElement;
         std::vector<Character*> characters;
         Color color = {255,255,255,0};
@@ -30,4 +31,5 @@ class NarrativeScene : public Scene {
         void debug();
         bool isForced();
         bool isReady();
+        bool isDoneAtLoc();
 };

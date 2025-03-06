@@ -11,7 +11,8 @@ enum NodeType {
     ADD_CHARACTER_NODE,
     REMOVE_CHARACTER_NODE,
     ADD_BACKGROUND_NODE,
-    REMOVE_BACKGROUND_NODE
+    REMOVE_BACKGROUND_NODE,
+    PASS_TIME_NODE
 };
 
 class NarrativeNode {
@@ -26,6 +27,7 @@ class TextNode : public NarrativeNode {
         Character* character;
         std::string text;
         Color color;
+        bool dialog = false;
 
     public:
         TextNode(Character* character, std::string text, Color color);
@@ -99,6 +101,21 @@ class AddBackgroundNode : public NarrativeNode {
 class RemoveBackgroundNode : public NarrativeNode {
     public:
         RemoveBackgroundNode();
+        bool isDone();
+        void draw();
+        NodeType getType();
+};
+
+enum Time {
+    FULL_DAY,
+    HALF_DAY
+};
+
+class PassTimeNode : public NarrativeNode {
+    private:
+        Time time;
+    public:
+        PassTimeNode(Time time);
         bool isDone();
         void draw();
         NodeType getType();

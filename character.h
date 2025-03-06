@@ -3,11 +3,13 @@
 #include <vector>
 #include "raylib.h"
 #include "enums.h"
+#include "soundManager.h"
 
 class Character {
     protected:
         std::string name;
         CharEnum type;
+        SFX sound;
         std::vector<LocEnum> dayLocations;
         std::vector<LocEnum> nightLocations;
         std::vector<CharDialogChoices> choices;
@@ -17,7 +19,7 @@ class Character {
         Texture2D side;
 
     public:
-        Character(std::string name, CharEnum type, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side);
+        Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side);
         ~Character();
 
         Texture2D getFront();
@@ -25,6 +27,7 @@ class Character {
 
         std::string getName();
         CharEnum getType();
+        SFX getSound();
         LocEnum getCurrentLoc();
         CharDialogChoices getChoice(int index);
         int getFriendship();

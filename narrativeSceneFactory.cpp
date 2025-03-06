@@ -127,10 +127,11 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
                 new TextNode(player, "Phew, glad that's done.", BLACK),
                 new TextNode(banshee, "Y-yeah, I need to head off now. Bye.", BLACK),
                 new RemoveCharacterNode(banshee),
-                new TextNode(player, "Chaointe left swiftly, leaving me wondering what she had to say.", DARKGRAY),
                 new AddBackgroundNode(BLACK),
+                new TextNode(player, "Chaointe left swiftly, leaving me wondering what she had to say.", DARKGRAY),
                 new TextNode(player, "I finish cleaning up and head home to sleep.", DARKGRAY),
-            })
+            }),
+        new PassTimeNode(FULL_DAY),
     }, new CharacterAtLocationCondition(banshee, GYM), false)};
 
     pookaEvents = {};

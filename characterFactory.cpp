@@ -1,6 +1,7 @@
 #include "characterFactory.h"
 #include "narrativeSceneFactory.h"
 #include "player.h"
+#include "soundManager.h"
 
 CharacterFactory* CharacterFactory::factory = nullptr;
 
@@ -16,6 +17,7 @@ CharacterFactory::CharacterFactory() {
     banshee = new Character(
         "Chaointe Doran",
         BANSHEE,
+        SFX_DIALOG_FEMALE,
         {GYM, RESTAURANT, SHOP},
         {GYM, PUB, SHOP},
         "assets/images/characters/banshee/banshee_front.png",
@@ -25,6 +27,7 @@ CharacterFactory::CharacterFactory() {
     paddy = new Character(
         "St. Paddy",
         PADDY,
+        SFX_DIALOG_MALE,
         {PUB},
         {PUB},
         "assets/images/characters/paddy/paddy_front.png",
@@ -34,6 +37,7 @@ CharacterFactory::CharacterFactory() {
     pooka = new Character(
         "Púca Cleasaí",
         POOKA,
+        SFX_DIALOG_MALE,
         {PUB, GYM, RESTAURANT},
         {SHOP, GYM, PUB},
         "assets/images/characters/pooka/pooka_front.png",
@@ -43,6 +47,7 @@ CharacterFactory::CharacterFactory() {
     dullahan = new Character(
         "Crom Dubh",
         DULLAHAN,
+        SFX_DIALOG_FEMALE,
         {RESTAURANT, SHOP, GYM},
         {PUB, SHOP, GYM},
         "assets/images/characters/dullahan/dullahan_front.png",

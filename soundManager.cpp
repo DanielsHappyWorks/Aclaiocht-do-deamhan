@@ -21,11 +21,14 @@ SoundManager::SoundManager() {
         {MUSIC_SHINNANIGANS, "./assets/sounds/music/Town_-_Boutique_Hopper.ogg"}
     };
     sounds = {
-        {SFX_WALK, LoadSound("./assets/sounds/freesound/362777__taure__walking_wood.wav")},
-        {SFX_SWIPE, LoadSound("./assets/sounds/freesound/398404__caitlin_100__swipescrape.mp3")},
+        {SFX_WALK, LoadSound("./assets/sounds/freesound/366111__wakuwakuwakuwaku__indoor-footsteps.wav")},
+        {SFX_SWIPE, LoadSound("./assets/sounds/freesound/515625__mrickey13__throwswipe.wav")},
         {SFX_MONEY, LoadSound("./assets/sounds/freesound/393909__pogmog__money-collect-4.wav")},
         {SFX_BOUNCE, LoadSound("./assets/sounds/freesound/615576__adhdreaming__bit-bounce.wav")},
-        {SFX_ERROR, LoadSound("./assets/sounds/freesound/542040__rob_marion__gasp_ui_reject.wav")}
+        {SFX_ERROR, LoadSound("./assets/sounds/freesound/542040__rob_marion__gasp_ui_reject.wav")},
+        {SFX_CLICK, LoadSound("./assets/sounds/freesound/475188__sheyvan__button-clicking-1.wav")},
+        {SFX_DIALOG_MALE, LoadSound("./assets/sounds/dialog_male.wav")},
+        {SFX_DIALOG_FEMALE, LoadSound("./assets/sounds/dialog_female.wav")}
     };
 
     //Music music;

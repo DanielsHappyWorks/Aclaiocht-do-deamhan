@@ -48,6 +48,14 @@ bool InputManager::isInteracting() {
     return false;
 }
 
+bool InputManager::isColliding(Rectangle a, Rectangle b) {
+    if ((IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_E)) && CheckCollisionRecs(a, b)) {
+        return true;
+    }
+
+    return false;
+}
+
 bool InputManager::isClickRect(Rectangle rect) {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), rect)) {
         return true;

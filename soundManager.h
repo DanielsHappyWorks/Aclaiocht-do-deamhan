@@ -17,7 +17,10 @@ enum SFX {
     SFX_MONEY,
     SFX_ERROR,
     SFX_BOUNCE,
-    SFX_SWIPE
+    SFX_SWIPE,
+    SFX_CLICK,
+    SFX_DIALOG_MALE,
+    SFX_DIALOG_FEMALE
 };
 
 class SoundManager {

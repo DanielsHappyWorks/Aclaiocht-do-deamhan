@@ -22,17 +22,17 @@ void LocationScene::update() {
     playerPos = Player::GetInstance()->move(playerPos, playerSpeed, playerScale);
 
     if (InputManager::GetInstance()->isInteracting()) {
-        //TODO why do we fall in here when pressing on the banshee?
-        if (CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), location->getExit()) || InputManager::GetInstance()->isClickRect(location->getExit())) {
+        if (InputManager::GetInstance()->isColliding(Player::GetInstance()->getCollisionRect(playerPos, playerScale), location->getExit()) ||
+                InputManager::GetInstance()->isClickRect(location->getExit())) {
             done = true;
         }
 
         std::vector<Character*> characters = CharacterFactory::GetInstance()->getCharactersAtLoc(location->getType());
         for (Character* character : characters) {
-            if (CharacterFactory::GetInstance()->isNarrativeSceneReady(character->getType()) && CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), character->getCollisionRect(0.7f)) || InputManager::GetInstance()->isClickRect(character->getCollisionRect(0.7f))) {
+            if (CharacterFactory::GetInstance()->isNarrativeSceneReady(character->getType()) && 
+                    InputManager::GetInstance()->isColliding(Player::GetInstance()->getCollisionRect(playerPos, playerScale), character->getCollisionRect(0.7f)) ||
+                        InputManager::GetInstance()->isClickRect(character->getCollisionRect(0.7f))) {
                 SceneManager::GetInstance()->setSceneOverlay(CharacterFactory::GetInstance()->getNarrativeScene(character->getType()));
-                //hack to fix banshee click!
-                done = false;
             }
         }
     }

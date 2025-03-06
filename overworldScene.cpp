@@ -25,7 +25,7 @@ void OverworldScene::update() {
 
     if (InputManager::GetInstance()->isInteracting()) {
         for (Location* loc : LocationFactory::GetInstance()->getLocations()) {
-            if (CheckCollisionRecs(Player::GetInstance()->getCollisionRect(playerPos, playerScale), loc->getBuildingRect()) || 
+            if (InputManager::GetInstance()->isColliding(Player::GetInstance()->getCollisionRect(playerPos, playerScale), loc->getBuildingRect()) || 
                     InputManager::GetInstance()->isClickRect(loc->getBuildingRect())) {
                 SceneManager::GetInstance()->setCurrentScene(new LocationScene(loc));
             }

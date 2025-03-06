@@ -15,7 +15,7 @@ class CharacterFactory {
         Character* pooka;
         Character* dullahan;
     public:
-    CharacterFactory(CharacterFactory &other) = delete;
+        CharacterFactory(CharacterFactory &other) = delete;
         void operator=(const CharacterFactory &) = delete;
         static CharacterFactory *GetInstance();
 

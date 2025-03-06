@@ -17,6 +17,7 @@ NarrativeScene::NarrativeScene(std::vector<NarrativeNode*> narrativeElements, Co
     this->condition = condition;
     this->forced = forced;
     this->done = false;
+    this->doneAtLoc = false;
     this->currentElement = 0;
 }
 
@@ -38,13 +39,15 @@ void NarrativeScene::update() {
         color = ((AddBackgroundNode*)narrativeElements[currentElement])->getColor();
     } else if(narrativeElements[currentElement]->getType() == REMOVE_BACKGROUND_NODE) {
         color = {255,255,255,0};
+    } else if(narrativeElements[currentElement]->getType() == PASS_TIME_NODE) {
+        doneAtLoc = true;
     }
 
     if (narrativeElements[currentElement]->isDone()) {
-        //TODO fix crash
-        //if (narrativeElements[currentElement]->getType() == CHOICE_NODE) {
-        //    narrativeElements.insert(narrativeElements.begin() + currentElement + 1, ((ChoiceNode*)narrativeElements[currentElement])->getChosenDialog().begin(), ((ChoiceNode*)narrativeElements[currentElement])->getChosenDialog().end());
-        //}
+        if (narrativeElements[currentElement]->getType() == CHOICE_NODE) {
+            std::vector<NarrativeNode*> choiceNode = ((ChoiceNode*)narrativeElements[currentElement])->getChosenDialog();
+            narrativeElements.insert(narrativeElements.begin() + currentElement + 1, choiceNode.begin(), choiceNode.end());
+        }
 
         currentElement++;
     }
@@ -98,6 +101,10 @@ bool NarrativeScene::isReady() {
     }
 
     return condition->isMet();
+}
+
+bool NarrativeScene::isDoneAtLoc() {
+    return doneAtLoc;
 }
 
 void NarrativeScene::addCharacter(Character* character) {
