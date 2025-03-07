@@ -150,11 +150,11 @@ Aye Aye Captain!
 
 ***ST. PADDY***
 
-Lovely enthusiasm, I see you're already staring down Monsieur Púca Cleasaí.
+Lovely enthusiasm! I see you're already staring down Monsieur Púca Cleasaí.
 
-Ya know its rude to stare right, tho he'd do the same. All I can do is hope your not two peas in a pod.
+Ya know it's rude to stare, right, tho he'd do the same. All I can do is hope you're not two peas in a pod.
 
-He's a bit of a trickster you see. Whatever you do, don't let him push you about OK.
+He's a bit of a trickster you see. Whatever you do, don't let him push you about, OK?.
 
 ***PLAYER***
 
@@ -162,7 +162,7 @@ He's a bit of a trickster you see. Whatever you do, don't let him push you about
 
 ***ST. PADDY***
 
-With this one you have to make sure you don't let the peer pressure get to you. Don't want to do things you'll regret after all.
+With this one, you have to make sure you don't let the peer pressure get to you. Don't want to do things you'll regret after all.
 
 If you're not up for this your always free to leave and come back another day.
 
@@ -170,12 +170,12 @@ Alright, am off to my home sweet home for a pint.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*What a man, so much joy but hes only got the pub on his mind. I wonder if I'll ever have a place like that.*</span>
+<span style="color:SlateDARKGRAY">*What a man, so much joy but he's only got the pub on his mind. I wonder if I'll ever have a place like that.*</span>
 
 See you soon boss!
 </center>
 
-You now have the choice of working or doing something else entirely. Waking into a location will not lock you out of doing other things anymore.
+You now have the choice of working or doing something else entirely. Walking into a location will not lock you out of doing other things anymore.
 
 </br>
 
@@ -193,11 +193,11 @@ A-Ahhh, t-that parson's h-head i-is...
 
 ***ST. PADDY***
 
-C'mere to me, whatever your about to yell stuff it down deep and don't. We don't need this beautiful day going arseways.
+C'mere to me, whatever you're about to yell, stuff it down deep and don't. We don't need this beautiful day going arseways.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*I gulped holding my fear back. Paddy's demeanour shifted from the usual happy go lucky caring self. What is this, should I leg it while I still can?*</span>
+<span style="color:SlateDARKGRAY">*I gulped, holding my fear back. Paddy's demeanour shifted from the usual happy go lucky caring self. What is this, should I leg it while I still can?*</span>
 
 ***ST. PADDY***
 
@@ -271,7 +271,7 @@ The PLAYER reflects on their meeting with PUCA.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*We made a bit of a mess yesterday with Púca. Can't believe I got tricked into it for the mans enjoyment. I'm glad we sorted it out so quickly.*</span>
+<span style="color:SlateDARKGRAY">*We made a bit of a mess yesterday with Púca. Can't believe I got tricked into it for the man's enjoyment. I'm glad we sorted it out so quickly.*</span>
 
 <span style="color:SlateDARKGRAY">*Leaving the gym in a better state then we started was great. We got to clean some stuff that doesn't usually get done.*</span>
 
@@ -284,14 +284,14 @@ The PLAYER reflects on their meeting with PUCA.
 
 ***PLAYER*** 
 
-<span style="color:SlateDARKGRAY">*That little garden gnome of a man had me doing to much extra work last night. I can't believe I spent so much extra time cleaning up that mess on my own.*</span>
+<span style="color:SlateDARKGRAY">*That little garden gnome of a man had me doing too much extra work last night. I can't believe I spent so much extra time cleaning up that mess on my own.*</span>
 
 <span style="color:SlateDARKGRAY">*I hope Paddy isn't too annoyed with the slight re-modelling. I couldn't fix it all alone.*</span>
 
 </center>
 </br>
 
-### **INT. HOME - MORNING - TRIGGER: Morning after meeting the dullaghan**
+### **INT. HOME - MORNING - TRIGGER: Morning after meeting the dullahan**
 The PLAYER reflects on their meeting with Crom.
 
 #### Good Choice
@@ -299,7 +299,7 @@ The PLAYER reflects on their meeting with Crom.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*I should meet Crom again. She must have some interesting stories to tell being a dullahan and all.*</span>
+<span style="color:SlateDARKGRAY">*I should meet Crom again. She must have some interesting stories to tell, being a dullahan n' all.*</span>
 
 <span style="color:SlateDARKGRAY">*I wonder what the other gym goers are. It's a delicate subject so I should take care.*</span>
 
@@ -508,7 +508,7 @@ The pookas name is Púca Cleasaí. It roughly translates to Goblin Trickster.
 
 ***PUCA***
 
-Hi there tall one. What's yar name?
+Hi there, tall one. What's yar name?
 
 ***PLAYER***
 
@@ -516,37 +516,37 @@ Hey, I'm {{NAME}}. What about you?
 
 ***PUCA***
 
-I'm the mighty Púca Cleasaí. Havn't sen you around before; you new here?
+I'm the mighty Púca Cleasaí. Haven't seen you around before; you new here?
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*For someone so short he seems to hold himself in high regard. It'd be nice to have his confidence.*</span>
+<span style="color:SlateDARKGRAY">*For someone so short, he seems to hold himself in high regard. It'd be nice to have his confidence.*</span>
 
 Yeah, started recently and am here to help you out if needed.
 
 ***PUCA***
 
-Good stuff. Since yar here to help lets sort this mess here out. This gym could use a slight re-modelling to improve the layout. Dear Paddy has too much on his head so this ill make his life easier.
+Good stuff. Since yar here to help, lets sort this here mess out. This gym could use a slight re-modelling to improve the layout. Dear Paddy has too much on his head so this I'll make his life easier.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*The commandeering Púca didn't need to convince me. I good swooped up by his charisma and didn't think to question him at all.*</span>
+<span style="color:SlateDARKGRAY">*The commandeering Púca didn't need to convince me. I got swooped up by his charisma and didn't think to question him at all.*</span>
 
-Alright lets get to work.
+Alright, lets get to work.
 
 ***PUCA***
 
-Good lad. Lets do this!
+Good lad. Let's do this!
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*We painstakingly moved everything at the gym at Púca's whim. What seemed a good idea initially turned into a big mess. I looked around and everything was placed haphazardly. I beautiful gym got turned into a tripping hazard on my watch.*</span>
+<span style="color:SlateDARKGRAY">*We painstakingly moved everything at the gym at Púca's whim. What seemed a good idea initially turned into a big mess. I looked around and everything was placed haphazardly. A beautiful gym got turned into a tripping hazard on my watch.*</span>
 
 </center>
 
 #### **PLAYER CHOICE:** What should I do now?
 
-##### **A.** Stop this maddness and fix everything even though It will take a long time
+##### **A.** Stop this madness and fix everything even though it will take a long time.
 
 <center>
 
@@ -560,35 +560,35 @@ B-But its so much fun messing with Paddy like this.
 
 ***PLAYER***
 
-Messing?! Have some cop on that's not how we should treat people!
+Messing?! Have some cop on! That's not how we should treat people!
 
 <span style="color:SlateDARKGRAY">*My mind was rushing. I don't like confrontation. Púca seemed impressed that I stood up to him as if he was messing with me and not Paddy.*</span>
 
 ***PUCA***
 
-Alright, alright let's sort this out so. Twas fun while it lasted.
+Alright, alright. Let's sort this out, so. T'was fun while it lasted.
 
 ***PLAYER***
 
 Thanks.
 
-<span style="color:SlateDARKGRAY">*We worked hard to fix the mess. It took longer than expecetd but the place was cleaner than before we started.*</span>
+<span style="color:SlateDARKGRAY">*We worked hard to fix the mess. It took longer than expected but the place was cleaner than before we started.*</span>
 
 </center>
 
-##### **B.** Keep going to avoid confronting Mr. Púca
+##### **B.** Keep going to avoid confronting Mr. Púca.
 
 <center>
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*We continued to work. The mess became worse. I'm in for it now. It's time to wrap this up before It gets even worse.*</span>
+<span style="color:SlateDARKGRAY">*We continued to work. The mess became worse. I'm in for it now. It's time to wrap this up before it gets even worse.*</span>
 
 There this should do it.
 
 ***PUCA***
 
-Yeah, fine work today
+Yeah, fine work today.
 
 <span style="color:SlateDARKGRAY">*Púca was grinning at me. He knows exactly what we had done here yet he also seems to be unsatisfied. Maybe I should have stopped him. I'll tidy the place up before I head off for the day.*</span>
 
@@ -664,7 +664,7 @@ The dullahans name is Crom Dubh as its known the be the Embodiment of this Celti
 
 ***CROM***
 
-Hello Mister "A-Ahhh, t-that parson's h-head i-is..." detatched. I'm Crom Dubh.
+Hello Mister "A-Ahhh, t-that person's h-head i-is..." detached. I'm Crom Dubh.
 
 You've probably already heard of me but who might you be?
 
@@ -674,11 +674,11 @@ H-Hi, I'm {{NAME}}. Just your average Joe who started working here recently.
 
 ***CROM***
 
-Average...Interesting...You seem to have gotten over headless solders quicker then most. So what do you need?
+Average...Interesting...You seem to have gotten over headless soldiers quicker then most. So what do you need?
 
 </center>
 
-#### **PLAYER CHOICE:** Crom doesn't seem to worried about my outburst. What should I do?
+#### **PLAYER CHOICE:** Crom doesn't seem too worried about my outburst. What should I do?
 
 ##### **A.** Apologise, reflecting on your moment of panic.
 
@@ -698,7 +698,7 @@ Well there was probably a small bit of that too when I seen you move.
 
 ***CROM***
 
-That's OK, you seem like an honest fellow. You also took the time to apologies to me too.
+That's OK, you seem like an honest fellow. You also took the time to apologise to me too.
 
 ***PLAYER***
 
@@ -706,7 +706,7 @@ Thanks for being so accepting of my mistake. It won't happen again.
 
 ***CROM***
 
-No problem. I do love a good jump scare. Twas a bit of fun.
+No problem. I do love a good jump scare. T'was a bit of fun.
 
 ***PLAYER***
 
@@ -722,7 +722,7 @@ No, just wrapping up my exercises. I'll be done and gone soon. Let's chat again 
 
 Sounds good.
 
-<span style="color:SlateDARKGRAY">*I left Crom to her own devices while I tidied up and filled out some paperwork. Once she left I wrapped up too.*</span>
+<span style="color:SlateDARKGRAY">*I left Crom to her own devices while I tidied up and filled out some paperwork. Once she left, I wrapped up too.*</span>
 
 </center>
 
@@ -740,21 +740,21 @@ NO!...How dare you make such an insolent request. You must have a death wish.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*I just made a bad situation worse. Crom is staring daggers at me and I worry my head may not stay on its solders for long either.*</span>
+<span style="color:SlateDARKGRAY">*I just made a bad situation worse. Crom is staring daggers at me and I worry my head may not stay on its shoulders for long either.*</span>
 
 S-Sorry, I-I just...
 
 ***CROM***
 
-You just what!? My patience is running thin. You ruined my exercising session. I should have you're head for this.
+You just what!? My patience is running thin. You ruined my exercising session. I should have your head for this.
 
-Your lucky Patrick is in charge here. I owe him a debt of gratitude so I'll let this one slide.
+You're lucky Patrick is in charge here. I owe him a debt of gratitude so I'll let this one slide.
 
 I'm heading off before anything else comes out of that fun-sized brain of yours.
 
 ***PLAYER***
 
-<span style="color:SlateDARKGRAY">*Corm stomped away while I stood there in silence to avoid making things worse. Paddy, my savior I have failed thee. I tidied up and left for the day.*</span>
+<span style="color:SlateDARKGRAY">*Crom stomped away while I stood there in silence to avoid making things worse. Paddy, my savior I have failed thee. I tidied up and left for the day.*</span>
 
 </center>
 </br>
