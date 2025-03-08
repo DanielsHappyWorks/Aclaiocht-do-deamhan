@@ -2,14 +2,14 @@
 title: "Alpha Delivery"
 date: "2025-03-10"
 categories: [demo]
-image: "waddle.gif"
+image: "alpha.gif"
 ---
 
-TODO write content closer to alpha
-
-This is the first project delivery. I took some time to create demos, update my timeline and resolve some minor issues to make the game more appealing.
+This is the first project delivery. I took some time to create a demo, update my timeline and resolve some minor issues to make the game more appealing.
 
 # Demo
+
+{{< video https://www.youtube.com/watch?v=ay1uuID8jRM >}}
 
 # Reflection
 
