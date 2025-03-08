@@ -33,6 +33,7 @@ class TextNode : public NarrativeNode {
         std::string text;
         TextNodeType type;
         bool dialog = false;
+        int dialogCounter = 0;
 
     public:
         TextNode(Character* character, std::string text, TextNodeType type);

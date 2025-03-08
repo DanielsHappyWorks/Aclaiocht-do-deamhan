@@ -25,15 +25,12 @@ Game::Game()
 Game::~Game()
 {
     CloseWindow();
-
-    //TODO cleanup?
 }
 
 void Game::update()
 {
     SoundManager::GetInstance()->update();
 
-    //TODO migrate this to scene manager!
     overlayScene = SceneManager::GetInstance()->getSceneOverlay();
     currentScene = SceneManager::GetInstance()->getCurrentScene();
 

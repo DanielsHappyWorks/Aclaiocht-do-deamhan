@@ -16,24 +16,37 @@ void drawDialogBox(std::string character, std::string text, Color color)
 
 TextNode::TextNode(Character *character, std::string text, TextNodeType type)
 {
+    int maxLineLength = 64;
+    if (text.length() > maxLineLength)
+    {
+        int lastSpace = text.find_last_of(" ", maxLineLength);
+        text.replace(lastSpace, 1, "\n");
+    }
+
     this->character = character;
-    this->text = text;
+    this->text = text; 
     this->type = type;
 }
 
 bool TextNode::isDone()
 {
-    bool isDone = (InputManager::GetInstance()->isInteracting());
-    if (isDone)
+    bool isInteract = (InputManager::GetInstance()->isInteracting());
+
+    if (isInteract && dialogCounter < text.length())
+    {
+        dialogCounter = text.length();
+        return false;
+    }
+
+    if (isInteract)
     {
         SoundManager::GetInstance()->stopSound(character->getSound());
     }
-    return isDone;
+    return isInteract;
 }
 
 void TextNode::draw()
 {
-    // TODO specify dialog type instead of color
     if (!dialog && TEXT_DIALOGUE == type)
     {
         SoundManager::GetInstance()->playSound(character->getSound());
@@ -45,13 +58,20 @@ void TextNode::draw()
         text = text.replace(text.find("{{NAME}}"), 8, Player::GetInstance()->getCharacter()->getName());
     }
 
+    //get dialog from text by dialog counter
+    std::string dialog = text.substr(0, dialogCounter);
+    if (dialogCounter < text.length())
+    {
+        dialogCounter++;
+    }
+
     switch (type) {
         case TEXT_MONOLOGUE:
-            drawDialogBox(character->getName(), text, DARKGRAY);
+            drawDialogBox(character->getName(), dialog, DARKGRAY);
             return;
         case TEXT_DIALOGUE:
         default:
-            drawDialogBox(character->getName(), text, BLACK);
+            drawDialogBox(character->getName(), dialog, BLACK);
     }
 }
 
@@ -98,7 +118,7 @@ void ChoiceNode::draw()
 
     float btnPadding = 80;
 
-    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 70, (float)GetScreenWidth() - btnPadding * 2, 30}, goodPrompt.c_str()))
+    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 70, (float)GetScreenWidth() - btnPadding * 2, 34}, goodPrompt.c_str()))
     {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         character->addChoice(GOOD);
@@ -106,7 +126,7 @@ void ChoiceNode::draw()
         done = true;
     }
 
-    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 110, (float)GetScreenWidth() - btnPadding * 2, 30}, badPrompt.c_str()))
+    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 110, (float)GetScreenWidth() - btnPadding * 2, 34}, badPrompt.c_str()))
     {
         SoundManager::GetInstance()->playSound(SFX_ERROR);
         character->addChoice(BAD);
