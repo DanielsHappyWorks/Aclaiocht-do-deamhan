@@ -14,6 +14,7 @@ class InputManager {
 
         Vector2 getMovement();
         bool isInteracting();
+        bool isIteractingWithCollider(Rectangle a, Rectangle b);
         bool isColliding(Rectangle a, Rectangle b);
         bool isClickRect(Rectangle rect);
 };

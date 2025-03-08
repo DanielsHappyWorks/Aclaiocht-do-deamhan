@@ -11,6 +11,10 @@ Character::Character(std::string name, CharEnum type, SFX sound, std::vector<Loc
     this->choices = {};
     this->friendship = 0;
 }
+
+PlayerCharacter::PlayerCharacter(std::string name, CharEnum type, SFX sound, std::string front, std::string side) : Character{name, type, sound, {}, {}, front, side} {
+}
+
 Character::~Character() {
     UnloadTexture(front);
     UnloadTexture(side);
@@ -35,12 +39,25 @@ LocEnum Character::getCurrentLoc() {
     return dayLocations[0];
 }
 
+LocEnum PlayerCharacter::getCurrentLoc() {
+    //TODO get day/night cycle!
+    return PUB;
+}
+
+void Character::drawAtLoc() {
+    DrawTextureFromCentre(getFront(), getPosAtLoc(getCurrentLoc()), 0.7f, 0.0f, WHITE);
+}
+
 CharDialogChoices Character::getChoice(int index) {
-    if (choices.size() <= index || index < 0) {
+    if (choices.size() <= index) {
         return UNKNOWN;
     }
 
     return choices[index];
+}
+
+void Character::addChoice(CharDialogChoices choice) {
+    choices.push_back(choice);
 }
 
 int Character::getFriendship() {
@@ -63,8 +80,8 @@ Vector2 Character::getPosAtLoc(LocEnum loc) {
     }
 }
 
-Rectangle Character::getCollisionRect(float scale) {
-    return {getPosAtLoc(getCurrentLoc()).x, getPosAtLoc(getCurrentLoc()).y, (float)front.width * scale, (float)front.height * scale};
+Rectangle Character::getCollisionRect() {
+    return TextureRectFromCentre(getFront(), getPosAtLoc(getCurrentLoc()), 0.7f);
 }
 
 int Character::getCurrentEvent() {

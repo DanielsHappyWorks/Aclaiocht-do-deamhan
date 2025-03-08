@@ -32,7 +32,7 @@ Player::Player() {
     swagger = 0.0f;
     swagger_speed = 0.5f;
 
-    character = new Character(name, PLAYER, SFX_DIALOG_MALE, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
+    character = new PlayerCharacter(name, PLAYER, SFX_DIALOG_MALE, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
 }
 
 Player::~Player() {
@@ -53,9 +53,9 @@ void Player::setDetails(bool gender, char* name) {
     this->name = name;
 
     if (gender) {
-        character = new Character(name, PLAYER, SFX_DIALOG_FEMALE, {}, {}, "assets/images/characters/mc/player_front_female.png", "assets/images/characters/mc/player_side_female.png");
+        character = new PlayerCharacter(name, PLAYER, SFX_DIALOG_FEMALE, "assets/images/characters/mc/player_front_female.png", "assets/images/characters/mc/player_side_female.png");
     } else {
-        character = new Character(name, PLAYER, SFX_DIALOG_MALE, {}, {}, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
+        character = new PlayerCharacter(name, PLAYER, SFX_DIALOG_MALE, "assets/images/characters/mc/player_front_male.png", "assets/images/characters/mc/player_side_male.png");
     }
 }
 

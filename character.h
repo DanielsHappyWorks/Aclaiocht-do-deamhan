@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "raylib.h"
+#include "rayxtend.h"
 #include "enums.h"
 #include "soundManager.h"
 
@@ -28,12 +28,20 @@ class Character {
         std::string getName();
         CharEnum getType();
         SFX getSound();
-        LocEnum getCurrentLoc();
+        virtual LocEnum getCurrentLoc();
+        void drawAtLoc();
         CharDialogChoices getChoice(int index);
+        void addChoice(CharDialogChoices choice);
         int getFriendship();
 
         Vector2 getPosAtLoc(LocEnum loc);
-        Rectangle getCollisionRect(float scale);
+        Rectangle getCollisionRect();
 
         int getCurrentEvent();
+};
+
+class PlayerCharacter : public Character {
+    public:
+        PlayerCharacter(std::string name, CharEnum type, SFX sound, std::string front, std::string side);
+        LocEnum getCurrentLoc();
 };

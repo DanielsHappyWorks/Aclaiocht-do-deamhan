@@ -6,6 +6,7 @@
 #include "inputManager.h"
 #include "locationScene.h"
 #include "sceneManager.h"
+#include "characterFactory.h"
 #include <string>
 
 OverworldScene::OverworldScene() {
@@ -31,6 +32,8 @@ void OverworldScene::update() {
             }
         }
     }
+
+    CharacterFactory::GetInstance()->playCharacterEvents(MAP, Player::GetInstance()->getCollisionRect(playerPos, playerScale));
 }
 
 void OverworldScene::draw() {

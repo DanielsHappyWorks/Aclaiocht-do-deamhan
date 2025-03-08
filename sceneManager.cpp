@@ -66,5 +66,8 @@ NarrativeScene* SceneManager::getSceneOverlay() {
 }
 
 void SceneManager::setSceneOverlay(NarrativeScene* scene) {
+    if (scene == nullptr || scene->isDone()) {
+
+    }
     overlayScene = scene;
 }

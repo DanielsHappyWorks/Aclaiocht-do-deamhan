@@ -48,6 +48,11 @@ bool InputManager::isInteracting() {
     return false;
 }
 
+bool InputManager::isIteractingWithCollider(Rectangle a, Rectangle b) {
+    return InputManager::GetInstance()->isInteracting() && 
+        (InputManager::GetInstance()->isColliding(a, b) || InputManager::GetInstance()->isClickRect(b));
+}
+
 bool InputManager::isColliding(Rectangle a, Rectangle b) {
     if ((IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_E)) && CheckCollisionRecs(a, b)) {
         return true;

@@ -1,6 +1,7 @@
 #pragma once
 
 enum LocEnum {
+    MAP,
     GYM,
     SHOP,
     RESTAURANT,

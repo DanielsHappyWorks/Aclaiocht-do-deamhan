@@ -15,6 +15,11 @@ enum NodeType {
     PASS_TIME_NODE
 };
 
+enum TextNodeType {
+    TEXT_MONOLOGUE,
+    TEXT_DIALOGUE
+};
+
 class NarrativeNode {
     public:
         virtual bool isDone() = 0;
@@ -26,11 +31,11 @@ class TextNode : public NarrativeNode {
     private:
         Character* character;
         std::string text;
-        Color color;
+        TextNodeType type;
         bool dialog = false;
 
     public:
-        TextNode(Character* character, std::string text, Color color);
+        TextNode(Character* character, std::string text, TextNodeType type);
         bool isDone();
         void draw();
         NodeType getType();
@@ -48,6 +53,7 @@ class MoodNode : public NarrativeNode {
 
 class ChoiceNode : public NarrativeNode {
     private:
+        Character* character;
         std::string question;
         std::string goodPrompt;
         std::vector<NarrativeNode*> goodDialog;
@@ -57,7 +63,7 @@ class ChoiceNode : public NarrativeNode {
         bool selected;
         bool done;
     public:
-        ChoiceNode(std::string question, std::string goodPrompt, std::vector<NarrativeNode*> goodDialog, std::string badPrompt, std::vector<NarrativeNode*> badDialog);
+        ChoiceNode(Character* character, std::string question, std::string goodPrompt, std::vector<NarrativeNode*> goodDialog, std::string badPrompt, std::vector<NarrativeNode*> badDialog);
         bool isDone();
         void draw();
         NodeType getType();

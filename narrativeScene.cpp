@@ -100,7 +100,7 @@ bool NarrativeScene::isReady() {
         return true;
     }
 
-    return condition->isMet();
+    return condition->isMet() && !isDone();
 }
 
 bool NarrativeScene::isDoneAtLoc() {

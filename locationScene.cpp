@@ -21,23 +21,15 @@ LocationScene::~LocationScene() {
 void LocationScene::update() {
     playerPos = Player::GetInstance()->move(playerPos, playerSpeed, playerScale);
 
-    if (InputManager::GetInstance()->isInteracting()) {
-        if (InputManager::GetInstance()->isColliding(Player::GetInstance()->getCollisionRect(playerPos, playerScale), location->getExit()) ||
-                InputManager::GetInstance()->isClickRect(location->getExit())) {
-            done = true;
-        }
+    Rectangle playerRect = Player::GetInstance()->getCollisionRect(playerPos, playerScale);
 
-        std::vector<Character*> characters = CharacterFactory::GetInstance()->getCharactersAtLoc(location->getType());
-        for (Character* character : characters) {
-            if (CharacterFactory::GetInstance()->isNarrativeSceneReady(character->getType()) && 
-                    InputManager::GetInstance()->isColliding(Player::GetInstance()->getCollisionRect(playerPos, playerScale), character->getCollisionRect(0.7f)) ||
-                        InputManager::GetInstance()->isClickRect(character->getCollisionRect(0.7f))) {
-                SceneManager::GetInstance()->setSceneOverlay(CharacterFactory::GetInstance()->getNarrativeScene(character->getType()));
-            }
-        }
+    if (InputManager::GetInstance()->isIteractingWithCollider(playerRect, location->getExit())) {
+            done = true;
     }
 
     location->playAnyForcedEvents();
+
+    CharacterFactory::GetInstance()->playCharacterEvents(location->getType(), playerRect);
 }
 
 void LocationScene::draw() {
@@ -45,7 +37,7 @@ void LocationScene::draw() {
 
     std::vector<Character*> characters = CharacterFactory::GetInstance()->getCharactersAtLoc(location->getType());
     for (Character* character : characters) {
-        DrawTextureFromCentre(character->getFront(), character->getPosAtLoc(location->getType()), 0.7f, 0.0f, WHITE);
+        character->drawAtLoc();
     }
 
     Player::GetInstance()->draw(playerPos, playerScale);
@@ -58,7 +50,7 @@ bool LocationScene::isDone() {
 void LocationScene::debug() {
     std::vector<Character*> characters = CharacterFactory::GetInstance()->getCharactersAtLoc(location->getType());
     for (Character* character : characters) {
-        DrawRectangleLinesEx(character->getCollisionRect(0.7f), 2.0f, GREEN);
+        DrawRectangleLinesEx(character->getCollisionRect(), 2.0f, GREEN);
     }
     DrawRectangleLinesEx(Player::GetInstance()->getCollisionRect(playerPos, playerScale), 2.0f, GREEN);
     DrawRectangleLinesEx(location->getExit(), 2.0f, GREEN);

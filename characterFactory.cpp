@@ -2,6 +2,8 @@
 #include "narrativeSceneFactory.h"
 #include "player.h"
 #include "soundManager.h"
+#include "inputManager.h"
+#include "sceneManager.h"
 
 CharacterFactory* CharacterFactory::factory = nullptr;
 
@@ -91,19 +93,43 @@ std::vector<Character*> CharacterFactory::getCharactersAtLoc(LocEnum loc) {
     return characters;
 }
 
+void CharacterFactory::playCharacterEvents(LocEnum loc, Rectangle playerRect) {
+    std::vector<Character*> characters = CharacterFactory::GetInstance()->getCharactersAtLoc(loc);
+    characters.push_back(Player::GetInstance()->getCharacter());
+
+    for (Character* character : characters) {
+        if (CharacterFactory::GetInstance()->isNarrativeSceneReady(character->getType())) {
+            NarrativeScene* scene = CharacterFactory::GetInstance()->getNarrativeScene(character->getType());
+
+            if (scene->isForced() || InputManager::GetInstance()->isIteractingWithCollider(playerRect, character->getCollisionRect())) {
+                SceneManager::GetInstance()->setSceneOverlay(scene);
+            }
+        }
+    }
+}
+
 bool CharacterFactory::isNarrativeSceneReady(CharEnum charEnum) {
     std::vector<NarrativeScene*> scenes = NarrativeSceneFactory::GetInstance()->getCharacterEvents(charEnum);
-    Character* character = getCharacter(charEnum);
 
-    if (scenes.size() <= character->getCurrentEvent()) {
-        return false;
+    for (NarrativeScene* scene : scenes)
+    {
+        if (scene->isReady() && !scene->isDone()) {
+            return true;
+        }
     }
-
-    return scenes[character->getCurrentEvent()]->isReady();
+    
+    return false;
 }
 
 NarrativeScene* CharacterFactory::getNarrativeScene(CharEnum charEnum) {
-    Character* character = getCharacter(charEnum);
-    std::vector<NarrativeScene*> scenes = NarrativeSceneFactory::GetInstance()->getCharacterEvents(character->getType());
-    return scenes[character->getCurrentEvent()];
+    std::vector<NarrativeScene*> scenes = NarrativeSceneFactory::GetInstance()->getCharacterEvents(charEnum);
+
+    for (NarrativeScene* scene : scenes)
+    {
+        if (scene->isReady() && !scene->isDone()) {
+            return scene;
+        }
+    }
+    
+    return nullptr;
 }
