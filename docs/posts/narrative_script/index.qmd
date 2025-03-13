@@ -1,7 +1,7 @@
 ---
 title: "Script: First Draft"
 date: "2025-02-26"
-categories: [narrative, assets, design]
+categories: [Narrative, Assets, Design]
 image: "../../images/narr_seq.svg"
 ---
 
@@ -13,7 +13,7 @@ After a lot of work, the first draft is completed and ready to be put into the g
 
 I'm not much of a writer, technical work has always been my specialty. This is very much a first for me. Feels like I'm in the deep end. I found myself stuck for words or at a loss of what I wanted my dialogue to achieve.
 
-Unable to write meant my motivation was waning, especially when I just wanted to get stuck into the code instead. The fact that i used a sequence diagram instead of a storyboard for the narrative highlights this.
+Unable to write meant my motivation was waning, especially when I just wanted to get stuck into the code instead. The fact that I used a sequence diagram instead of a storyboard for the narrative highlights this.
 
 On multiple occasions, I got stuck, unable to write anything more, but the clock keeps ticking. Deadlines are looming. There is no rest for the wicked after all. As I write this entry, I reflect on all of those times. By persevering, I overcame a problem I never expected to have.
 

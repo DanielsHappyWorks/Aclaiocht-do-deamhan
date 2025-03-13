@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Production Journal",
     "section": "",
-    "text": "Alpha Delivery\n\n\n\n\n\n\ndemo\n\n\n\n\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNarrative Engine\n\n\n\n\n\n\nprogramming\n\n\nnarrative\n\n\n\n\n\n\n\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nVisual & Audio Improvements\n\n\n\n\n\n\nprogramming\n\n\ndesign\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nScript: First Draft\n\n\n\n\n\n\nnarrative\n\n\nassets\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter Select & Movement\n\n\n\n\n\n\nprogramming\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter & Map Design\n\n\n\n\n\n\nassets\n\n\ndesign\n\n\ncharacters\n\n\nenvironment\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPaper Prototype\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nFeb 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRefining Concept Reasearch Question\n\n\n\n\n\n\nconcept\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Concept\n\n\n\n\n\n\nconcept\n\n\ndesign\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Alpha Delivery\n\n\n\n\n\n\nDemo\n\n\nProject Management\n\n\n\n\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNarrative Engine\n\n\n\n\n\n\nProgramming\n\n\nNarrative\n\n\n\n\n\n\n\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nVisual & Audio Improvements\n\n\n\n\n\n\nProgramming\n\n\nDesign\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nScript: First Draft\n\n\n\n\n\n\nNarrative\n\n\nAssets\n\n\nDesign\n\n\n\n\n\n\n\n\n\nFeb 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter Select & Movement\n\n\n\n\n\n\nProgramming\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCharacter & Map Design\n\n\n\n\n\n\nAssets\n\n\nDesign\n\n\nCharacters\n\n\nEnvironment\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPaper Prototype\n\n\n\n\n\n\nConcept\n\n\nDesign\n\n\n\n\n\n\n\n\n\nFeb 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRefining Concept Reasearch Question\n\n\n\n\n\n\nConcept\n\n\nResearch\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Concept\n\n\n\n\n\n\nConcept\n\n\nDesign\n\n\nUser Testing\n\n\nProject Management\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/concept/index.html",
@@ -221,14 +221,14 @@
     "href": "posts/narrative_engine/index.html",
     "title": "Narrative Engine",
     "section": "",
-    "text": "A lot of work has gone into the system that runs the narrative in my game. It’s complicated and was the biggest challenge but with perseverance I’m finally in a position where I can copy my script into the game quickly and see my work paying off.\nHere is a demo of this system with the proofread dialog for Chaointe Doran."
+    "text": "A lot of work has gone into the system that runs the narrative in my game. It’s complicated and was the biggest challenge but with perseverance, I’m finally in a position where I can copy my script into the game quickly and see my work paying off.\nHere is a demo of this system with the proofread dialogue for Chaointe Doran."
   },
   {
     "objectID": "posts/narrative_engine/index.html#not-everything-is-supported",
     "href": "posts/narrative_engine/index.html#not-everything-is-supported",
     "title": "Narrative Engine",
     "section": "Not everything is supported",
-    "text": "Not everything is supported\nThe system still has some pitfalls. It doesn’t support everything I need it too for the other character narratives that need to be integrated. For example forced character events are not available. These things are not needed for the Alpha & Beta though so I’m not worried. If something is missing when I go to add Púca’s and Crom’s events it won’t take long as the system has proven to be very extendable with new narrative nodes."
+    "text": "Not everything is supported\nThe system still has some pitfalls. It doesn’t support everything I need it to for the other character narratives that need to be integrated. For example, forced character events are not available. These things are not needed for the Alpha & Beta though so I’m not worried. If something is missing when I go to add Púca’s and Crom’s events, it won’t take long as the system has proven to be very extendable with new narrative nodes."
   },
   {
     "objectID": "posts/narrative_engine/index.html#visual-fidelity",
@@ -242,13 +242,48 @@
     "href": "posts/visual_improvements/index.html",
     "title": "Visual & Audio Improvements",
     "section": "",
-    "text": "The narrative engine has proven very complicated with no visual feedback. It felt like I was not making any progress so I took a here and there to add some flare to the game.\nHere is a demo of the visuals so far:\n\n\nCharacter Animations\nCharacter animations without animated sprites was a challenge. The characters pivot point needed to change but raylib didn’t automatically so I extended texture drawing to support this. I’m very happy with this.\n\nOnce this was done making the character squish and stretch and rotate over time was simple. I still need to extend this to texture boundaries to make collisions simpler when drawing using pivots but this can be done later as needed.\n\n\nCharacter Selection\nReusing the pivot work from the character animation work, I added a sun and clouds to the character select which was now also re-purposed into the main menu. This was simple enough but it did so much towards making the menu much more professional.\n\n\nGame Locations\nAll locations have different backgrounds now so they are easier to tell apart. This makes testing easier. The locations are still missing items but that’s refinement work for the beta stage of the project.\n\n\nAudio Improvements\nI added an audio manager with music made by Joel Steudler. This actually helped me In the narrative engine as now I can change music in scenes to match the mood. This has added some much needed depth to my game. Sound effects still need to be implemented but the audio manager has support for these making my life easier in the future."
+    "text": "The narrative engine has proven very complicated with no visual feedback. It felt like I was not making any progress so I took some time here and there to add some flare to the game.\nHere is a demo of the visuals so far:\n\n\nCharacter Animations\nCharacter animations without animated sprites was a challenge. The character’s pivot point needed to change but Raylib didn’t support this so I extended texture drawing to support this. I’m very happy with this.\n\nOnce this was done, making the character squish and stretch and rotate over time was simple. I still need to extend this to texture boundaries to make collisions simpler when drawing using pivots but this can be done later as needed.\n\n\nCharacter Selection\nReusing the pivot work from the character animation, I added a sun and clouds to the character select which was now also re-purposed into the main menu. This was simple enough but it did so much towards making the menu much more professional.\n\n\nGame Locations\nAll locations have different backgrounds now so they are easier to tell apart. This makes testing easier. The locations are still missing items but that’s refinement work for the beta stage of the project.\n\n\nAudio Improvements\nI added an audio manager with music made by Joel Steudler. This actually helped me in the narrative engine as now I can change music in scenes to match the mood. This has added some much needed depth to my game. Sound effects still need to be implemented but the audio manager has support for these, making my life easier in the future."
   },
   {
     "objectID": "posts/alpha_delivery/index.html",
     "href": "posts/alpha_delivery/index.html",
     "title": "Alpha Delivery",
     "section": "",
-    "text": "This is the first project delivery. I took some time to create a demo, update my timeline and resolve some minor issues to make the game more appealing.\n\nDemo\n\n\n\nReflection\n\n\nBeta - Next steps"
+    "text": "This is the first project delivery. I took some time to create a demo, update my timeline and resolve some minor issues to make the game more appealing."
+  },
+  {
+    "objectID": "posts/alpha_delivery/index.html#next-steps---prioritized",
+    "href": "posts/alpha_delivery/index.html#next-steps---prioritized",
+    "title": "Alpha Delivery",
+    "section": "Next steps - Prioritized",
+    "text": "Next steps - Prioritized\n\nFinish narrative integration\n\nPooka\nDullahan\n\nQuality of Life improvements. The core of the game is already completed!\n\nFont Readability\nDay/Night Mechanic\nNeeds way to pass time\n\nSpotting mechanic to become default interaction for passing time.\n\nControls menu/tutorial\nFinal beta scene\nTo be continued screen when all narrative events are completed\nVisual enhancements"
+  },
+  {
+    "objectID": "posts/alpha_delivery/index.html#project-management",
+    "href": "posts/alpha_delivery/index.html#project-management",
+    "title": "Alpha Delivery",
+    "section": "Project Management",
+    "text": "Project Management\nI also updated scope and re-evaluated the timeline based on the work completed so far. I got more done then expecetd for the alpha so I will make testing my main focus for the beta.\n\nThis Gantt chart shows how I will tackle the leftover work."
+  },
+  {
+    "objectID": "posts/alpha_delivery/index.html#next-steps---prioritized-list",
+    "href": "posts/alpha_delivery/index.html#next-steps---prioritized-list",
+    "title": "Alpha Delivery",
+    "section": "Next steps - Prioritized list",
+    "text": "Next steps - Prioritized list\n\nFinish narrative integration\n\nPooka\nDullahan\n\nQuality of Life improvements. The core of the game is already completed!\n\nFont Readability\nDay/Night Mechanic\nNeeds way to pass time\n\nSpotting mechanic to become default interaction for passing time.\n\nControls menu/tutorial\nFinal beta scene\nTo be continued screen when all narrative events are completed\nVisual enhancements"
+  },
+  {
+    "objectID": "posts/alpha_delivery/index.html#project-update",
+    "href": "posts/alpha_delivery/index.html#project-update",
+    "title": "Alpha Delivery",
+    "section": "Project Update",
+    "text": "Project Update\nI also updated scope and re-evaluated the timeline based on the work completed so far. I got more done than expected for the alpha so I will make testing my main focus for the beta.\n\nThis Gantt chart shows how I will tackle the leftover work."
+  },
+  {
+    "objectID": "posts/narrative_engine/index.html#visual-improvements",
+    "href": "posts/narrative_engine/index.html#visual-improvements",
+    "title": "Narrative Engine",
+    "section": "Visual improvements",
+    "text": "Visual improvements\nThe focus was on making the back-end work. The visuals still need refinement. The TextNode is especially poor. The text overflows and the font is hard to read. My goal is to refine this in the beta dev cycle. I took a stab at this already but needed to move on as the script is not fully integrated yet and that takes priority."
   }
 ]

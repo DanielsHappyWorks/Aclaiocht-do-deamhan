@@ -1,0 +1,17 @@
+{
+  "hash": "8704103ee730956bf8e39173d81c9c7f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Alpha Delivery\"\ndate: \"2025-03-10\"\ncategories: [Demo, Project Management]\nimage: \"alpha.gif\"\n---\n\n\nThis is the first project delivery. I took some time to create a demo,\nupdate my timeline and resolve some minor issues to make the game more\nappealing.\n\n# Demo\n\n\n{{< video https://www.youtube.com/watch?v=ay1uuID8jRM >}}\n\n\n\n# Reflection\n\nThe alpha went really well. I'm very happy with what I delivered. I've overcome many bugs and challenges. Not everything went according to plan but more got done than expected. As part of this delivery, I got some time to re-evaluate the project timeline and scope. I adjusted for things that in retrospect aren't needed for the beta demo.\n\n# Beta\n\nI need to wrap up the game artifact work soon and publish it so I can\nattempt to answer my research question.\n\n## Next steps - Prioritized list\n\n-   Finish narrative integration\n    -   Pooka\n    -   Dullahan\n-   Quality of Life improvements. The core of the game is already completed!\n    -   Font Readability\n    -   Day/Night Mechanic\n    -   Needs way to pass time\n        -   Spotting mechanic to become default interaction for passing time.\n    -   Controls menu/tutorial\n    -   Final beta scene\n    -   To be continued screen when all narrative events are completed\n    -   Visual enhancements\n\n## Project Update\n\nI also updated scope and re-evaluated the timeline based on the work\ncompleted so far. I got more done than expected for the alpha so I will\nmake testing my main focus for the beta.\n\n![](trello.png)\n\nThis Gantt chart shows how I will tackle the leftover work.\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

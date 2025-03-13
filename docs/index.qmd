@@ -1,6 +1,6 @@
 ---
 title: "Production Journal"
-description: "Hey, my name is Daniel Foth. This is my journal which logs and relfects on the work done for my MSc project called Exercise Your Demons. It's a 2D cozy narrative game with some dark themes based on the ‘good people’ from Irish fairy tales and folklore."
+description: "Hey, my name is Daniel Foth. This is my journal which logs and reflects on the work done for my MSc project called \"Life lessons from Irish Folklore via video games\". As part of it, I'm producing a 2D cozy narrative game called \"Exercise Your Demons\" with some dark themes based on the ‘good people’ from Irish fairy tales and folklore."
 listing:
   contents: posts
   sort: "date desc"

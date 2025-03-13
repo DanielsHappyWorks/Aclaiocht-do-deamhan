@@ -1,7 +1,7 @@
 ---
 title: "Initial Concept"
 date: "2025-01-29"
-categories: [concept, design]
+categories: [Concept, Design, User Testing, Project Management]
 image: "../../images/timeline.png"
 ---
 

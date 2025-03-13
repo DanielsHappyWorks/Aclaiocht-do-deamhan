@@ -131,8 +131,8 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title column-body">
       <h1 class="title">Narrative Engine</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">programming</div>
-                <div class="quarto-category">narrative</div>
+                <div class="quarto-category">Programming</div>
+                <div class="quarto-category">Narrative</div>
               </div>
                   </div>
   </div>
@@ -163,41 +163,41 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>A lot of work has gone into the system that runs the narrative in my game. It’s complicated and was the biggest challenge but with perseverance I’m finally in a position where I can copy my script into the game quickly and see my work paying off.</p>
-<p>Here is a demo of this system with the proofread dialog for Chaointe Doran.</p>
+<p>A lot of work has gone into the system that runs the narrative in my game. It’s complicated and was the biggest challenge but with perseverance, I’m finally in a position where I can copy my script into the game quickly and see my work paying off.</p>
+<p>Here is a demo of this system with the proofread dialogue for Chaointe Doran.</p>
 <p><img src="image.gif" class="img-fluid"></p>
 <section id="architecture" class="level1">
 <h1>Architecture</h1>
-<p>The narrative engine extends the scene system I use to navigate the world. There is a Narrative Scene that renders all of the Narrative Nodes associated with Characters &amp; Locations. For this to fully function all Character &amp; Location definitions needed to be added into the game.</p>
+<p>The narrative engine extends the scene system I use to navigate the world. There is a Narrative Scene that renders all of the Narrative Nodes associated with Characters &amp; Locations. For this to fully function, all Character &amp; Location definitions needed to be added into the game.</p>
 <p>The nodes that are currently supported are:</p>
 <ul>
-<li>TextNode: Displays dialog.</li>
+<li>TextNode: Displays dialogue.</li>
 <li>ChoiceNode: Allows the player to make a narrative choice while keeping track of the selections for future use.</li>
-<li>AddCharacterNode: Adds a character to the narrative scene showing them standing behind the dialog.</li>
+<li>AddCharacterNode: Adds a character to the narrative scene showing them standing behind the dialogue.</li>
 <li>RemoveCharacterNode: Removes a character in the scene.</li>
 <li>MoodNode: Sets the mood by changing the music playing in the background.</li>
-<li>AddBackgroundNode: Sets a background color to override the location the scene takes place in. This can be extended to Textures later but ther isn’t time to make bespoke drawings for scenes.</li>
+<li>AddBackgroundNode: Sets a background colour to override the location the scene takes place in. This can be extended to textures later but there isn’t time to make bespoke drawings for scenes.</li>
 <li>RemoveBackgroundNode: Removes a background displaying the current location.</li>
 </ul>
-<p>Each narrative event known as a NarrativeScene also has Conditions and an isForced parameter.</p>
-<p>Conditions are used to limit when a scene can be activated and are easily extendible. They currently include:</p>
+<p>Each narrative event known as a NarrativeScene also has conditions and an isForced parameter.</p>
+<p>Conditions are used to limit when a scene can be activated and are easily extendable. They currently include:</p>
 <ul>
 <li>CharacterAtLocationCondition: Checks if a specific character is at a location.</li>
 <li>MetCharacterCondition: Checks if the player has completed a specific character event and distinguishes between the choice made.</li>
 </ul>
-<p>IsForced forces scenes to play when a specific condition is meet allowing us to trigger scenes as needed without player input.</p>
-<p>All of the above is letting me add the narrative script in minutes. Once I get around to proofreading the rest of the script adding it in for the beta should be simple. I managed to solve the most difficult problem I faced allowing me to iterate quickly from here on. It unfortunately took longer then expected.</p>
+<p>IsForced forces scenes to play when a specific condition is met, allowing us to trigger scenes as needed without player input.</p>
+<p>All of the above is letting me add the narrative script in minutes. Once I get around to proofreading the rest of the script, adding it in for the beta should be simple. I managed to solve the most difficult problem I faced, allowing me to iterate quickly from here on. It unfortunately took longer than expected.</p>
 </section>
 <section id="limitations-future-work" class="level1">
 <h1>Limitations &amp; Future Work</h1>
 <p>This section describes some current limitations of the narrative engine at this point in time.</p>
 <section id="not-everything-is-supported" class="level2">
 <h2 class="anchored" data-anchor-id="not-everything-is-supported">Not everything is supported</h2>
-<p>The system still has some pitfalls. It doesn’t support everything I need it too for the other character narratives that need to be integrated. For example forced character events are not available. These things are not needed for the Alpha &amp; Beta though so I’m not worried. If something is missing when I go to add Púca’s and Crom’s events it won’t take long as the system has proven to be very extendable with new narrative nodes.</p>
+<p>The system still has some pitfalls. It doesn’t support everything I need it to for the other character narratives that need to be integrated. For example, forced character events are not available. These things are not needed for the Alpha &amp; Beta though so I’m not worried. If something is missing when I go to add Púca’s and Crom’s events, it won’t take long as the system has proven to be very extendable with new narrative nodes.</p>
 </section>
-<section id="visual-fidelity" class="level2">
-<h2 class="anchored" data-anchor-id="visual-fidelity">Visual Fidelity</h2>
-<p>The focus was on making the backed work. The visuals still need refinement. The TextNode is especially poor. The text overflows and the font is hard to read. My goal I to refine this in the beta dev cycle. I took a stab at this already but needed to move on as the script is not fully integrated yet and that takes priority.</p>
+<section id="visual-improvements" class="level2">
+<h2 class="anchored" data-anchor-id="visual-improvements">Visual improvements</h2>
+<p>The focus was on making the back-end work. The visuals still need refinement. The TextNode is especially poor. The text overflows and the font is hard to read. My goal is to refine this in the beta dev cycle. I took a stab at this already but needed to move on as the script is not fully integrated yet and that takes priority.</p>
 
 
 </section>

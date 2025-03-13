@@ -1,11 +1,13 @@
 ---
 title: "Alpha Delivery"
 date: "2025-03-10"
-categories: [demo]
+categories: [Demo, Project Management]
 image: "alpha.gif"
 ---
 
-This is the first project delivery. I took some time to create a demo, update my timeline and resolve some minor issues to make the game more appealing.
+This is the first project delivery. I took some time to create a demo,
+update my timeline and resolve some minor issues to make the game more
+appealing.
 
 # Demo
 
@@ -13,4 +15,70 @@ This is the first project delivery. I took some time to create a demo, update my
 
 # Reflection
 
-# Beta - Next steps
+The alpha went really well. I'm very happy with what I delivered. I've overcome many bugs and challenges. Not everything went according to plan but more got done than expected. As part of this delivery, I got some time to re-evaluate the project timeline and scope. I adjusted for things that in retrospect aren't needed for the beta demo.
+
+# Beta
+
+I need to wrap up the game artifact work soon and publish it so I can
+attempt to answer my research question.
+
+## Next steps - Prioritized list
+
+-   Finish narrative integration
+    -   Pooka
+    -   Dullahan
+-   Quality of Life improvements. The core of the game is already completed!
+    -   Font Readability
+    -   Day/Night Mechanic
+    -   Needs way to pass time
+        -   Spotting mechanic to become default interaction for passing time.
+    -   Controls menu/tutorial
+    -   Final beta scene
+    -   To be continued screen when all narrative events are completed
+    -   Visual enhancements
+
+## Project Update
+
+I also updated scope and re-evaluated the timeline based on the work
+completed so far. I got more done than expected for the alpha so I will
+make testing my main focus for the beta.
+
+![](trello.png)
+
+This Gantt chart shows how I will tackle the leftover work.
+
+```{r, include = FALSE}
+install.packages("ganttrify",
+  repos = c(
+    "https://giocomai.r-universe.dev",
+    "https://cloud.r-project.org"
+  )
+)
+
+library("ganttrify")
+```
+
+```{r, echo = FALSE, warning = FALSE}
+funky_project <- tibble::tribble(
+  ~wp, ~activity, ~start_date, ~end_date,
+  "Documentation", "Weekly Journaling", "2025-03-11", "2025-04-22",
+  "Documentation", "Thesis", "2025-03-11", "2025-05-06",
+
+  "Beta", "Narrative Integration - Pooka", "2025-03-11", "2025-03-14",
+  "Beta", "Narrative Integration - Banshee", "2025-03-14", "2025-03-17",
+  "Beta", "Font Readability", "2025-03-17", "2025-03-18",
+  "Beta", "Day & Night Mechanic", "2025-03-18", "2025-03-20",
+  "Beta", "Controls Menu", "2025-03-20", "2025-03-21",
+  "Beta", "Demo Ending Scene", "2025-03-21", "2025-03-23",
+  "Beta", "Visual Enhancements", "2025-03-23", "2025-03-26",
+  "Beta", "Beta Testing", "2025-03-26", "2025-04-07",
+)
+
+ ganttrify(
+   project = funky_project,
+   project_start_date = "2025-03",
+   by_date = TRUE,
+   exact_date = TRUE,
+   font_family = "Roboto Condensed"
+ )
+```

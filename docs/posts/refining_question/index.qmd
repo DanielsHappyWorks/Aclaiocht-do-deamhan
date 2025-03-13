@@ -1,7 +1,7 @@
 ---
 title: "Refining Concept Reasearch Question"
 date: "2025-02-05"
-categories: [concept, research]
+categories: [Concept, Research]
 image: "../../images/brain.png"
 ---
 
