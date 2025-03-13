@@ -21,3 +21,10 @@ enum CharEnum {
     DULLAHAN,
     POOKA
 };
+
+enum Time {
+    FULL_DAY,
+    HALF_DAY,
+    DAY,
+    NIGHT
+};

@@ -19,7 +19,8 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
     Character* pooka = CharacterFactory::GetInstance()->getCharacter(POOKA);
     Character* dullahan = CharacterFactory::GetInstance()->getCharacter(DULLAHAN);
 
-    playerEvents = {new NarrativeScene({
+    playerEvents = {
+    new NarrativeScene({
         new TextNode(player, "I woke up early with my muscles aching from the exercise.", TEXT_MONOLOGUE),
         new TextNode(player, "It feels good to have exercised yesterday. The sleep felt so much better than usual.", TEXT_MONOLOGUE),
         new TextNode(player, "Chaointe was so nice. I should make sure to exercise with her again soon.", TEXT_MONOLOGUE),
@@ -36,15 +37,42 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "Ehhh, I guess I should get up and try to get out of bed.", TEXT_MONOLOGUE),
         new TextNode(player, "The parents would be so disappointed If I failed at another job.", TEXT_MONOLOGUE),
         new TextNode(player, "I wouldn't be able to face uncle Colin after this either.", TEXT_MONOLOGUE),
-    }, new MetCharacterCondition(banshee, 0, BAD), true)};
+    }, new MetCharacterCondition(banshee, 0, BAD), true),
+    new NarrativeScene({
+        new TextNode(player, "We made a bit of a mess yesterday with Púca.", TEXT_MONOLOGUE),
+        new TextNode(player, "Can't believe I got tricked into it for the man's enjoyment.", TEXT_MONOLOGUE),
+        new TextNode(player, "I'm glad we sorted it out so quickly.", TEXT_MONOLOGUE),
+        new TextNode(player, "Leaving the gym in a better state then we started was great.", TEXT_MONOLOGUE),
+        new TextNode(player, "We got to clean some stuff that doesn't usually get done.", TEXT_MONOLOGUE),
+    }, new MetCharacterCondition(pooka, 0, GOOD), true),
+    new NarrativeScene({
+        new TextNode(player, "That little garden gnome of a man had me doing too much extra work last night.", TEXT_MONOLOGUE),
+        new TextNode(player, "I can't believe I spent so much extra time cleaning up that mess on my own.", TEXT_MONOLOGUE),
+        new TextNode(player, "I hope Paddy isn't too annoyed with the slight re-modelling.", TEXT_MONOLOGUE),
+        new TextNode(player, "I couldn't fix it all alone.", TEXT_MONOLOGUE),
+    }, new MetCharacterCondition(pooka, 0, BAD), true),
+    new NarrativeScene({
+        new TextNode(player, "I should meet Crom again.", TEXT_MONOLOGUE),
+        new TextNode(player, "She must have some interesting stories to tell, being a dullahan n' all.", TEXT_MONOLOGUE),
+        new TextNode(player, "I wonder what the other gym goers are.", TEXT_MONOLOGUE),
+        new TextNode(player, "It's a delicate subject so I should take care.", TEXT_MONOLOGUE),
+    }, new MetCharacterCondition(dullahan, 0, GOOD), true),
+    new NarrativeScene({
+        new TextNode(player, "I gotta make sure my head doesn't come off next time I meet Crom.", TEXT_MONOLOGUE),
+        new TextNode(player, "She seems like shes got a violent streak going.", TEXT_MONOLOGUE),
+        new TextNode(player, "I wonder what creatures the other gym goers are.", TEXT_MONOLOGUE),
+        new TextNode(player, "I should avoid offending them too.", TEXT_MONOLOGUE),
+    }, new MetCharacterCondition(dullahan, 0, BAD), true)};
 
-    gymEvents = {};
-    gymEvents.push_back(new NarrativeScene({
+    gymEvents = {
+    new NarrativeScene({
+        new AddBackgroundNode(BLACK),
         new TextNode(player, "Finally arrived. Uncle Colin really pulled through for me here.", TEXT_MONOLOGUE),
         new TextNode(player, "Not sure I could have landed this gig without him.", TEXT_MONOLOGUE),
         new TextNode(player, "Tis been hard the last few weeks.", TEXT_MONOLOGUE),
         new AddCharacterNode(paddy),
         new TextNode(paddy, "Ahh you finally made it. The name is Paddy.", TEXT_DIALOGUE),
+        new RemoveBackgroundNode(),
         new TextNode(paddy, "I'm the manager of this here joint. Tír na Síoga we call it.", TEXT_DIALOGUE),
         new TextNode(player, "I'm {{NAME}}, thank you for taking me on on such short notice.", TEXT_DIALOGUE),
         new TextNode(paddy, "Looking forward to having you on board.", TEXT_DIALOGUE),
@@ -86,11 +114,64 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new RemoveCharacterNode(paddy),
         new TextNode(player, "Paddy waddled off humming such a joyful tune; I wonder what it was.", TEXT_MONOLOGUE),
         new TextNode(player, "Alright time to get to it. It's not like Chaointe bites, right?!", TEXT_MONOLOGUE),
-        new TextNode(player, "The next day they will have a choice of where they want to head during the day.", TEXT_MONOLOGUE),
-    }, new CharacterAtLocationCondition(banshee, GYM), true));
+    }, new CharacterAtLocationCondition(banshee, GYM), true),
+    new NarrativeScene({
+        new AddCharacterNode(paddy),
+        new TextNode(paddy, "Welcome back, good to have ya here again. Ready for another day at work?", TEXT_DIALOGUE),
+        new TextNode(player, "He sounds way too happy to see me.", TEXT_MONOLOGUE),
+        new TextNode(player, "Something tells me he's about to run off again and leave me to deal with the shortie in the corner.", TEXT_MONOLOGUE),
+        new TextNode(player, "Aye Aye Captain!", TEXT_DIALOGUE),
+        new TextNode(paddy, "Lovely enthusiasm! I see you're already staring down Monsieur Púca Cleasaí.", TEXT_DIALOGUE),
+        new AddCharacterNode(pooka),
+        new TextNode(paddy, "Ya know it's rude to stare, right, tho he'd do the same.", TEXT_DIALOGUE),
+        new TextNode(paddy, "All I can do is hope you're not two peas in a pod.", TEXT_DIALOGUE),
+        new TextNode(paddy, "He's a bit of a trickster you see.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Whatever you do, don't let him push you about, OK?", TEXT_DIALOGUE),
+        new TextNode(player, "I nodded back at Paddy and wondered if this guy might be a kindred spirit.", TEXT_MONOLOGUE),
+        new TextNode(paddy, "With this one, you have to make sure you don't let the peer pressure get to you.", TEXT_DIALOGUE),
+        new RemoveCharacterNode(pooka),
+        new TextNode(paddy, "Don't want to do things you'll regret after all.", TEXT_DIALOGUE),
+        new TextNode(paddy, "If you're not up for this your always free to leave and come back another day.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Alright, am off to my home sweet home for a pint.", TEXT_DIALOGUE),
+        new TextNode(player, "What a man, so much joy but he's only got the pub on his mind.", TEXT_MONOLOGUE),
+        new TextNode(player, "I wonder if I'll ever have a place like that.", TEXT_MONOLOGUE),
+        new TextNode(player, "See you soon boss!", TEXT_DIALOGUE),
+    }, new CharacterAtLocationCondition(pooka, GYM), true),
+    new NarrativeScene({
+        new AddCharacterNode(dullahan),
+        new TextNode(player, "A-Ahhh, t-that parson's h-head i-is…", TEXT_DIALOGUE),
+        new AddCharacterNode(paddy),
+        new TextNode(player, "Before I could finish my sentence, Paddy put his hand over my mouth to stop me.", TEXT_MONOLOGUE),
+        new TextNode(player, "All I could see was the severed head glaring at me from a distance.", TEXT_MONOLOGUE),
+        new TextNode(paddy, "C'mere to me, whatever you're about to yell, stuff it down deep and don't.", TEXT_DIALOGUE),
+        new TextNode(paddy, "We don't need this beautiful day going arseways.", TEXT_DIALOGUE),
+        new TextNode(player, "I gulped, holding my fear back.", TEXT_MONOLOGUE),
+        new TextNode(player, "Paddy's demeanour shifted from the usual happy go lucky caring self. What is this, should I leg it while I still can?", TEXT_MONOLOGUE),
+        new TextNode(paddy, "Calm down kid, I'm sure you've realized it by know.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Everyone who comes here ain't exactly human but they are good people.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Our little lady over there is the headless rider herself, Crom Dubh.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Try not to cross her as she's got a tendency for violence.", TEXT_DIALOGUE),
+        new TextNode(player, "Paddy is right, I already knew this place was odd.", TEXT_MONOLOGUE),
+        new TextNode(player, "Knowing I'm not seeing a dead body has put me slightly at ease.", TEXT_MONOLOGUE),
+        new RemoveCharacterNode(dullahan),
+        new TextNode(paddy, "Yeah, you'll be fine.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Today might be a tough day on the job but you've got this, after all you already meet some inhuman guests of ours.", TEXT_DIALOGUE),
+        new TextNode(paddy, "Just make sure to apologize for that outburst.", TEXT_DIALOGUE),
+        new TextNode(player, "I guess I'm gonna need to figure out whats up with this town.", TEXT_MONOLOGUE),
+        new TextNode(player, "It's so odd that I may just fit right in.", TEXT_MONOLOGUE),
+        new TextNode(player, "These misfits may be my kind of odd but should I really be here?", TEXT_MONOLOGUE),
+        new TextNode(player, "W-will do. Sorry for making things uncomfortable.", TEXT_DIALOGUE),
+        new TextNode(paddy, "'Tis grand, reflecting on and rectifying our mistakes is important.", TEXT_DIALOGUE),
+        new TextNode(paddy, "I'll leave ya to it so. Am off to take care of da pub.", TEXT_DIALOGUE),
+        new RemoveCharacterNode(paddy),
+        new TextNode(player, "No humming today. I really soured the mood.", TEXT_MONOLOGUE),
+        new TextNode(player, "Not a great way to start another day on the job.", TEXT_MONOLOGUE),
+        new TextNode(player, "I should at least go and apologize.", TEXT_MONOLOGUE),
+    }, new CharacterAtLocationCondition(dullahan, GYM), true)};
 
 
-    bansheeEvents = {new NarrativeScene({
+    bansheeEvents = {
+    new NarrativeScene({
         new AddCharacterNode(banshee),
         new TextNode(player, "Hey, my name is {{NAME}}. I'm new here. How can I help you today?", TEXT_DIALOGUE),
         new TextNode(banshee, "H-Hi, I-I'm C-Chaointe Doran. It's nice to meet you {{NAME}}.", TEXT_DIALOGUE),
@@ -134,9 +215,116 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new PassTimeNode(FULL_DAY),
     }, new CharacterAtLocationCondition(banshee, GYM), false)};
 
-    pookaEvents = {};
+    pookaEvents = {
+    new NarrativeScene({
+        new AddCharacterNode(pooka),
+        new TextNode(pooka, "Hi there, tall one. What's yar name?", TEXT_DIALOGUE),
+        new TextNode(player, "Hey, I'm {{NAME}}. What about you?", TEXT_DIALOGUE),
+        new TextNode(pooka, "I'm the mighty Púca Cleasaí.", TEXT_DIALOGUE),
+        new TextNode(pooka, "Haven't seen you around before; you new here?", TEXT_DIALOGUE),
+        new TextNode(player, "For someone so short, he seems to hold himself in high regard.", TEXT_MONOLOGUE),
+        new TextNode(player, "It'd be nice to have his confidence.", TEXT_MONOLOGUE),
+        new TextNode(player, "Yeah, started recently and am here to help you out if needed.", TEXT_DIALOGUE),
+        new TextNode(pooka, "Good stuff. Since yar here to help, lets sort this here mess out.", TEXT_DIALOGUE),
+        new TextNode(pooka, "This gym could use a slight re-modelling to improve the layout.", TEXT_DIALOGUE),
+        new TextNode(pooka, "Dear Paddy has too much on his head so this I'll make his life easier.", TEXT_DIALOGUE),
+        new TextNode(player, "The commandeering Púca didn't need to convince me.", TEXT_MONOLOGUE),
+        new TextNode(player, "I got swooped up by his charisma and didn't think to question him at all.", TEXT_MONOLOGUE),
+        new TextNode(player, "Alright, lets get to work.", TEXT_DIALOGUE),
+        new TextNode(pooka, "Good lad. Let's do this!", TEXT_DIALOGUE),
+        new TextNode(player, "We painstakingly moved everything at the gym at Púca's whim.", TEXT_MONOLOGUE),
+        new TextNode(player, "What seemed a good idea initially turned into a big mess", TEXT_MONOLOGUE),
+        new TextNode(player, "I looked around and everything was placed haphazardly.", TEXT_MONOLOGUE),
+        new TextNode(player, "A beautiful gym got turned into a tripping hazard on my watch.", TEXT_MONOLOGUE),
+        new ChoiceNode(pooka, "What should I do now?",
+            "Stop this madness and fix everything even though it will take a long time.",
+            {
+                new TextNode(player, "This isn't working. We should stop and put it all back as it was before.", TEXT_DIALOGUE),
+                new TextNode(pooka, "B-But its so much fun messing with Paddy like this.", TEXT_DIALOGUE),
+                new TextNode(player, "Messing?! Have some cop on! That's not how we should treat people!", TEXT_DIALOGUE),
+                new TextNode(player, "My mind was rushing. I don't like confrontation.", TEXT_MONOLOGUE),
+                new TextNode(player, "Púca seemed impressed that I stood up to him as if he was messing with me and not Paddy.", TEXT_MONOLOGUE),
+                new TextNode(pooka, "Alright, alright. Let's sort this out, so. T'was fun while it lasted.", TEXT_DIALOGUE),
+                new TextNode(player, "Thanks.", TEXT_DIALOGUE),
+                new TextNode(player, "We worked hard to fix the mess.", TEXT_MONOLOGUE),
+                new TextNode(player, "It took longer than expected but the place was cleaner than before we started.", TEXT_MONOLOGUE),
+            },
+            "Keep going to avoid confronting Mr. Púca.",
+            {
+                new TextNode(player, "We continued to work. The mess became worse.", TEXT_MONOLOGUE),
+                new TextNode(player, "I'm in for it now.", TEXT_MONOLOGUE),
+                new TextNode(player, "It's time to wrap this up before it gets even worse.", TEXT_MONOLOGUE),
+                new TextNode(player, "There this should do it.", TEXT_DIALOGUE),
+                new TextNode(pooka, "Yeah, fine work today.", TEXT_DIALOGUE),
+                new TextNode(player, "Púca was grinning at me.", TEXT_MONOLOGUE),
+                new TextNode(player, "He knows exactly what we had done here yet he also seems to be unsatisfied.", TEXT_MONOLOGUE),
+                new TextNode(player, "Maybe I should have stopped him.", TEXT_MONOLOGUE),
+                new TextNode(player, "I'll tidy the place up before I head off for the day.", TEXT_MONOLOGUE),
+            }),
+        new TextNode(pooka, "That was hard work lad.", TEXT_DIALOGUE),
+        new TextNode(pooka, "Let's have some fun again sometime.", TEXT_DIALOGUE),
+        new TextNode(pooka, "See you soon.", TEXT_DIALOGUE),
+        new RemoveCharacterNode(pooka),
+        new AddBackgroundNode(BLACK),
+        new TextNode(player, "Bye, See ya around.", TEXT_DIALOGUE),
+        new PassTimeNode(FULL_DAY),
+    }, new CharacterAtLocationCondition(pooka, GYM), false)};
 
-    dullahanEvents = {};
+    dullahanEvents = {
+    new NarrativeScene({
+        new AddCharacterNode(dullahan),
+        new TextNode(dullahan, "Hello Mister “A-Ahhh, t-that person's h-head i-is…” detached.", TEXT_DIALOGUE),
+        new TextNode(dullahan, "I'm Crom Dubh.", TEXT_DIALOGUE),
+        new TextNode(dullahan, "You've probably already heard of me but who might you be?", TEXT_DIALOGUE),
+        new TextNode(player, "H-Hi, I'm {{NAME}}.", TEXT_DIALOGUE),
+        new TextNode(player, "Just your average Joe who started working here recently.", TEXT_DIALOGUE),
+        new TextNode(dullahan, "Average...Interesting...You seem to have gotten over headless soldiers quicker then most.", TEXT_DIALOGUE),
+        new TextNode(dullahan, "So what do you need?", TEXT_DIALOGUE),
+        new ChoiceNode(dullahan, "Crom doesn't seem too worried about my outburst. What should I do?",
+            "Apologise, reflecting on your moment of panic.",
+            {
+                new TextNode(player, "I'm so sorry about my panicked outburst earlier.", TEXT_DIALOGUE),
+                new TextNode(player, "I assumed the worst. I thought someone had died.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "Interesting, people usually jump like that from fear when they see me.", TEXT_DIALOGUE),
+                new TextNode(player, "Well there was probably a small bit of that too when I seen you move.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "That's OK, you seem like an honest fellow.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "You also took the time to apologise to me too.", TEXT_DIALOGUE),
+                new TextNode(player, "Thanks for being so accepting of my mistake. It won't happen again.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "No problem. I do love a good jump scare. T'was a bit of fun.", TEXT_DIALOGUE),
+                new TextNode(player, "The apology went well.", TEXT_MONOLOGUE),
+                new TextNode(player, "It seems like Crom is well used to this kind of thing.", TEXT_MONOLOGUE),
+                new TextNode(player, "Makes me wonder what kind of life she must lead.", TEXT_MONOLOGUE),
+                new TextNode(player, "Do you need help with anything today?", TEXT_DIALOGUE),
+                new TextNode(dullahan, "No, just wrapping up my exercises.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "I'll be done and gone soon.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "Let's chat again some other day.", TEXT_DIALOGUE),
+                new RemoveCharacterNode(dullahan),
+                new AddBackgroundNode(BLACK),
+                new TextNode(player, "I left Crom to her own devices while I tidied up and filled out some paperwork.", TEXT_MONOLOGUE),
+                new TextNode(player, "Once she left, I wrapped up too.", TEXT_MONOLOGUE),
+            },
+            "Ask to hold her head.",
+            {
+                new TextNode(player, "Could I maybe hold your head?", TEXT_DIALOGUE),
+                new TextNode(dullahan, "NO!...How dare you make such an insolent request.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "You must have a death wish.", TEXT_DIALOGUE),
+                new TextNode(player, "I just made a bad situation worse.", TEXT_MONOLOGUE),
+                new TextNode(player, "Crom is staring daggers at me and I worry my head may not stay on its shoulders for long either.", TEXT_MONOLOGUE),
+                new TextNode(player, "S-Sorry, I-I just...", TEXT_DIALOGUE),
+                new TextNode(player, "You just what!? My patience is running thin.", TEXT_DIALOGUE),
+                new TextNode(player, "You ruined my exercising session.", TEXT_DIALOGUE),
+                new TextNode(player, "I should have your head for this.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "You're lucky Patrick is in charge here.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "I owe him a debt of gratitude so I'll let this one slide.", TEXT_DIALOGUE),
+                new TextNode(dullahan, "I'm heading off before anything else comes out of that fun-sized brain of yours.", TEXT_DIALOGUE),
+                new RemoveCharacterNode(dullahan),
+                new AddBackgroundNode(BLACK),
+                new TextNode(player, "Crom stomped away while I stood there in silence to avoid making things worse.", TEXT_MONOLOGUE),
+                new TextNode(player, "Paddy, my savior I have failed thee.", TEXT_MONOLOGUE),
+                new TextNode(player, "I tidied up and left for the day.", TEXT_MONOLOGUE),
+            }),
+        new PassTimeNode(HALF_DAY),
+    }, new CharacterAtLocationCondition(dullahan, GYM), false)};
 }
 
 NarrativeSceneFactory::~NarrativeSceneFactory() {
@@ -167,14 +355,13 @@ std::vector<NarrativeScene*> NarrativeSceneFactory::getCharacterEvents(CharEnum 
     switch (charEnum) {
         case PLAYER:
             return playerEvents;
-        case PADDY:
-            return gymEvents;
         case BANSHEE:
             return bansheeEvents;
         case POOKA:
             return pookaEvents;
         case DULLAHAN:
             return dullahanEvents;
+        case PADDY:
         default:
             return {};
     }

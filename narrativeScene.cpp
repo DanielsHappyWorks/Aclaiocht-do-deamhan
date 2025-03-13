@@ -1,4 +1,5 @@
 #include "narrativeScene.h"
+#include "gameState.h"
 
 NarrativeScene::NarrativeScene(std::vector<NarrativeNode*> narrativeElements) {
     NarrativeScene(narrativeElements, nullptr);
@@ -40,6 +41,7 @@ void NarrativeScene::update() {
     } else if(narrativeElements[currentElement]->getType() == REMOVE_BACKGROUND_NODE) {
         color = {255,255,255,0};
     } else if(narrativeElements[currentElement]->getType() == PASS_TIME_NODE) {
+        GameState::GetInstance()->incrementTime(((PassTimeNode*)narrativeElements[currentElement])->getTime());
         doneAtLoc = true;
     }
 

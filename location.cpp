@@ -54,7 +54,7 @@ void Location::playAnyForcedEvents() {
         return;
     }
 
-    if (events[currentEvent]->isForced()) {
+    if (events[currentEvent]->isForced() && events[currentEvent]->isReady()) {
         SceneManager::GetInstance()->setSceneOverlay(events[currentEvent]);
         currentEvent++;
     }

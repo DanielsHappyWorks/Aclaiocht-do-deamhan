@@ -113,11 +113,6 @@ class RemoveBackgroundNode : public NarrativeNode {
         NodeType getType();
 };
 
-enum Time {
-    FULL_DAY,
-    HALF_DAY
-};
-
 class PassTimeNode : public NarrativeNode {
     private:
         Time time;
@@ -126,4 +121,5 @@ class PassTimeNode : public NarrativeNode {
         bool isDone();
         void draw();
         NodeType getType();
+        Time getTime();
 };

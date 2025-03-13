@@ -41,7 +41,7 @@ CharacterFactory::CharacterFactory() {
         POOKA,
         SFX_DIALOG_MALE,
         {PUB, GYM, RESTAURANT},
-        {SHOP, GYM, PUB},
+        {SHOP, PUB, GYM},
         "assets/images/characters/pooka/pooka_front.png",
         "assets/images/characters/pooka/pooka_side.png"
     );
@@ -51,7 +51,7 @@ CharacterFactory::CharacterFactory() {
         DULLAHAN,
         SFX_DIALOG_FEMALE,
         {RESTAURANT, SHOP, GYM},
-        {PUB, SHOP, GYM},
+        {PUB, GYM, SHOP},
         "assets/images/characters/dullahan/dullahan_front.png",
         "assets/images/characters/dullahan/dullahan_side.png"
     );
@@ -83,7 +83,7 @@ Character* CharacterFactory::getCharacter(CharEnum charEnum) {
 }
 
 std::vector<Character*> CharacterFactory::getCharactersAtLoc(LocEnum loc) {
-    std::vector<Character*> characters;
+    std::vector<Character*> characters = {};
     for (Character* character : getCharacters()) {
         if (character->getCurrentLoc() == loc) {
             characters.push_back(character);

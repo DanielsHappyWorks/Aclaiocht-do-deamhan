@@ -248,3 +248,8 @@ NodeType PassTimeNode::getType()
 {
     return PASS_TIME_NODE;
 }
+
+Time PassTimeNode::getTime()
+{
+    return time;
+}

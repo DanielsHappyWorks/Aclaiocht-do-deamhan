@@ -1,4 +1,5 @@
 #include "character.h"
+#include "gameState.h"
 
 Character::Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side) {
     this->name = name;
@@ -35,13 +36,17 @@ SFX Character::getSound() {
     return sound;
 }
 LocEnum Character::getCurrentLoc() {
-    //TODO get day/night cycle!
-    return dayLocations[0];
+    int day = GameState::GetInstance()->getDay();
+
+    if (GameState::GetInstance()->getTime() == NIGHT) {
+        return nightLocations[day % nightLocations.size()];
+    }
+
+    return dayLocations[day % dayLocations.size()];
 }
 
 LocEnum PlayerCharacter::getCurrentLoc() {
-    //TODO get day/night cycle!
-    return PUB;
+    return MAP;
 }
 
 void Character::drawAtLoc() {
