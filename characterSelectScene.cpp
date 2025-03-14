@@ -84,24 +84,24 @@ void CharacterSelectScene::draw()
         DrawTextureFromCentre(sun, {(float)GetScreenWidth() / 3 * 2, 200}, 0.4f, sun_rotation, WHITE);
     DrawTextureEx(femaleBody, (Vector2){GetScreenWidth() / 3 * 2 - femaleBody.width / 2, 140}, 0.0f, 1.0f, WHITE);
 
-    if (GuiToggleSlider((Rectangle){GetScreenWidth() / 2 - 60, 360, 120, 30}, "Male;Female", &toggleSliderActive) == true) {
+    if (GuiToggleSlider((Rectangle){GetScreenWidth() / 2 - 80, 360, 140, 30}, "Male;Female", &toggleSliderActive) == true) {
         SoundManager::GetInstance()->playSound(SFX_SWIPE);
         selectedGender = !selectedGender;
     }
 
     // GuiTextBox does not respect allignment for cursor when editing so lets left allign it while this happens
     textBoxEditMode == true ? GuiSetStyle(TEXTBOX, TEXT_ALIGNMENT, TEXT_ALIGN_LEFT) : GuiSetStyle(TEXTBOX, TEXT_ALIGNMENT, TEXT_ALIGN_CENTER);
-    if (GuiTextBox((Rectangle){GetScreenWidth() / 2 - 60, 400, 120, 30}, name, 25, textBoxEditMode)) {
+    if (GuiTextBox((Rectangle){GetScreenWidth() / 2 - 80, 400, 140, 30}, name, 25, textBoxEditMode)) {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         textBoxEditMode = !textBoxEditMode;
     }
 
-    if (GuiButton((Rectangle){GetScreenWidth() / 2 - 60, 440, 120, 30}, "Play Game")) {
+    if (GuiButton((Rectangle){GetScreenWidth() / 2 - 80, 440, 140, 30}, "Play Game")) {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         characterCompleted = true;
     }
 
-    DrawTextEx(FontManager::GetInstance()->getFont(), "Exercise your Demons!", {85, 35}, 60, FontManager::GetInstance()->getSpacing(), DARKGREEN);
+    DrawTextEx(FontManager::GetInstance()->getFontHeaders(), "Exercise your Demons!", {110, 35}, 60, FontManager::GetInstance()->getSpacing(), DARKGREEN);
 }
 
 bool CharacterSelectScene::isDone()

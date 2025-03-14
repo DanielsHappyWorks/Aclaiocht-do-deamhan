@@ -53,7 +53,7 @@ void Game::draw()
         overlayScene->draw();
     }
 
-    DrawTextEx(FontManager::GetInstance()->getFont(), "@BoopDood", {(float)screenWidth - 130, (float)screenHeight - 35}, 20, FontManager::GetInstance()->getSpacing(), BLUE);
+    DrawTextEx(FontManager::GetInstance()->getFontItal(), "@BoopDood", {(float)screenWidth - 130, (float)screenHeight - 35}, 18, FontManager::GetInstance()->getSpacing(), BLUE);
 
     if (DEBUG) {
         currentScene->debug();

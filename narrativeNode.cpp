@@ -5,18 +5,28 @@
 #include "fontManager.h"
 #include "player.h"
 
-void drawDialogBox(std::string character, std::string text, Color color)
+void drawDialogBox(std::string character, std::string text, TextNodeType type)
 {
     float padding = 50.0f;
+    float textLen = MeasureTextEx(FontManager::GetInstance()->getFontHeaders(), character.c_str(), 45, FontManager::GetInstance()->getSpacing()).x + 20; 
     DrawRectangle(padding, (float)GetScreenHeight() / 3 * 2, (float)GetScreenWidth() - padding * 2, (float)GetScreenHeight() / 3 - padding, {255, 255, 255, 200});
+    DrawRectangle(padding, (float)GetScreenHeight() / 3 * 2 - 20, textLen, 20, {255, 255, 255, 200});
 
-    DrawTextEx(FontManager::GetInstance()->getFont(), character.c_str(), {padding + 10, (float)GetScreenHeight() / 3 * 2 - 20}, 45, FontManager::GetInstance()->getSpacing(), DARKGREEN);
-    DrawTextEx(FontManager::GetInstance()->getFont(), text.c_str(), {padding + 30, (float)GetScreenHeight() / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), color);
+    DrawTextEx(FontManager::GetInstance()->getFontHeaders(), character.c_str(), {padding + 10, (float)GetScreenHeight() / 3 * 2 - 20}, 45, FontManager::GetInstance()->getSpacing(), DARKGREEN);
+
+    switch (type) {
+        case TEXT_MONOLOGUE:
+            DrawTextEx(FontManager::GetInstance()->getFontItal(), text.c_str(), {padding + 30, (float)GetScreenHeight() / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), DARKDARKGRAY);
+            break;
+        case TEXT_DIALOGUE:
+        default:
+            DrawTextEx(FontManager::GetInstance()->getFont(), text.c_str(), {padding + 30, (float)GetScreenHeight() / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), BLACK);
+    }
 }
 
 TextNode::TextNode(Character *character, std::string text, TextNodeType type)
 {
-    int maxLineLength = 64;
+    int maxLineLength = 56;
     if (text.length() > maxLineLength)
     {
         int lastSpace = text.find_last_of(" ", maxLineLength);
@@ -65,14 +75,7 @@ void TextNode::draw()
         dialogCounter++;
     }
 
-    switch (type) {
-        case TEXT_MONOLOGUE:
-            drawDialogBox(character->getName(), dialog, DARKGRAY);
-            return;
-        case TEXT_DIALOGUE:
-        default:
-            drawDialogBox(character->getName(), dialog, BLACK);
-    }
+    drawDialogBox(character->getName(), dialog, type);
 }
 
 NodeType TextNode::getType()
@@ -114,7 +117,7 @@ bool ChoiceNode::isDone()
 }
 void ChoiceNode::draw()
 {
-    drawDialogBox(Player::GetInstance()->getCharacter()->getName(), question, DARKGRAY);
+    drawDialogBox(Player::GetInstance()->getCharacter()->getName(), question, TEXT_DIALOGUE);
 
     float btnPadding = 80;
 

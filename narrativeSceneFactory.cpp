@@ -240,7 +240,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "I looked around and everything was placed haphazardly.", TEXT_MONOLOGUE),
         new TextNode(player, "A beautiful gym got turned into a tripping hazard on my watch.", TEXT_MONOLOGUE),
         new ChoiceNode(pooka, "What should I do now?",
-            "Stop this madness and fix everything even though it will take a long time.",
+            "Stop the madness & fix everything but it will take a long time.",
             {
                 new MoodNode(MUSIC_TENSE),
                 new TextNode(player, "This isn't working. We should stop and put it all back as it was before.", TEXT_DIALOGUE),
@@ -286,7 +286,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "Just your average Joe who started working here recently.", TEXT_DIALOGUE),
         new TextNode(dullahan, "Average...Interesting...You seem to have gotten over headless soldiers quicker then most.", TEXT_DIALOGUE),
         new TextNode(dullahan, "So what do you need?", TEXT_DIALOGUE),
-        new ChoiceNode(dullahan, "Crom doesn't seem too worried about my outburst. What should I do?",
+        new ChoiceNode(dullahan, "Crom isn't worried about my outburst. What should I do?",
             "Apologise, reflecting on your moment of panic.",
             {
                 new MoodNode(MUSIC_SAD),
