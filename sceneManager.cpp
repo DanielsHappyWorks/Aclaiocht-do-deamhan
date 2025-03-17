@@ -30,11 +30,9 @@ Scene* SceneManager::getCurrentScene() {
             currentScene = nextScene;
             nextScene = nullptr;
         } else if (currentScene->isDone() && nextScene != nullptr) {
-            //currentScene->destroy();
             currentScene = nextScene;
             nextScene = nullptr;
         } else if (currentScene->isDone()) {
-            //currentScene->destroy();
             currentScene = defaultScene;
         }
     }
@@ -43,20 +41,18 @@ Scene* SceneManager::getCurrentScene() {
 }
 
 void SceneManager::setCurrentScene(Scene* scene) {
-    //this->nextScene->destroy();
     this->nextScene = scene;
 }
 
 
 //TODO maybe change the scene to a stack?
-NarrativeScene* SceneManager::getSceneOverlay() {
+SceneOverlay* SceneManager::getSceneOverlay() {
     if (overlayScene == nullptr) {
         return overlayScene;
     }
 
     if (overlayScene->isDone()) {
         if (overlayScene->isDoneAtLoc()) {
-            //currentScene->destroy();
             currentScene = defaultScene;
         }
         overlayScene = nullptr;
@@ -65,9 +61,9 @@ NarrativeScene* SceneManager::getSceneOverlay() {
     return overlayScene;
 }
 
-void SceneManager::setSceneOverlay(NarrativeScene* scene) {
-    if (scene == nullptr || scene->isDone()) {
-
+void SceneManager::setSceneOverlay(SceneOverlay* scene) {
+    if (scene == nullptr || scene->isDone() || overlayScene != nullptr) {
+        return;
     }
     overlayScene = scene;
 }

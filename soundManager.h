@@ -35,6 +35,8 @@ class SoundManager {
         Song currentMusic;
         float timePlayed;
         float volume;
+        float volumeSound;
+        float volumeMusic;
     public:
         SoundManager(SoundManager &other) = delete;
         void operator=(const SoundManager &) = delete;
@@ -49,5 +51,9 @@ class SoundManager {
         void stopSound(SFX sound);
         void stopSounds();
         float getVolume();
-        void setVolume(float volume);
+        float getVolumeSound();
+        float getVolumeMusic();
+        void setVolume(float v);
+        void setVolumeSound(float v);
+        void setVolumeMusic(float v);
 };

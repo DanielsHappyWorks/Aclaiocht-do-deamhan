@@ -121,7 +121,12 @@ void ChoiceNode::draw()
 
     float btnPadding = 80;
 
-    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 70, (float)GetScreenWidth() - btnPadding * 2, 34}, goodPrompt.c_str()))
+    //Hack to prevent instant click on buttons
+    int disabledFrames = 30;
+    if (frameCounter <= disabledFrames)
+        frameCounter++;
+
+    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 70, (float)GetScreenWidth() - btnPadding * 2, 34}, goodPrompt.c_str()) && frameCounter >= disabledFrames)
     {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         character->addChoice(GOOD);
@@ -129,7 +134,7 @@ void ChoiceNode::draw()
         done = true;
     }
 
-    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 110, (float)GetScreenWidth() - btnPadding * 2, 34}, badPrompt.c_str()))
+    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 110, (float)GetScreenWidth() - btnPadding * 2, 34}, badPrompt.c_str()) && frameCounter >= disabledFrames)
     {
         SoundManager::GetInstance()->playSound(SFX_ERROR);
         character->addChoice(BAD);

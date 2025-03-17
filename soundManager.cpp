@@ -36,6 +36,8 @@ SoundManager::SoundManager() {
     currentMusic = MUSIC_NULL;
 
     volume = 0.5f;
+    volumeSound = 1.0f;
+    volumeMusic = 1.0f;
 
     playMusic(MUSIC_DAY);
 }
@@ -55,6 +57,7 @@ SoundManager::~SoundManager() {
 
 void SoundManager::update() {
     SetMasterVolume(volume);
+    SetMusicVolume(music, volumeMusic);
 
     UpdateMusicStream(music);
 
@@ -75,6 +78,7 @@ void SoundManager::playMusic(Song song) {
 
     if (auto search = songs.find(song); search != songs.end()) {
         music = LoadMusicStream(search->second.c_str());
+        SetMusicVolume(music, volumeMusic);
         PlayMusicStream(music);
         currentMusic = song;
     }
@@ -125,6 +129,28 @@ float SoundManager::getVolume() {
     return volume;
 }
 
-void SoundManager::setVolume(float volume) {
-    volume = volume;
+float SoundManager::getVolumeSound() {
+    return volumeSound;
+}
+
+float SoundManager::getVolumeMusic() {
+    return volumeMusic;
+}
+
+void SoundManager::setVolume(float v) {
+    volume = v;
+    SetMasterVolume(volume);
+}
+
+void SoundManager::setVolumeSound(float v) {
+    volumeSound = v;
+
+    for (auto sound : sounds) {
+        SetSoundVolume(sound.second, volumeSound);
+    }
+}
+
+void SoundManager::setVolumeMusic(float v) {
+    volumeMusic = v;
+    SetMusicVolume(music, volumeMusic);
 }

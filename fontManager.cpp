@@ -18,6 +18,8 @@ FontManager::FontManager() {
 
 FontManager::~FontManager() {
     UnloadFont(font);
+    UnloadFont(fontItal);
+    UnloadFont(fontHeaders);
 }
 
 Font FontManager::getFont() {

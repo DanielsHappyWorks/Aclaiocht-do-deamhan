@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 
-class NarrativeScene : public Scene {
+class NarrativeScene : public SceneOverlay {
     private:
         std::vector<NarrativeNode*> narrativeElements; 
         Condition* condition;

@@ -106,8 +106,6 @@ Vector2 Player::move(Vector2 playerPos, float playerSpeed, float playerScale) {
 
 void Player::draw(Vector2 playerPos, float playerScale) {
     playerScale *= bop_factor;
-    //DrawTextureEx(Player::GetInstance()->getCurrentSprite(), playerPos, swagger, playerScale, WHITE);
-    //(Texture2D texture, Vector2 pos, Vector2 pivotPoint, float scale, float rotation, Color color)
     Vector2 pivotPoint = {Player::GetInstance()->getCurrentSprite().width/2*playerScale, Player::GetInstance()->getCurrentSprite().height*playerScale};
     DrawTextureFromPoint(Player::GetInstance()->getCurrentSprite(), playerPos, pivotPoint, playerScale, swagger, WHITE);
 }

@@ -63,6 +63,7 @@ class ChoiceNode : public NarrativeNode {
 
         bool selected;
         bool done;
+        int frameCounter = 0;
     public:
         ChoiceNode(Character* character, std::string question, std::string goodPrompt, std::vector<NarrativeNode*> goodDialog, std::string badPrompt, std::vector<NarrativeNode*> badDialog);
         bool isDone();

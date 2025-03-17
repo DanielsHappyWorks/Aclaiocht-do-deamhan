@@ -6,6 +6,7 @@
 #include "sceneManager.h"
 #include "fontManager.h"
 #include "soundManager.h"
+#include "menuScene.h"
 
 // When set to true renders in-game debug options
 #define DEBUG false
@@ -53,7 +54,22 @@ void Game::draw()
         overlayScene->draw();
     }
 
-    DrawTextEx(FontManager::GetInstance()->getFontItal(), "@BoopDood", {(float)screenWidth - 130, (float)screenHeight - 35}, 18, FontManager::GetInstance()->getSpacing(), BLUE);
+    if (SceneManager::GetInstance()->getSceneOverlay() == nullptr) {
+        if (GuiButton((Rectangle){10, screenHeight - 30, 20, 20}, "#191#")) {
+            SoundManager::GetInstance()->playSound(SFX_CLICK);
+            SceneManager::GetInstance()->setSceneOverlay(new ControlsScene());
+        }
+
+        if (GuiButton((Rectangle){32, screenHeight - 30, 20, 20}, "#142#")) {
+            SoundManager::GetInstance()->playSound(SFX_CLICK);
+            SceneManager::GetInstance()->setSceneOverlay(new OptionsScene());
+        }
+
+        if (GuiButton((Rectangle){54, screenHeight - 30, 20, 20}, "#149#")) {
+            SoundManager::GetInstance()->playSound(SFX_CLICK);
+            SceneManager::GetInstance()->setSceneOverlay(new CreditsScene());
+        }
+    }
 
     if (DEBUG) {
         currentScene->debug();

@@ -7,3 +7,8 @@ class Scene {
         virtual void draw() = 0;
         virtual void debug() = 0;
 };
+
+class SceneOverlay : public Scene {
+    public:
+        virtual bool isDoneAtLoc() = 0;
+};
