@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-01">
+<meta name="dcterms.date" content="2025-03-14">
 
-<title>Exercise Your Demons - Visual &amp; Audio Improvements</title>
+<title>Exercise Your Demons - Narrative is ready for the beta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,10 +129,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Visual &amp; Audio Improvements</h1>
+      <h1 class="title">Narrative is ready for the beta</h1>
                                 <div class="quarto-categories">
+                <div class="quarto-category">Narrative</div>
                 <div class="quarto-category">Programming</div>
-                <div class="quarto-category">Design</div>
+                <div class="quarto-category">Research</div>
               </div>
                   </div>
   </div>
@@ -144,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 1, 2025</p>
+        <p class="date">March 14, 2025</p>
       </div>
     </div>
     
@@ -163,26 +164,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>The narrative engine has proven very complicated with no visual feedback. It felt like I was not making any progress so I took some time here and there to add some flare to the game.</p>
-<p>Here is a demo of the visuals so far:</p>
-<p><img src="image.gif" class="img-fluid"></p>
-<section id="character-animations" class="level1">
-<h1>Character Animations</h1>
-<p>Character animations without animated sprites was a challenge. The character’s pivot point needed to change but Raylib didn’t support this so I extended texture drawing to support this. I’m very happy with this.</p>
-<p><img src="pivot.png" class="img-fluid"></p>
-<p>Once this was done, making the character squish and stretch and rotate over time was simple. I still need to extend this to texture boundaries to make collisions simpler when drawing using pivots but this can be done later as needed.</p>
-</section>
-<section id="character-selection" class="level1">
-<h1>Character Selection</h1>
-<p>Reusing the pivot work from the character animation, I added a sun and clouds to the character select which was now also re-purposed into the main menu. This was simple enough but it did so much towards making the menu much more professional.</p>
-</section>
-<section id="game-locations" class="level1">
-<h1>Game Locations</h1>
-<p>All locations have different backgrounds now so they are easier to tell apart. This makes testing easier. The locations are still missing items but that’s refinement work for the beta stage of the project.</p>
-</section>
-<section id="audio-improvements" class="level1">
-<h1>Audio Improvements</h1>
-<p>I added an audio manager with music made by Joel Steudler. This actually helped me in the narrative engine as now I can change music in scenes to match the mood. This has added some much needed depth to my game. Sound effects still need to be implemented but the audio manager has support for these, making my life easier in the future.</p>
+<p>The narrative script scoped for the beta release is now fully integrated into my game. I’m satisfied with how this came out. The narrative engine made this easy and quick. Unlike the first few dialogue events this only took about 2 hours including bug fixing. The actual narrative integration probably only took 45 min which speaks volumes for how robust and extendable this game is.</p>
+<p>I do worry that the focus on the character introductions may not be enough to answer my research question though which is something I need to take up with my supervisors. This may need to be listed as a limitation in the thesis if I don’t find a way forward.</p>
+<section id="bugs" class="level1">
+<h1>Bugs</h1>
+<p>I encountered some bugs in the narrative engine while doing this work. All of these were minor and easy to fix. These included:</p>
+<ul>
+<li>Gym location events triggering where paddy is located due to paddy being wrongly assigned these events.</li>
+<li>Character events skipped conditional checks under specific circumstances which turned out to be a missing if statement.</li>
+<li>Glitches with special characters in text not displaying correctly.</li>
+</ul>
 
 
 </section>

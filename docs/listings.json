@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/menus/index.html",
+      "/posts/font_updates/index.html",
+      "/posts/narrative_implemented/index.html",
       "/posts/alpha_delivery/index.html",
       "/posts/narrative_engine/index.html",
       "/posts/visual_improvements/index.html",

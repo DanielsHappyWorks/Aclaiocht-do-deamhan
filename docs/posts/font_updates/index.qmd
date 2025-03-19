@@ -1,0 +1,31 @@
+---
+title: "Changing the game fonts"
+date: "2025-03-16"
+categories: [Programming, Design, Assets]
+image: "image.gif"
+---
+
+Fonts are hard but they are important to branding. Choosing the right one is always tough. Programming with fonts can also be difficult. I spent some time trying to find the right one and even more time getting it to work with Irish special characters (á, Á, ó, Ó, ú, Ú, í, Í, é, É).
+
+# Considered Options
+
+Fonts that didn't support the special characters were out straight away. I used the site [fontsc](https://www.fontsc.com/font/tag/celtic-gaelic-irish?page=1) to find my options. This already limits the pool of fonts significantly but it has to be done to fully display my narrative script. It's a pity because some of these fonts were much nicer like the [Celtic](https://www.fontsc.com/font/celtic) by Sam Wang.
+
+![](vinque.png)
+![](eringobragh.png)
+![](dum3.png)
+![](quest.png)
+
+# Final Choices
+
+I chose Vinque for headers as it doesn't have the best support for things like italics and Erin Go Bragh as it was the font that best supports my use cases for displaying text while looking good and being readable. Between these who I have all I need.
+
+Here is a demo of the fonts in a narrative scene. Vinque is used for the names while Erin Go Bragh is used for dialogue.
+
+![](Corm.png)
+
+# Font Implementation Issues
+
+Fonts and Raylib are an odd combination. It they are not loaded right they look off. I struggled with blurriness on some fonts and others didn't look quiet right hnece my final choice of fonts.
+
+My biggest issue here was special characters. By default not all of the font is loaded. It's not very well documented. I had to dig through samples to figure out how to load this properly. It was all related to how fonts are loaded and the defaults are not enough. The [raylib [text] example - Font loading](https://github.com/raysan5/raylib/blob/master/examples/text/text_font_loading.c) sample helped me a lot. Once this was sorted out the game looked a lot better.

@@ -1,0 +1,32 @@
+---
+title: "Game Menus"
+date: "2025-03-19"
+categories: [Programming, Design]
+image: "image.gif"
+---
+
+I added 3 menus to the game. They are very rough around the edges but they serve their purpose.
+
+# Controls
+
+Displays the game controls.
+
+![](controls.png)
+
+# Options
+
+Allows the user to change volume settings for music and sounds. Other options can be added at a later date.
+
+![](options.png)
+
+# Credits
+
+Attributes my work and assets I sourced from other places. Also thanks all of the people that have supported me during this project.
+
+![](credits.png)
+
+# Thoughts on the menus
+
+Originally, I had scrapped the idea of doing an options menu for the beta but after seeing the minimal effort involved in extending the controls menu I brought it back into scope. Credits wasn't considered before but since some music assets have been sourced it made sense to attribute everyone in some way.
+
+These menus may be basic but they serve a purpose making them a worth while addition to the game. They may not be the prettiest looking but they are consistent which makes them feel like they belong.

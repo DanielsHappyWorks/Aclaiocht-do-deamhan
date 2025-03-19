@@ -1,0 +1,20 @@
+---
+title: "Narrative is ready for the beta"
+date: "2025-003-14"
+categories: [Narrative, Programming, Research]
+image: "../../images/narr_seq.svg"
+---
+
+The narrative script scoped for the beta release is now fully integrated into my game. I'm satisfied with how this came out. The narrative engine made this easy and quick. Unlike the first few dialogue events this only took about 2 hours including bug fixing. The actual narrative integration probably only took 45 min which speaks volumes for how robust and extendable this game is. 
+
+I do worry that the focus on the character introductions may not be enough to answer my research question though which is something I need to take up with my supervisors. This may need to be listed as a limitation in the thesis if I don't find a way forward.
+
+# Bugs
+
+I encountered some bugs in the narrative engine while doing this work. All of these were minor and easy to fix. These included:
+
+- Gym location events triggering where paddy is located due to paddy being wrongly assigned these events.
+- Character events skipped conditional checks under specific circumstances which turned out to be a missing if statement.
+- Glitches with special characters in text not displaying correctly.
+
+

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-01">
+<meta name="dcterms.date" content="2025-03-16">
 
-<title>Exercise Your Demons - Visual &amp; Audio Improvements</title>
+<title>Exercise Your Demons - Changing the game fonts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,10 +129,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Visual &amp; Audio Improvements</h1>
+      <h1 class="title">Changing the game fonts</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Programming</div>
                 <div class="quarto-category">Design</div>
+                <div class="quarto-category">Assets</div>
               </div>
                   </div>
   </div>
@@ -144,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 1, 2025</p>
+        <p class="date">March 16, 2025</p>
       </div>
     </div>
     
@@ -163,26 +164,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>The narrative engine has proven very complicated with no visual feedback. It felt like I was not making any progress so I took some time here and there to add some flare to the game.</p>
-<p>Here is a demo of the visuals so far:</p>
-<p><img src="image.gif" class="img-fluid"></p>
-<section id="character-animations" class="level1">
-<h1>Character Animations</h1>
-<p>Character animations without animated sprites was a challenge. The character’s pivot point needed to change but Raylib didn’t support this so I extended texture drawing to support this. I’m very happy with this.</p>
-<p><img src="pivot.png" class="img-fluid"></p>
-<p>Once this was done, making the character squish and stretch and rotate over time was simple. I still need to extend this to texture boundaries to make collisions simpler when drawing using pivots but this can be done later as needed.</p>
+<p>Fonts are hard but they are important to branding. Choosing the right one is always tough. Programming with fonts can also be difficult. I spent some time trying to find the right one and even more time getting it to work with Irish special characters (á, Á, ó, Ó, ú, Ú, í, Í, é, É).</p>
+<section id="considered-options" class="level1">
+<h1>Considered Options</h1>
+<p>Fonts that didn’t support the special characters were out straight away. I used the site <a href="https://www.fontsc.com/font/tag/celtic-gaelic-irish?page=1">fontsc</a> to find my options. This already limits the pool of fonts significantly but it has to be done to fully display my narrative script. It’s a pity because some of these fonts were much nicer like the <a href="https://www.fontsc.com/font/celtic">Celtic</a> by Sam Wang.</p>
+<p><img src="vinque.png" class="img-fluid"> <img src="eringobragh.png" class="img-fluid"> <img src="dum3.png" class="img-fluid"> <img src="quest.png" class="img-fluid"></p>
 </section>
-<section id="character-selection" class="level1">
-<h1>Character Selection</h1>
-<p>Reusing the pivot work from the character animation, I added a sun and clouds to the character select which was now also re-purposed into the main menu. This was simple enough but it did so much towards making the menu much more professional.</p>
+<section id="final-choices" class="level1">
+<h1>Final Choices</h1>
+<p>I chose Vinque for headers as it doesn’t have the best support for things like italics and Erin Go Bragh as it was the font that best supports my use cases for displaying text while looking good and being readable. Between these who I have all I need.</p>
+<p>Here is a demo of the fonts in a narrative scene. Vinque is used for the names while Erin Go Bragh is used for dialogue.</p>
+<p><img src="Corm.png" class="img-fluid"></p>
 </section>
-<section id="game-locations" class="level1">
-<h1>Game Locations</h1>
-<p>All locations have different backgrounds now so they are easier to tell apart. This makes testing easier. The locations are still missing items but that’s refinement work for the beta stage of the project.</p>
-</section>
-<section id="audio-improvements" class="level1">
-<h1>Audio Improvements</h1>
-<p>I added an audio manager with music made by Joel Steudler. This actually helped me in the narrative engine as now I can change music in scenes to match the mood. This has added some much needed depth to my game. Sound effects still need to be implemented but the audio manager has support for these, making my life easier in the future.</p>
+<section id="font-implementation-issues" class="level1">
+<h1>Font Implementation Issues</h1>
+<p>Fonts and Raylib are an odd combination. It they are not loaded right they look off. I struggled with blurriness on some fonts and others didn’t look quiet right hnece my final choice of fonts.</p>
+<p>My biggest issue here was special characters. By default not all of the font is loaded. It’s not very well documented. I had to dig through samples to figure out how to load this properly. It was all related to how fonts are loaded and the defaults are not enough. The <a href="https://github.com/raysan5/raylib/blob/master/examples/text/text_font_loading.c">raylib [text] example - Font loading</a> sample helped me a lot. Once this was sorted out the game looked a lot better.</p>
 
 
 </section>
