@@ -306,5 +306,75 @@
     "title": "Game Menus",
     "section": "",
     "text": "I added 3 menus to the game. They are very rough around the edges but they serve their purpose.\n\nControls\nDisplays the game controls.\n\n\n\nOptions\nAllows the user to change volume settings for music and sounds. Other options can be added at a later date.\n\n\n\nCredits\nAttributes my work and assets I sourced from other places. Also thanks all of the people that have supported me during this project.\n\n\n\nThoughts on the menus\nOriginally, I had scrapped the idea of doing an options menu for the beta but after seeing the minimal effort involved in extending the controls menu I brought it back into scope. Credits wasn’t considered before but since some music assets have been sourced it made sense to attribute everyone in some way.\nThese menus may be basic but they serve a purpose making them a worth while addition to the game. They may not be the prettiest looking but they are consistent which makes them feel like they belong."
+  },
+  {
+    "objectID": "leaflet.html",
+    "href": "leaflet.html",
+    "title": "Participant Information Leaflet",
+    "section": "",
+    "text": "Life lessons from Irish Folklore via video games."
+  },
+  {
+    "objectID": "leaflet.html#why-is-this-study-being-done",
+    "href": "leaflet.html#why-is-this-study-being-done",
+    "title": "Participant Information Leaflet",
+    "section": "Why is this study being done?",
+    "text": "Why is this study being done?\nThe study is being done as part of an MSc games development project. The goal is to create interesting characters based on Irish Folklore that try to overcome their issues."
+  },
+  {
+    "objectID": "leaflet.html#who-is-organising-and-funding-this-study",
+    "href": "leaflet.html#who-is-organising-and-funding-this-study",
+    "title": "Participant Information Leaflet",
+    "section": "Who is organising and funding this study?",
+    "text": "Who is organising and funding this study?\nThe Game Developer, with the help of DKIT, is organizing this study. There is no funding for this study."
+  },
+  {
+    "objectID": "leaflet.html#why-am-i-being-asked-to-take-part",
+    "href": "leaflet.html#why-am-i-being-asked-to-take-part",
+    "title": "Participant Information Leaflet",
+    "section": "Why am I being asked to take part?",
+    "text": "Why am I being asked to take part?\nYou are being asked to take part in the evaluation of the game narrative to determine the level of success achieved by the research into the topics the game covers. This includes character driven narrative, use of Irish Folklore and using self-improvement as a guide to become better people."
+  },
+  {
+    "objectID": "leaflet.html#how-will-the-study-be-carried-out",
+    "href": "leaflet.html#how-will-the-study-be-carried-out",
+    "title": "Participant Information Leaflet",
+    "section": "How will the study be carried out?",
+    "text": "How will the study be carried out?\nThe study will be carried out via anonymous survey and focus groups. Please avoid inputting any sensitive information that could identify you. I will do my best to anonymise this data before storing it for up to 6 months after the survey is carried out."
+  },
+  {
+    "objectID": "leaflet.html#what-will-happen-to-me-if-i-agree-to-take-part",
+    "href": "leaflet.html#what-will-happen-to-me-if-i-agree-to-take-part",
+    "title": "Participant Information Leaflet",
+    "section": "What will happen to me if I agree to take part?",
+    "text": "What will happen to me if I agree to take part?\nYou will play a game and fill out a survey or participate in a focus group. You may gain some insight into the themes covered by this game, or you may feel that this game has done a disservice to the themes. Your input is valuable to figuring out if the game has achieved its purpose."
+  },
+  {
+    "objectID": "leaflet.html#what-are-the-benefits",
+    "href": "leaflet.html#what-are-the-benefits",
+    "title": "Participant Information Leaflet",
+    "section": "What are the benefits?",
+    "text": "What are the benefits?\nWe all get to learn about narrative design in a somewhat niche topic. This will be documented for us to learn from. Be the results good or bad, there will hopefully be a lesson for us to take from this study."
+  },
+  {
+    "objectID": "leaflet.html#what-are-the-risks",
+    "href": "leaflet.html#what-are-the-risks",
+    "title": "Participant Information Leaflet",
+    "section": "What are the risks?",
+    "text": "What are the risks?\nThe narrative can have some sensitive themes based around death and addiction. If you have any reservations about this, please avoid the game. Alternatively, you can try it and stop at any time if you think the narrative is becoming too much for you."
+  },
+  {
+    "objectID": "leaflet.html#is-the-study-confidential",
+    "href": "leaflet.html#is-the-study-confidential",
+    "title": "Participant Information Leaflet",
+    "section": "Is the study confidential?",
+    "text": "Is the study confidential?\nYes, the study is anonymous. We will not gather personal data and will be stored in a safe and secure location until it is deleted. Any information from the study will be abstracted to prevent leaking your information."
+  },
+  {
+    "objectID": "leaflet.html#where-can-i-get-further-information",
+    "href": "leaflet.html#where-can-i-get-further-information",
+    "title": "Participant Information Leaflet",
+    "section": "Where can I get further information?",
+    "text": "Where can I get further information?\nIf you have any further questions about the study or if you want to opt out of the study, you can rest assured it won’t affect the quality of treatment you get in the future.\nIf you need any further information now or at any time in the future, please contact me via boopdood.itch.io or email: D00165165@student.dkit.ie"
   }
 ]

@@ -1,0 +1,85 @@
+---
+title: "Participant Information Leaflet"
+about:
+  template: solana
+---
+
+# Study title
+
+Life lessons from Irish Folklore via video games.
+
+# Study details
+
+You are being invited to take part in a research study to be carried out at Dundalk Institute of
+Technology (DkIT).
+
+Before you decide whether you wish to take part, you should read the information provided
+below carefully and, if you wish, discuss it with your family or friends or the games author. Take
+time to ask questions – don’t feel rushed and don’t feel under pressure to make a quick
+decision.
+
+You should clearly understand the risks and benefits of taking part in this study so that you can
+make a decision that is right for you. This process is known as ‘Informed Consent’.
+
+You don’t have to take part in this study and a decision not to take part will not affect on your
+future. You are free to play the artifact without actively participating in the research.
+
+You can change your mind about taking part in the study any time you like. Even if the study
+has started, you can still opt out. You don't have to give us a reason. If you do opt out, rest
+assured it won't affect you in the future.
+
+## Why is this study being done?
+
+The study is being done as part of an MSc games development project. The goal is to create
+interesting characters based on Irish Folklore that try to overcome their issues.
+
+## Who is organising and funding this study?
+
+The Game Developer, with the help of DKIT, is organizing this study. There is no funding for this
+study.
+
+## Why am I being asked to take part?
+
+You are being asked to take part in the evaluation of the game narrative to determine the level
+of success achieved by the research into the topics the game covers. This includes character
+driven narrative, use of Irish Folklore and using self-improvement as a guide to become better
+people.
+
+## How will the study be carried out?
+
+The study will be carried out via anonymous survey and focus groups. Please avoid inputting
+any sensitive information that could identify you. I will do my best to anonymise this data
+before storing it for up to 6 months after the survey is carried out.
+
+## What will happen to me if I agree to take part?
+
+You will play a game and fill out a survey or participate in a focus group. You may gain some
+insight into the themes covered by this game, or you may feel that this game has done a
+disservice to the themes. Your input is valuable to figuring out if the game has achieved its
+purpose.
+
+## What are the benefits?
+
+We all get to learn about narrative design in a somewhat niche topic. This will be documented
+for us to learn from. Be the results good or bad, there will hopefully be a lesson for us to take
+from this study.
+
+## What are the risks?
+
+The narrative can have some sensitive themes based around death and addiction. If you have
+any reservations about this, please avoid the game. Alternatively, you can try it and stop at any
+time if you think the narrative is becoming too much for you.
+
+## Is the study confidential?
+
+Yes, the study is anonymous. We will not gather personal data and will be stored in a safe and
+secure location until it is deleted. Any information from the study will be abstracted to prevent
+leaking your information.
+
+## Where can I get further information?
+
+If you have any further questions about the study or if you want to opt out of the study, you
+can rest assured it won't affect the quality of treatment you get in the future.
+
+If you need any further information now or at any time in the future, please contact me via
+[boopdood.itch.io](https://boopdood.itch.io/) or email: [D00165165@student.dkit.ie](mailto://D00165165@student.dkit.ie)
