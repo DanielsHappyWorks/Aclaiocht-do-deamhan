@@ -1,8 +1,25 @@
 #include "location.h"
 #include "sceneManager.h"
 
+InteriorItem::InteriorItem(Vector2 position, std::string texture, float scale) {
+    this->position = position;
+    this->texture = LoadTexture(texture.c_str());
+    this->scale = scale;
+}
 
-Location::Location(std::string building, std::string background, std::string name, LocEnum type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart) {
+InteriorItem::~InteriorItem() {
+    UnloadTexture(texture);
+}
+
+void InteriorItem::draw() {
+    DrawTextureEx(texture, position, 0.0f, (float)scale, WHITE);
+}
+
+Rectangle InteriorItem::getRect() {
+    return {position.x, position.y, texture.width*scale, texture.height*scale};
+}
+
+Location::Location(std::string building, std::string background, std::string name, LocEnum type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart, std::vector<InteriorItem*> interiors) {
     this->name = name;
     this->type = type;
     this->overworldLocation = overworldLocation;
@@ -12,7 +29,8 @@ Location::Location(std::string building, std::string background, std::string nam
     this->exit = exit;
     this->events = events;
     this->currentEvent = 0;
-    this->playerStart = playerStart; 
+    this->playerStart = playerStart;
+    this->interiors = interiors;
 }
 
 Location::~Location() {
@@ -58,4 +76,8 @@ void Location::playAnyForcedEvents() {
         SceneManager::GetInstance()->setSceneOverlay(events[currentEvent]);
         currentEvent++;
     }
+}
+
+std::vector<InteriorItem*> Location::getInteriors() {
+    return interiors;
 }

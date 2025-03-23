@@ -55,6 +55,26 @@ CharacterFactory::CharacterFactory() {
         "assets/images/characters/dullahan/dullahan_front.png",
         "assets/images/characters/dullahan/dullahan_side.png"
     );
+
+    shopkeeper = new Character(
+        "Shopkeeper",
+        SHOPKEEPER,
+        SFX_DIALOG_FEMALE,
+        {SHOP},
+        {SHOP},
+        "assets/images/characters/side/sentra.png",
+        "assets/images/characters/side/sentra.png"
+    );
+
+    cook = new Character(
+        "Chef",
+        CHEF,
+        SFX_DIALOG_MALE,
+        {RESTAURANT},
+        {RESTAURANT},
+        "assets/images/characters/side/supperwacks.png",
+        "assets/images/characters/side/supperwacks.png"
+    );
 }
 
 CharacterFactory::~CharacterFactory() {
@@ -62,7 +82,7 @@ CharacterFactory::~CharacterFactory() {
 }
 
 std::list<Character*> CharacterFactory::getCharacters() {
-    return {banshee, paddy, pooka, dullahan};
+    return {banshee, paddy, pooka, dullahan, shopkeeper, cook};
 }
 
 Character* CharacterFactory::getCharacter(CharEnum charEnum) {
@@ -75,6 +95,10 @@ Character* CharacterFactory::getCharacter(CharEnum charEnum) {
             return pooka;
         case DULLAHAN:
             return dullahan;
+        case SHOPKEEPER:
+            return shopkeeper;
+        case CHEF:
+            return cook;
         case PLAYER:
             return Player::GetInstance()->getCharacter();
         default:

@@ -19,7 +19,9 @@ enum CharEnum {
     PADDY,
     BANSHEE,
     DULLAHAN,
-    POOKA
+    POOKA,
+    SHOPKEEPER,
+    CHEF,
 };
 
 enum Time {

@@ -14,6 +14,8 @@ class CharacterFactory {
         Character* paddy;
         Character* pooka;
         Character* dullahan;
+        Character* shopkeeper;
+        Character* cook;
     public:
         CharacterFactory(CharacterFactory &other) = delete;
         void operator=(const CharacterFactory &) = delete;

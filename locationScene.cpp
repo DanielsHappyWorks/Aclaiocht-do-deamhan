@@ -40,6 +40,10 @@ void LocationScene::draw() {
         character->drawAtLoc();
     }
 
+    for (InteriorItem* item : location->getInteriors()) {
+        item->draw();
+    }
+
     Player::GetInstance()->draw(playerPos, playerScale);
 }
 

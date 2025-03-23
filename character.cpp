@@ -50,7 +50,7 @@ LocEnum PlayerCharacter::getCurrentLoc() {
 }
 
 void Character::drawAtLoc() {
-    DrawTextureFromCentre(getFront(), getPosAtLoc(getCurrentLoc()), 0.7f, 0.0f, WHITE);
+    DrawTextureFromCentre(getFront(), getPosAtLoc(getCurrentLoc()), 0.8f, 0.0f, WHITE);
 }
 
 CharDialogChoices Character::getChoice(int index) {
