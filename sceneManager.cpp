@@ -41,7 +41,17 @@ Scene* SceneManager::getCurrentScene() {
 }
 
 void SceneManager::setCurrentScene(Scene* scene) {
-    this->nextScene = scene;
+    setCurrentScene(scene, false);
+}
+
+void SceneManager::setCurrentScene(Scene* scene, bool forced) {
+    nextScene = scene;
+
+    if (forced) {
+        currentScene = scene;
+        nextScene = nullptr;
+        overlayScene = nullptr;
+    }
 }
 
 

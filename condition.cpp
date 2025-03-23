@@ -18,3 +18,18 @@ MetCharacterCondition::MetCharacterCondition(Character* character, int index, Ch
 bool MetCharacterCondition::isMet() {
     return character->getChoice(index) == choice;
 }
+
+CharacterEventsCompltededCondition::CharacterEventsCompltededCondition(std::vector<Character*> characters) {
+    this->characters = characters;
+}
+
+bool CharacterEventsCompltededCondition::isMet() {
+    for (Character* character : characters) {
+        if (character->getCurrentEvent() < 1) {
+            return false;
+        }
+    }
+
+    return true;
+}
+

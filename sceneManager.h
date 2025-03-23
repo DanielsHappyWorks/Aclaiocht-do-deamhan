@@ -22,6 +22,7 @@ class SceneManager {
 
         Scene* getCurrentScene();
         void setCurrentScene(Scene* scene);
+        void setCurrentScene(Scene* scene, bool forced);
         SceneOverlay* getSceneOverlay();
         void setSceneOverlay(SceneOverlay* scene);
 };

@@ -4,6 +4,7 @@
 #include "inputManager.h"
 #include "fontManager.h"
 #include "player.h"
+#include "sceneManager.h"
 
 void drawDialogBox(std::string character, std::string text, TextNodeType type)
 {
@@ -260,4 +261,22 @@ NodeType PassTimeNode::getType()
 Time PassTimeNode::getTime()
 {
     return time;
+}
+
+SceneChangeNode::SceneChangeNode(Scene *scene)
+{
+    this->scene = scene;
+}
+
+bool SceneChangeNode::isDone()
+{
+    SceneManager::GetInstance()->setCurrentScene(scene, true);
+    return true;
+}
+
+void SceneChangeNode::draw() {}
+
+NodeType SceneChangeNode::getType()
+{
+    return SCENE_CHANGE_NODE;
 }

@@ -2,6 +2,7 @@
 #include <string>
 #include "enums.h"
 #include "character.h"
+#include <vector>
 
 class Condition {
     public:
@@ -24,5 +25,13 @@ class MetCharacterCondition : public Condition {
         int index;
     public:
         MetCharacterCondition(Character* character, int index, CharDialogChoices choice);
+        bool isMet();
+};
+
+class CharacterEventsCompltededCondition : public Condition {
+    private:
+        std::vector<Character*> characters;
+    public:
+        CharacterEventsCompltededCondition(std::vector<Character*> character);
         bool isMet();
 };

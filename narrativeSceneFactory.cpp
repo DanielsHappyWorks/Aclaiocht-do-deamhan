@@ -1,6 +1,7 @@
 #include "narrativeSceneFactory.h"
 #include "condition.h"
 #include "characterFactory.h"
+#include "endOfDemoScene.h"
 
 NarrativeSceneFactory* NarrativeSceneFactory::factory = nullptr;
 
@@ -62,7 +63,10 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "She seems like shes got a violent streak going.", TEXT_MONOLOGUE),
         new TextNode(player, "I wonder what creatures the other gym goers are.", TEXT_MONOLOGUE),
         new TextNode(player, "I should avoid offending them too.", TEXT_MONOLOGUE),
-    }, new MetCharacterCondition(dullahan, 0, BAD), true)};
+    }, new MetCharacterCondition(dullahan, 0, BAD), true),
+    new NarrativeScene({
+        new SceneChangeNode(new EndOfDemoScene()),
+    }, new CharacterEventsCompltededCondition({banshee, pooka, dullahan}), true),};
 
     gymEvents = {
     new NarrativeScene({

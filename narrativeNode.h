@@ -3,6 +3,7 @@
 #include <vector>
 #include "soundManager.h"
 #include "character.h"
+#include "scene.h"
 
 enum NodeType {
     TEXT_NODE,
@@ -12,7 +13,8 @@ enum NodeType {
     REMOVE_CHARACTER_NODE,
     ADD_BACKGROUND_NODE,
     REMOVE_BACKGROUND_NODE,
-    PASS_TIME_NODE
+    PASS_TIME_NODE,
+    SCENE_CHANGE_NODE
 };
 
 enum TextNodeType {
@@ -123,4 +125,14 @@ class PassTimeNode : public NarrativeNode {
         void draw();
         NodeType getType();
         Time getTime();
+};
+
+class SceneChangeNode : public NarrativeNode {
+    private:
+        Scene* scene;
+    public:
+        SceneChangeNode(Scene* scene);
+        bool isDone();
+        void draw();
+        NodeType getType();
 };
