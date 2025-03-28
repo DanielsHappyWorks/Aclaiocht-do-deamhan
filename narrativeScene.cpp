@@ -49,6 +49,9 @@ void NarrativeScene::update() {
         if (narrativeElements[currentElement]->getType() == CHOICE_NODE) {
             std::vector<NarrativeNode*> choiceNode = ((ChoiceNode*)narrativeElements[currentElement])->getChosenDialog();
             narrativeElements.insert(narrativeElements.begin() + currentElement + 1, choiceNode.begin(), choiceNode.end());
+        } else if (narrativeElements[currentElement]->getType() == RANDOM_NODE) {
+            NarrativeNode* randomNode = ((RandomNode*)narrativeElements[currentElement])->getRandomNode();
+            narrativeElements.insert(narrativeElements.begin() + currentElement + 1, randomNode);
         }
 
         currentElement++;

@@ -14,7 +14,9 @@ enum NodeType {
     ADD_BACKGROUND_NODE,
     REMOVE_BACKGROUND_NODE,
     PASS_TIME_NODE,
-    SCENE_CHANGE_NODE
+    SCENE_CHANGE_NODE,
+    RANDOM_NODE,
+    ITEM_SHOP_NODE
 };
 
 enum TextNodeType {
@@ -132,6 +134,27 @@ class SceneChangeNode : public NarrativeNode {
         Scene* scene;
     public:
         SceneChangeNode(Scene* scene);
+        bool isDone();
+        void draw();
+        NodeType getType();
+};
+
+class RandomNode : public NarrativeNode {
+    private:
+        std::vector<NarrativeNode*> nodes;
+    public:
+        RandomNode(std::vector<NarrativeNode*> nodes);
+        bool isDone();
+        void draw();
+        NodeType getType();
+        NarrativeNode* getRandomNode();
+};
+
+class ItemShopNode : public NarrativeNode {
+    private:
+        bool done;
+    public:
+        ItemShopNode();
         bool isDone();
         void draw();
         NodeType getType();

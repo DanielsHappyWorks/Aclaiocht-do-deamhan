@@ -130,15 +130,21 @@ void ChoiceNode::draw()
     if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 70, (float)GetScreenWidth() - btnPadding * 2, 34}, goodPrompt.c_str()) && frameCounter >= disabledFrames)
     {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
-        character->addChoice(GOOD);
+        if (character != nullptr) {
+            character->addChoice(GOOD);
+        }
         selected = true;
         done = true;
     }
 
     if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 110, (float)GetScreenWidth() - btnPadding * 2, 34}, badPrompt.c_str()) && frameCounter >= disabledFrames)
     {
-        SoundManager::GetInstance()->playSound(SFX_ERROR);
-        character->addChoice(BAD);
+        if (character != nullptr) {
+            SoundManager::GetInstance()->playSound(SFX_ERROR);
+            character->addChoice(BAD);
+        } else {
+            SoundManager::GetInstance()->playSound(SFX_CLICK);
+        }
         selected = false;
         done = true;
     }
@@ -279,4 +285,55 @@ void SceneChangeNode::draw() {}
 NodeType SceneChangeNode::getType()
 {
     return SCENE_CHANGE_NODE;
+}
+
+RandomNode::RandomNode(std::vector<NarrativeNode *> nodes)
+{
+    this->nodes = nodes;
+}
+
+bool RandomNode::isDone()
+{
+    return true;
+}
+
+void RandomNode::draw() {}
+
+NodeType RandomNode::getType()
+{
+    return RANDOM_NODE;
+}
+
+NarrativeNode* RandomNode::getRandomNode()
+{
+    return nodes[rand() % nodes.size()];
+}
+
+ItemShopNode::ItemShopNode() {
+    done = false;
+}
+
+bool ItemShopNode::isDone()
+{
+    return done;
+}
+
+void ItemShopNode::draw() {
+    float hight = GetScreenHeight()/2 - 200;
+
+    if (GuiWindowBox((Rectangle){GetScreenWidth()/2 - 200, hight, 400, 400}, "Item Shop")) {
+        done = true;
+    }
+
+    //TODO add item shop items
+    DrawTextEx(FontManager::GetInstance()->getFont(), "There are currently no items \nfor sale.", {(float)GetScreenWidth()/2 - 170, hight + 40}, 18, FontManager::GetInstance()->getSpacing(), DARKDARKGRAY);
+
+    if (GuiButton((Rectangle){GetScreenWidth()/2 - 80, hight + 330, 160, 30}, "Exit")) {
+        done = true;
+    }
+}
+
+NodeType ItemShopNode::getType()
+{
+    return ITEM_SHOP_NODE;
 }

@@ -26,4 +26,5 @@ class NarrativeSceneFactory {
         std::vector<NarrativeScene*> getPookaEvents();
         std::vector<NarrativeScene*> getDullahanEvents();
         std::vector<NarrativeScene*> getCharacterEvents(CharEnum charEnum);
+        NarrativeScene* getDefaultCharacterEvent(CharEnum charEnum);
 };

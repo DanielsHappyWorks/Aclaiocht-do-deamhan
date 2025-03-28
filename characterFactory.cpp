@@ -142,7 +142,7 @@ bool CharacterFactory::isNarrativeSceneReady(CharEnum charEnum) {
         }
     }
     
-    return false;
+    return NarrativeSceneFactory::GetInstance()->getDefaultCharacterEvent(charEnum) != nullptr;
 }
 
 NarrativeScene* CharacterFactory::getNarrativeScene(CharEnum charEnum) {
@@ -155,5 +155,5 @@ NarrativeScene* CharacterFactory::getNarrativeScene(CharEnum charEnum) {
         }
     }
     
-    return nullptr;
+    return NarrativeSceneFactory::GetInstance()->getDefaultCharacterEvent(charEnum);
 }

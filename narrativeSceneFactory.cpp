@@ -68,6 +68,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new SceneChangeNode(new EndOfDemoScene()),
     }, new CharacterEventsCompltededCondition({banshee, pooka, dullahan}), true),};
 
+    /*
     gymEvents = {
     new NarrativeScene({
         new AddBackgroundNode(BLACK),
@@ -174,7 +175,7 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "Not a great way to start another day on the job.", TEXT_MONOLOGUE),
         new TextNode(player, "I should at least go and apologize.", TEXT_MONOLOGUE),
     }, new CharacterAtLocationCondition(dullahan, GYM), true)};
-
+*/
 
     bansheeEvents = {
     new NarrativeScene({
@@ -377,5 +378,95 @@ std::vector<NarrativeScene*> NarrativeSceneFactory::getCharacterEvents(CharEnum 
         case PADDY:
         default:
             return {};
+    }
+}
+
+NarrativeScene* NarrativeSceneFactory::getDefaultCharacterEvent(CharEnum charEnum) {
+    Character* shopkeeper = CharacterFactory::GetInstance()->getCharacter(SHOPKEEPER);
+    Character* chef = CharacterFactory::GetInstance()->getCharacter(CHEF);
+    Character* player = CharacterFactory::GetInstance()->getCharacter(PLAYER);
+    Character* paddy = CharacterFactory::GetInstance()->getCharacter(PADDY);
+
+    switch (charEnum) {
+        case SHOPKEEPER:
+            return new NarrativeScene({
+                new RandomNode({
+                    new TextNode(shopkeeper, "Hello. Welcome to Sentra. How can we help you today?", TEXT_DIALOGUE),
+                    new TextNode(shopkeeper, "Hey. Welcome to Sentra. What can I do for you?", TEXT_DIALOGUE),
+                    new TextNode(shopkeeper, "Hello. Live Every Day. How can we help you today?", TEXT_DIALOGUE),
+                    new TextNode(shopkeeper, "Welcome. Live Every Day. What can I do for you?", TEXT_DIALOGUE),
+                }),
+                new ItemShopNode(),
+                new RandomNode({
+                    new TextNode(shopkeeper, "Thank you for shopping with us! Have a lovely day", TEXT_DIALOGUE),
+                    new TextNode(shopkeeper, "Thank you for shopping with us! Have a great day", TEXT_DIALOGUE),
+                    new TextNode(shopkeeper, "Bye. Feel free to visit us again soon!", TEXT_DIALOGUE),
+                    new TextNode(shopkeeper, "Thanks, were always here to help. Please come again.", TEXT_DIALOGUE),
+                }),
+            }, nullptr, false);
+        case CHEF:
+            return new NarrativeScene({
+                new RandomNode({
+                    new TextNode(chef, "Welcome to the Supperwacs, home of the supperwacs. Can I take your order?", TEXT_DIALOGUE),
+                    new TextNode(chef, "Welcome to the Supperwacs, the kingdom of supperwacks! What's your craving today?", TEXT_DIALOGUE),
+                    new TextNode(chef, "Welcome to the Supperwacs, home of the biggest Bog Wacs! Would you like the biggest burger?", TEXT_DIALOGUE),
+                    new TextNode(chef, "Ah, a fellow supperwack fan! You're in the right place. What'll it be?", TEXT_DIALOGUE),
+                }),
+                new ChoiceNode(nullptr, "Should I eat something?",
+                    "Yes, some grub would be lovely.",
+                    {
+                        new RandomNode({
+                            new TextNode(player, "Hello, can I get a Bog Wac Meal.", TEXT_DIALOGUE),
+                            new TextNode(player, "Hey, can I get a Supper Slurp.", TEXT_DIALOGUE),
+                            new TextNode(player, "Hi, can I get a Wac Fries and Dino Nuggies.", TEXT_DIALOGUE),
+                            new TextNode(player, "Can I get a King sized WacDonels Crispy Chicken Bunger.", TEXT_DIALOGUE),
+                        }),
+                        new TextNode(chef, "We'll have that down to your table in no time.", TEXT_DIALOGUE),
+                        new AddBackgroundNode(BLACK),
+                        new TextNode(player, "I ate my food after it arrived. What quick service!", TEXT_MONOLOGUE),
+                        new TextNode(player, "The food here is great. I should come back again.", TEXT_MONOLOGUE),
+                        new PassTimeNode(HALF_DAY),
+                    },
+                    "No",
+                    {
+                        new TextNode(player, "Sorry, not sure I want anything right now.", TEXT_MONOLOGUE),
+                        new TextNode(chef, "No worries. Take as much time as you need to decide.", TEXT_DIALOGUE),
+                    }
+                ),
+            }, nullptr, false);
+        case PADDY:
+            return new NarrativeScene({
+                new RandomNode({
+                    new TextNode(paddy, "Hey kiddo. Ya made it down to Paddys. Can I get ya anything?", TEXT_DIALOGUE),
+                    new TextNode(paddy, "Oi! Shouldn't ya be working at the gym? Oh well, wanna pint?", TEXT_DIALOGUE),
+                    new TextNode(paddy, "Look who the Leprechauns dragged in! Pint?", TEXT_DIALOGUE),
+                    new TextNode(paddy, "Hey, great to see ya again. Shall we have a drink?", TEXT_DIALOGUE),
+                }),
+                new ChoiceNode(nullptr, "Should I eat something?",
+                    "Yes, I'd love a pint.",
+                    {
+                        new RandomNode({
+                            new TextNode(chef, "Hey, can I get a Coorsberg.", TEXT_DIALOGUE),
+                            new TextNode(chef, "Hello, can I get a Guiuuess.", TEXT_DIALOGUE),
+                            new TextNode(chef, "Hi, can I get a Koppoborg", TEXT_DIALOGUE),
+                            new TextNode(chef, "Can I get a Brick Shore", TEXT_DIALOGUE),
+                        }),
+                        new TextNode(paddy, "Here's yar pint. Enjoy!", TEXT_DIALOGUE),
+                        new AddBackgroundNode(BLACK),
+                        new TextNode(player, "I drank my lovely cold pint. It hit the spot", TEXT_MONOLOGUE),
+                        new PassTimeNode(HALF_DAY),
+                    },
+                    "No",
+                    {
+                        new TextNode(player, "Sorry, not sure I want anything right now.", TEXT_MONOLOGUE),
+                        new TextNode(paddy, "I'll pour ya one some other time so.", TEXT_DIALOGUE),
+                    }
+                ),
+            }, nullptr, false);
+        case BANSHEE:
+        case POOKA:
+        case DULLAHAN:
+        default:
+            return nullptr;
     }
 }
