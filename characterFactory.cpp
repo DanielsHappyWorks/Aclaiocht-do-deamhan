@@ -23,7 +23,8 @@ CharacterFactory::CharacterFactory() {
         {GYM, RESTAURANT, SHOP},
         {GYM, PUB, SHOP},
         "assets/images/characters/banshee/banshee_front.png",
-        "assets/images/characters/banshee/banshee_side.png"
+        "assets/images/characters/banshee/banshee_side.png",
+        {GetScreenWidth()/2, GetScreenHeight()/2}
     );
 
     paddy = new Character(
@@ -33,7 +34,8 @@ CharacterFactory::CharacterFactory() {
         {PUB},
         {PUB},
         "assets/images/characters/paddy/paddy_front.png",
-        "assets/images/characters/paddy/paddy_side.png"
+        "assets/images/characters/paddy/paddy_side.png",
+        {GetScreenWidth() - 200, 150}
     );
 
     pooka = new Character(
@@ -43,7 +45,8 @@ CharacterFactory::CharacterFactory() {
         {PUB, GYM, RESTAURANT},
         {SHOP, PUB, GYM},
         "assets/images/characters/pooka/pooka_front.png",
-        "assets/images/characters/pooka/pooka_side.png"
+        "assets/images/characters/pooka/pooka_side.png",
+        {GetScreenWidth()/2 + 75, GetScreenHeight()/2}
     );
 
     dullahan = new Character(
@@ -53,7 +56,8 @@ CharacterFactory::CharacterFactory() {
         {RESTAURANT, SHOP, GYM},
         {PUB, GYM, SHOP},
         "assets/images/characters/dullahan/dullahan_front.png",
-        "assets/images/characters/dullahan/dullahan_side.png"
+        "assets/images/characters/dullahan/dullahan_side.png",
+        {GetScreenWidth()/2 - 75, GetScreenHeight()/2}
     );
 
     shopkeeper = new Character(
@@ -63,7 +67,8 @@ CharacterFactory::CharacterFactory() {
         {SHOP},
         {SHOP},
         "assets/images/characters/side/sentra.png",
-        "assets/images/characters/side/sentra.png"
+        "assets/images/characters/side/sentra.png",
+        {GetScreenWidth()/2, 100}
     );
 
     cook = new Character(
@@ -73,7 +78,8 @@ CharacterFactory::CharacterFactory() {
         {RESTAURANT},
         {RESTAURANT},
         "assets/images/characters/side/supperwacks.png",
-        "assets/images/characters/side/supperwacks.png"
+        "assets/images/characters/side/supperwacks.png",
+        {200, 130}
     );
 }
 

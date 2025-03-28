@@ -14,12 +14,13 @@ class Character {
         std::vector<LocEnum> nightLocations;
         std::vector<CharDialogChoices> choices;
         int friendship;
+        Vector2 posAtLoc;
 
         Texture2D front;
         Texture2D side;
 
     public:
-        Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side);
+        Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side, Vector2 posAtLoc);
         ~Character();
 
         Texture2D getFront();

@@ -1,7 +1,7 @@
 #include "character.h"
 #include "gameState.h"
 
-Character::Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side) {
+Character::Character(std::string name, CharEnum type, SFX sound, std::vector<LocEnum> dayLocations, std::vector<LocEnum> nightLocations, std::string front, std::string side, Vector2 posAtLoc) {
     this->name = name;
     this->type = type;
     this->sound = sound;
@@ -11,9 +11,10 @@ Character::Character(std::string name, CharEnum type, SFX sound, std::vector<Loc
     this->side = LoadTexture(side.c_str());
     this->choices = {};
     this->friendship = 0;
+    this->posAtLoc = posAtLoc;
 }
 
-PlayerCharacter::PlayerCharacter(std::string name, CharEnum type, SFX sound, std::string front, std::string side) : Character{name, type, sound, {}, {}, front, side} {
+PlayerCharacter::PlayerCharacter(std::string name, CharEnum type, SFX sound, std::string front, std::string side) : Character{name, type, sound, {}, {}, front, side, {0,0}} {
 }
 
 Character::~Character() {
@@ -69,20 +70,9 @@ int Character::getFriendship() {
     return friendship;
 }
 
-//TODO fix locations & and make this per character configurable
 Vector2 Character::getPosAtLoc(LocEnum loc) {
-    switch (loc) {
-        case PUB:
-            return {GetScreenWidth()/2, GetScreenHeight()/2};
-        case SHOP:
-            return {GetScreenWidth()/2, GetScreenHeight()/2};
-        case RESTAURANT:
-            return {GetScreenWidth()/2, GetScreenHeight()/2};
-        case GYM:
-            return {GetScreenWidth()/2, GetScreenHeight()/2};
-        default:
-            return {0, 0};
-    }
+    //TODO make this unique per location!
+    return posAtLoc;
 }
 
 Rectangle Character::getCollisionRect() {
