@@ -138,7 +138,7 @@ void CharacterFactory::playCharacterEvents(LocEnum loc, Rectangle playerRect) {
     }
 }
 
-bool CharacterFactory::isNarrativeSceneReady(CharEnum charEnum) {
+bool CharacterFactory::isCoreSceneReady(CharEnum charEnum) {
     std::vector<NarrativeScene*> scenes = NarrativeSceneFactory::GetInstance()->getCharacterEvents(charEnum);
 
     for (NarrativeScene* scene : scenes)
@@ -148,7 +148,11 @@ bool CharacterFactory::isNarrativeSceneReady(CharEnum charEnum) {
         }
     }
     
-    return NarrativeSceneFactory::GetInstance()->getDefaultCharacterEvent(charEnum) != nullptr;
+    return false;
+}
+
+bool CharacterFactory::isNarrativeSceneReady(CharEnum charEnum) {
+    return isCoreSceneReady(charEnum) || NarrativeSceneFactory::GetInstance()->getDefaultCharacterEvent(charEnum) != nullptr;
 }
 
 NarrativeScene* CharacterFactory::getNarrativeScene(CharEnum charEnum) {

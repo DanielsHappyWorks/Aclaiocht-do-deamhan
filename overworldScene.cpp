@@ -8,6 +8,7 @@
 #include "sceneManager.h"
 #include "characterFactory.h"
 #include <string>
+#include "gameState.h"
 
 OverworldScene::OverworldScene() {
     playerPos = {420, 250};
@@ -44,6 +45,8 @@ void OverworldScene::draw() {
     }
 
     Player::GetInstance()->draw(playerPos, playerScale);
+
+    GameState::GetInstance()->drawDayNight();
 }
 
 bool OverworldScene::isDone() {

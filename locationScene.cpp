@@ -5,6 +5,7 @@
 #include <string>
 #include "characterFactory.h"
 #include "sceneManager.h"
+#include "gameState.h"
 
 LocationScene::LocationScene(Location* location) {
     this->location = location;
@@ -12,10 +13,12 @@ LocationScene::LocationScene(Location* location) {
     playerPos = location->getPlayerStart();
     playerSpeed = 210;
     playerScale = 0.7f;
+
+    eventIcon = LoadTexture("assets/images/icons/event.png");
 }
 
 LocationScene::~LocationScene() {
-
+    UnloadTexture(eventIcon);
 }
 
 void LocationScene::update() {
@@ -38,6 +41,10 @@ void LocationScene::draw() {
     std::vector<Character*> characters = CharacterFactory::GetInstance()->getCharactersAtLoc(location->getType());
     for (Character* character : characters) {
         character->drawAtLoc();
+        if (CharacterFactory::GetInstance()->isCoreSceneReady(character->getType())) {
+            Rectangle rect = character->getCollisionRect();
+            DrawTextureFromCentre(eventIcon, {rect.x + rect.width - 10, rect.y + 10}, 0.6f, 0.0f, YELLOW);
+        }
     }
 
     for (InteriorItem* item : location->getInteriors()) {
@@ -45,6 +52,8 @@ void LocationScene::draw() {
     }
 
     Player::GetInstance()->draw(playerPos, playerScale);
+
+    GameState::GetInstance()->drawDayNight();
 }
 
 bool LocationScene::isDone() {

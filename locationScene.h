@@ -12,6 +12,8 @@ class LocationScene : public Scene {
         float playerScale;
 
         bool done;
+
+        Texture2D eventIcon;
     public:
         LocationScene(Location* location);
         ~LocationScene();

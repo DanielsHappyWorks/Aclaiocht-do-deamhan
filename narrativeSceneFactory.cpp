@@ -68,7 +68,6 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new SceneChangeNode(new EndOfDemoScene()),
     }, new CharacterEventsCompltededCondition({banshee, pooka, dullahan}), true),};
 
-    /*
     gymEvents = {
     new NarrativeScene({
         new AddBackgroundNode(BLACK),
@@ -175,7 +174,6 @@ NarrativeSceneFactory::NarrativeSceneFactory() {
         new TextNode(player, "Not a great way to start another day on the job.", TEXT_MONOLOGUE),
         new TextNode(player, "I should at least go and apologize.", TEXT_MONOLOGUE),
     }, new CharacterAtLocationCondition(dullahan, GYM), true)};
-*/
 
     bansheeEvents = {
     new NarrativeScene({

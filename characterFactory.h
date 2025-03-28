@@ -26,6 +26,7 @@ class CharacterFactory {
         std::vector<Character*> getCharactersAtLoc(LocEnum loc);
         void playCharacterEvents(LocEnum loc, Rectangle playerRect);
 
+        bool isCoreSceneReady(CharEnum charEnum);
         bool isNarrativeSceneReady(CharEnum charEnum);
         NarrativeScene* getNarrativeScene(CharEnum charEnum);
 };

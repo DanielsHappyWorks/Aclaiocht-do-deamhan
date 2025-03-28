@@ -48,10 +48,10 @@ LocationFactory::LocationFactory() {
             {310, 490, 140, 110},
             {},
             {365, 600},
-            {new InteriorItem({150, 100}, "assets/images/locations/sentra_shelf.png", 1.0f),
-            new InteriorItem({150, 350}, "assets/images/locations/sentra_shelf.png", 1.0f),
+            {new InteriorItem({150, 100}, "assets/images/locations/sentra_shelf_b.png", 1.0f),
+            new InteriorItem({150, 350}, "assets/images/locations/sentra_shelf_c.png", 1.0f),
             new InteriorItem({550, 100}, "assets/images/locations/sentra_shelf.png", 1.0f),
-            new InteriorItem({550, 350}, "assets/images/locations/sentra_shelf.png", 1.0f),}
+            new InteriorItem({550, 350}, "assets/images/locations/sentra_shelf_d.png", 1.0f),}
     ));
 
     locations.push_back(

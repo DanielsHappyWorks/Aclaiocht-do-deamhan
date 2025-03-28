@@ -28,6 +28,7 @@ class Location {
 
         Texture2D building;
         Texture2D background;
+        Texture2D eventIcon;
         std::vector<InteriorItem*> interiors;
     public:
         Location(std::string building, std::string background, std::string name, LocEnum type, Vector2 overworldLocation, Rectangle exit, std::vector<NarrativeScene*> events, Vector2 playerStart, std::vector<InteriorItem*> interiors);
