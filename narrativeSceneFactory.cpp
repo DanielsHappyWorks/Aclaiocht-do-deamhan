@@ -405,10 +405,10 @@ NarrativeScene* NarrativeSceneFactory::getDefaultCharacterEvent(CharEnum charEnu
         case CHEF:
             return new NarrativeScene({
                 new RandomNode({
-                    new TextNode(chef, "Welcome to the Supperwacs, home of the supperwacs. Can I take your order?", TEXT_DIALOGUE),
-                    new TextNode(chef, "Welcome to the Supperwacs, the kingdom of supperwacks! What's your craving today?", TEXT_DIALOGUE),
+                    new TextNode(chef, "Welcome to the Supperwacs, home of the Supperwacs. Can I take your order?", TEXT_DIALOGUE),
+                    new TextNode(chef, "Welcome to the Supperwacs, the kingdom of Supperwacs! What's your craving today?", TEXT_DIALOGUE),
                     new TextNode(chef, "Welcome to the Supperwacs, home of the biggest Bog Wacs! Would you like the biggest burger?", TEXT_DIALOGUE),
-                    new TextNode(chef, "Ah, a fellow supperwack fan! You're in the right place. What'll it be?", TEXT_DIALOGUE),
+                    new TextNode(chef, "Ah, a fellow Supperwacs fan! You're in the right place. What'll it be?", TEXT_DIALOGUE),
                 }),
                 new ChoiceNode(nullptr, "Should I eat something?",
                     "Yes, some grub would be lovely.",
@@ -440,14 +440,14 @@ NarrativeScene* NarrativeSceneFactory::getDefaultCharacterEvent(CharEnum charEnu
                     new TextNode(paddy, "Look who the Leprechauns dragged in! Pint?", TEXT_DIALOGUE),
                     new TextNode(paddy, "Hey, great to see ya again. Shall we have a drink?", TEXT_DIALOGUE),
                 }),
-                new ChoiceNode(nullptr, "Should I eat something?",
+                new ChoiceNode(nullptr, "Should I drink something?",
                     "Yes, I'd love a pint.",
                     {
                         new RandomNode({
-                            new TextNode(chef, "Hey, can I get a Coorsberg.", TEXT_DIALOGUE),
-                            new TextNode(chef, "Hello, can I get a Guiuuess.", TEXT_DIALOGUE),
-                            new TextNode(chef, "Hi, can I get a Koppoborg", TEXT_DIALOGUE),
-                            new TextNode(chef, "Can I get a Brick Shore", TEXT_DIALOGUE),
+                            new TextNode(player, "Hey, can I get a Coorsberg.", TEXT_DIALOGUE),
+                            new TextNode(player, "Hello, can I get a Guiuuess.", TEXT_DIALOGUE),
+                            new TextNode(player, "Hi, can I get a Koppoborg", TEXT_DIALOGUE),
+                            new TextNode(player, "Can I get a Brick Shore", TEXT_DIALOGUE),
                         }),
                         new TextNode(paddy, "Here's yar pint. Enjoy!", TEXT_DIALOGUE),
                         new AddBackgroundNode(BLACK),
