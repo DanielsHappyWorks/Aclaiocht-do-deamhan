@@ -17,6 +17,8 @@ Game::Game()
     screenHeight = 600;
 
     InitWindow(screenWidth, screenHeight, "Exercise Your Demons");
+    Image icon = LoadImage("assets/images/icons/icon.png");
+    SetWindowIcon(icon);
     SetTargetFPS(60);
 
     GuiSetFont(FontManager::GetInstance()->getFont());
