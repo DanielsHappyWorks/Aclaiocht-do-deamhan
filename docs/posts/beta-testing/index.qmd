@@ -1,0 +1,105 @@
+---
+title: "Beta Testing"
+date: "2025-04-05"
+categories: [Demo, Research, User Testing]
+image: "approach.png"
+---
+
+This blog entry discusses the user testing that occurred after the game demo was completed and ethics approval was granted.
+
+# Demo Playthrough
+
+{{< video https://youtu.be/PvkIKVA3UM8 >}}
+
+# Approach
+
+I ran an anonymous survey on [Itch.io](https://boopdood.itch.io/exercise-your-demons) to test my game to answer my thesis question.
+I scouted over Reddit, Discord, Itch.io, Instagram in Gaming Channels and Game Development channels for people willing to submit answers.
+
+In total, I got 12 responses total out of 24 downloads but I didn't hit my goal of 15. I still think this is a very successful survey with a decent response rate.
+The survey lasted 1 week less than expected due to ethics approvals delay. I expect I could have hit my target if not for this delay.
+
+![](approach.png)
+
+# Feedback & Learnings
+
+All players who played my demo and answered the survey agreed to the consent leaflet and spent at least 5 minutes playing the game. I was originally going to filter out less then 5 min in the results as based on my experience the demo takes 6-8 minutes to complete but this wont be the case as everyone played for at least 5 minutes.
+
+![](time.png)
+
+The premise of the game was well understood by all 11 testers who responded to "You've just played the game. Imagine I've never seen or played it. Describe it briefly to me.".
+
+Positive Feedback:
+
+- Generally positive sentiment, with an interesting and enjoyable narrative concept that shows a lot of promise.
+- Enjoy the games humor and visual style.
+- Enjoyed the music, especially as it changes to match the narrative.
+- It's quirky and silly which makes it more charming.
+- Everyone enjoyed the narrative in the demo.
+- Funny and great references to Irish culture.
+
+Negative Feedback:
+
+- Some visuals are slightly blurry.
+- Introduction seems too open, some confusion about what needs to be done.
+- Lack of window scaling & full screen mode.
+- Font is too small and sometimes not very clear.
+- Narrative is too short and may be lacking depth.
+- Core characters are not interactable outside of the gym.
+
+# Research Findings
+
+Have you learned any life lessons from this video game?
+
+- 7 out of 12 answered with a lesson they have learned.
+
+What life lessons did the game suggest?
+
+- 11 out of 12 said the game does suggest life lessons.
+
+The game has life lessons to offer but not everyone has something to learn here as they may already have learned these. These include:
+
+- The Pooka & Dullahan are not to be messed with.
+- A little apology goes a long way.
+- To be kind and treat people respectfully.
+- Stick up for yourself.
+- Don't judge a book by its cover.
+- Staying away from pints? Don't skip work to go day drinking at the pub, or you will get scolded by St. Paddy :D
+
+# Future Work
+
+There are some long term goals for this project if it was to continue. These include:
+
+- Finish the whole narrative.
+- Item shop & gift giving.
+- Add window scaling support to game.
+- Re-work fonts more!
+  - Maybe make this configurable as it's an accessibility issue.
+- Save player progress.
+
+There are also some quick fixes that could take a few days. These include:
+
+- Fix scaling on 2D assets – some seem blurry.
+- More animations.
+- Add default interactions with core characters.
+- Only show characters in the town after meeting them and force first interaction.
+
+As with any game development project, it needs regular testing. This includes both feature testing to make sure the game runs fine and user testing to verify the game is still fun to play. As new features are developed, I would need to make sure I test both of these at regular intervals.
+
+# Project Reflections so far
+
+- The research topic changed throughout, and the narrative became more lighthearted because of this which seems to appeal to the testers.
+- Artefact was well organized and completed in a timely manner.
+- User testing shows potential interest in a fully finished product.
+- Most scope was achieved.
+  - Item shop was cut.
+  - Rhythm minigame was reworked into other interactions capable of passing time.
+- Technical Stack was enjoyable.
+  - Good test of my coding skills.
+  - Raylib is fun to work with.
+  - 17mb game build is awesome.
+- More complicated than using a game engine – good challenge!
+- Based on initial analysis, there seems to be a consensus that teaching life lessons through video games is possible, but it could use a larger sample size.
+  - Would be good to test again with the full narrative.
+- Main Objective: Making a game demo my wife enjoys - Successful.
+

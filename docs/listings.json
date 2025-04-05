@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/beta-testing/index.html",
+      "/posts/wrapup/index.html",
       "/posts/menus/index.html",
       "/posts/font_updates/index.html",
       "/posts/narrative_implemented/index.html",

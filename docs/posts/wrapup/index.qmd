@@ -1,0 +1,54 @@
+---
+title: "Final Additions"
+date: "2025-03-28"
+categories: [Programming, Design, Assets, Environment, Narrative, Characters]
+image: "locations.gif"
+---
+
+The focus of the last weeks of the project was to add a few smaller features and refine the existing artefact. This blog entry discusses the changes added before beta testing starts.
+
+# Extra town interactions & Populating all locations with items
+
+All of the locations felt barren up until now. The only interactions that occurred were in the gym and every location was empty. For a game contained in a small area, this is less then ideal. To fix this, I added the following:
+
+- A new character known as the chef who is selling food at the restaurant.
+- A new character known as the shop keeper with a stub item shop menu.
+  - Item shop and gift giving was cut out of scope during the alpha stage.
+- Paddy is now interactable and now sells pints at the pub.
+- There are now unique items at every location to make them feel different and lived in.
+
+![](locations.gif)
+
+# Day/Night Mechanic
+
+Time passes as the player plays the game. It has done so for a while but the core narrative events currently pass to the next day. The new interactions allow you to pass the time in half day increments which was originally going to be the case for all events. In the case of introduction events, it made sense for them to take up the rest of the day from a narrative standpoint.
+
+This extra passage of time makes the world feel more interesting and adds some depth to the visuals. There is also an indicator of showing the time of day and how many days the player has played for.
+
+![](time.gif)
+
+# End Screen
+
+Once all core events are completed, the demo ends with a "thank you for playing" screen. It adds a sense of being done with the demo while symbolizing there is more to come.
+
+![](endscreen.png)
+
+# Event Markers
+
+Core game events are now marked on the map and the characters associated with them at all locations. This adds a sense of direction for where the players need to go to continue.
+
+Event marker on a character:
+
+![](evtmark_char.png)
+
+Event marker on a location:
+
+![](evtmark_loc.png)
+
+# Reflections
+
+This really should have been split up into multiple blog entries. There is a lot of content here and by blogging in a two week increment, too much got bundled in together. Originally this was going to be the final entry but while waiting for the ethics review board, I had extra time to fit in some more work so it got pushed out. Next time, I need to make sure I make more regular updates as I have been very consistent up until this entry.
+
+As with all of my features, they are generic and re-usable. This is great as it means my prototype is easy to build on. I'm very proud of this as it means adding more events should be easier and everything will show up as expected. For example, if I add another character event, all locations that have an event will display the event markers. Planning for the future will make my life easier if I choose to continue this project.
+
+Lastly, I'm very satisfied with all of the extra interactions. It has made my game slightly less linear as you don't need to interact with the core characters to pass the time. There is still some work to do here like not showing characters at locations until you meet them but this is a minor improvement for the future.

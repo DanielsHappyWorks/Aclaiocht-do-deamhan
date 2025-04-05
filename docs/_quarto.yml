@@ -10,6 +10,7 @@ website:
         href: /
       - design.qmd
       - narrative_script.qmd
+      - run.qmd
     right:
       - icon: github
         href: https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan

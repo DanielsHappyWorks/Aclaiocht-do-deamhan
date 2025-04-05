@@ -1,0 +1,71 @@
+---
+title: "Running Instructions"
+about:
+  template: solana
+---
+
+# Running the game
+
+The game is compiled for windows x86-64 systems.
+
+You should be able to run it on most windows devices by opening the executable. You can [download it from itch.io](https://boopdood.itch.io/exercise-your-demons).
+
+The executable is not properly signed so you have to bypass the windows warning for the game to start.
+
+## Game Controls
+
+- Movement: WASD or Arrow Keys
+- Interact: E, Enter or mouse click
+- Buttons: Mouse click
+- Quit: ESC
+
+# Project Files
+
+You can download the project files from GitHub: [https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan](https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan)
+
+# Building the game
+
+If you are having issues with the windows executable or would like to build the game for another system you can follow along with this section.
+
+## My Environemnt setup
+
+Install the following software:
+
+- VS Code - Project IDE
+- Vs Code Extensions
+  - C/C++
+  - C++ Intellisense
+  - C/C++ Extension Pack
+  - Better C++ Syntax
+  - C/C++ Themes
+- Raylib Version 5.0
+
+Useful Documentation
+
+- [VS Code](https://code.visualstudio.com/)
+- [Raylib](https://www.raylib.com/)
+- [Raygui - simple and easy-to-use immediate-mode-gui library for raylib](https://github.com/raysan5/raygui)
+- [Getting Started with Raylib for Game Development in C++](https://chirag4862.hashnode.dev/getting-started-with-raylib-for-game-development-in-c)
+- [Using raylib in VSCode](https://github.com/raysan5/raylib/wiki/Using-raylib-in-VSCode)
+- [Working on macOS](https://github.com/raysan5/raylib/wiki/Working-on-macOS)
+
+## Building the game
+
+Use VS code to run the project using the existing tasks defined in /.vscode. Alternatively you can also try to use the cli directly by copying the command args from the /.vscode tasks.
+
+# Building the docs and journal
+
+You can also build your own version of the documentation by downloading the project and opening the /docs directory in R-Studio.
+Pressing Render in R-Studio on any of the pages should build the whole project.
+
+Prerequisites:
+
+- Install R from [https://www.r-project.org/](https://www.r-project.org/)
+- Install R-Studio from [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+Versions Used:
+
+- R - 4.3.2 (2023-10-31 ucrt)
+- R-Studio  - 2024.09.1 Build 394
+
+Code: [https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan/tree/main/docs](https://github.com/DanielsHappyWorks/Aclaiocht-do-deamhan/tree/main/docs)
