@@ -1,0 +1,28 @@
+---
+title: "Final Delivery"
+date: "2025-06-05"
+categories: [Design, Research, User Testing]
+image: "poster.png"
+---
+
+After the project beta was delivered the next step was to write up the thesis based on the findings and create a poster showcasing the research. Both of these items are available below.
+
+# Poster
+
+![](poster.png)
+
+# Thesis
+
+::: {.iframe-container}
+<iframe src="thesis.pdf" width="100%" height="600px">
+  Your browser does not support iframes.
+</iframe>
+:::
+
+---
+
+# Thesis Download Link
+
+If you prefer, you can download the PDF directly:
+
+[📄 Download Link](thesis.pdf)

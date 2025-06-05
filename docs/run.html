@@ -195,6 +195,24 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-anchor-id="building-the-game-1">Building the game</h2>
 <p>Use VS code to run the project using the existing tasks defined in /.vscode. Alternatively you can also try to use the cli directly by copying the command args from the /.vscode tasks.</p>
 </section>
+<section id="building-the-game-for-web" class="level2">
+<h2 data-anchor-id="building-the-game-for-web">Building the game for web</h2>
+<p>This is the <a href="https://www.youtube.com/watch?v=j6akryezlzc&amp;t=652s">tutorial</a> that was followed to compile a web build.</p>
+<section id="installing-emscripten" class="level3">
+<h3 data-anchor-id="installing-emscripten">Installing Emscripten</h3>
+</section>
+<section id="compiling-raylib-with-emscripten" class="level3">
+<h3 data-anchor-id="compiling-raylib-with-emscripten">Compiling raylib with Emscripten</h3>
+</section>
+<section id="compiling-a-c-game-for-the-web" class="level3">
+<h3 data-anchor-id="compiling-a-c-game-for-the-web">Compiling a C++ game for the web</h3>
+<p><code>emcc -o index.html (Get-ChildItem *.cpp) -Wall -std=c++23 -Wno-c++11-narrowing -D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result -Os -I. -I C:/raylib/raylib/src -I C:/raylib/raylib/src/external -L. -L C:/raylib/raylib/src -s USE_GLFW=3 -s ASYNCIFY -s TOTAL_MEMORY=67108864 -s FORCE_FILESYSTEM=1 --preload-file assets --shell-file C:/raylib/raylib/src/shell.html C:/raylib/raylib/src/web/libraylib.a -DPLATFORM_WEB -s 'EXPORTED_FUNCTIONS=["_free","_malloc","_main"]'-s EXPORTED_RUNTIME_METHODS=ccall</code></p>
+</section>
+<section id="serving-the-build" class="level3">
+<h3 data-anchor-id="serving-the-build">Serving the build</h3>
+<p><code>py -m http.server</code></p>
+</section>
+</section>
 </section>
 <section id="building-the-docs-and-journal" class="level1">
 <h1>Building the docs and journal</h1>

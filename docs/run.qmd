@@ -53,6 +53,22 @@ Useful Documentation
 
 Use VS code to run the project using the existing tasks defined in /.vscode. Alternatively you can also try to use the cli directly by copying the command args from the /.vscode tasks.
 
+## Building the game for web
+
+This is the [tutorial](https://www.youtube.com/watch?v=j6akryezlzc&t=652s) that was followed to compile a web build.
+
+### Installing Emscripten
+
+### Compiling raylib with Emscripten
+
+### Compiling a C++ game for the web
+
+```emcc -o index.html (Get-ChildItem *.cpp) -Wall -std=c++23 -Wno-c++11-narrowing -D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result -Os -I. -I C:/raylib/raylib/src -I C:/raylib/raylib/src/external -L. -L C:/raylib/raylib/src -s USE_GLFW=3 -s ASYNCIFY -s TOTAL_MEMORY=67108864 -s FORCE_FILESYSTEM=1 --preload-file assets --shell-file C:/raylib/raylib/src/shell.html C:/raylib/raylib/src/web/libraylib.a -DPLATFORM_WEB -s 'EXPORTED_FUNCTIONS=["_free","_malloc","_main"]'-s EXPORTED_RUNTIME_METHODS=ccall```
+
+### Serving the build
+
+```py -m http.server```
+
 # Building the docs and journal
 
 You can also build your own version of the documentation by downloading the project and opening the /docs directory in R-Studio.
