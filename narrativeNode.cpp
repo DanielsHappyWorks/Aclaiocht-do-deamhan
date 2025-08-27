@@ -5,23 +5,24 @@
 #include "fontManager.h"
 #include "player.h"
 #include "sceneManager.h"
+#include "constants.h"
 
 void drawDialogBox(std::string character, std::string text, TextNodeType type)
 {
     float padding = 50.0f;
     float textLen = MeasureTextEx(FontManager::GetInstance()->getFontHeaders(), character.c_str(), 45, FontManager::GetInstance()->getSpacing()).x + 20; 
-    DrawRectangle(padding, (float)GetScreenHeight() / 3 * 2, (float)GetScreenWidth() - padding * 2, (float)GetScreenHeight() / 3 - padding, {255, 255, 255, 200});
-    DrawRectangle(padding, (float)GetScreenHeight() / 3 * 2 - 20, textLen, 20, {255, 255, 255, 200});
+    DrawRectangle(padding, (float)SCREEN_HEIGHT / 3 * 2, (float)SCREEN_WIDTH - padding * 2, (float)SCREEN_HEIGHT / 3 - padding, {255, 255, 255, 200});
+    DrawRectangle(padding, (float)SCREEN_HEIGHT / 3 * 2 - 20, textLen, 20, {255, 255, 255, 200});
 
-    DrawTextEx(FontManager::GetInstance()->getFontHeaders(), character.c_str(), {padding + 10, (float)GetScreenHeight() / 3 * 2 - 20}, 45, FontManager::GetInstance()->getSpacing(), DARKGREEN);
+    DrawTextEx(FontManager::GetInstance()->getFontHeaders(), character.c_str(), {padding + 10, (float)SCREEN_HEIGHT / 3 * 2 - 20}, 45, FontManager::GetInstance()->getSpacing(), DARKGREEN);
 
     switch (type) {
         case TEXT_MONOLOGUE:
-            DrawTextEx(FontManager::GetInstance()->getFontItal(), text.c_str(), {padding + 30, (float)GetScreenHeight() / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), DARKDARKGRAY);
+            DrawTextEx(FontManager::GetInstance()->getFontItal(), text.c_str(), {padding + 30, (float)SCREEN_HEIGHT / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), DARKDARKGRAY);
             break;
         case TEXT_DIALOGUE:
         default:
-            DrawTextEx(FontManager::GetInstance()->getFont(), text.c_str(), {padding + 30, (float)GetScreenHeight() / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), BLACK);
+            DrawTextEx(FontManager::GetInstance()->getFont(), text.c_str(), {padding + 30, (float)SCREEN_HEIGHT / 3 * 2 + 50}, 18, FontManager::GetInstance()->getSpacing(), BLACK);
     }
 }
 
@@ -127,7 +128,7 @@ void ChoiceNode::draw()
     if (frameCounter <= disabledFrames)
         frameCounter++;
 
-    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 70, (float)GetScreenWidth() - btnPadding * 2, 34}, goodPrompt.c_str()) && frameCounter >= disabledFrames)
+    if (GuiButton({btnPadding, (float)SCREEN_HEIGHT / 3 * 2 + 70, (float)SCREEN_WIDTH - btnPadding * 2, 34}, goodPrompt.c_str()) && frameCounter >= disabledFrames)
     {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         if (character != nullptr) {
@@ -137,7 +138,7 @@ void ChoiceNode::draw()
         done = true;
     }
 
-    if (GuiButton({btnPadding, (float)GetScreenHeight() / 3 * 2 + 110, (float)GetScreenWidth() - btnPadding * 2, 34}, badPrompt.c_str()) && frameCounter >= disabledFrames)
+    if (GuiButton({btnPadding, (float)SCREEN_HEIGHT / 3 * 2 + 110, (float)SCREEN_WIDTH - btnPadding * 2, 34}, badPrompt.c_str()) && frameCounter >= disabledFrames)
     {
         if (character != nullptr) {
             SoundManager::GetInstance()->playSound(SFX_ERROR);
@@ -319,16 +320,16 @@ bool ItemShopNode::isDone()
 }
 
 void ItemShopNode::draw() {
-    float hight = GetScreenHeight()/2 - 200;
+    float hight = SCREEN_HEIGHT/2 - 200;
 
-    if (GuiWindowBox((Rectangle){GetScreenWidth()/2 - 200, hight, 400, 400}, "Item Shop")) {
+    if (GuiWindowBox((Rectangle){SCREEN_WIDTH/2 - 200, hight, 400, 400}, "Item Shop")) {
         done = true;
     }
 
     //TODO add item shop items
-    DrawTextEx(FontManager::GetInstance()->getFont(), "There are currently no items \nfor sale.", {(float)GetScreenWidth()/2 - 170, hight + 40}, 18, FontManager::GetInstance()->getSpacing(), DARKDARKGRAY);
+    DrawTextEx(FontManager::GetInstance()->getFont(), "There are currently no items \nfor sale.", {(float)SCREEN_WIDTH/2 - 170, hight + 40}, 18, FontManager::GetInstance()->getSpacing(), DARKDARKGRAY);
 
-    if (GuiButton((Rectangle){GetScreenWidth()/2 - 80, hight + 330, 160, 30}, "Exit")) {
+    if (GuiButton((Rectangle){SCREEN_WIDTH/2 - 80, hight + 330, 160, 30}, "Exit")) {
         done = true;
     }
 }

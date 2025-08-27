@@ -1,6 +1,7 @@
 #include "gameState.h"
 #include "fontManager.h"
 #include <string>
+#include "constants.h"
 
 GameState* GameState::state = nullptr;
 
@@ -41,7 +42,7 @@ void GameState::incrementTime(Time time) {
 
 void GameState::drawDayNight() {
     if (currentTime == NIGHT) {
-        DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Fade(DARKBLUE, 0.2f));
+        DrawRectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, Fade(DARKBLUE, 0.2f));
     }
 
     DrawTextureEx(dayNightIndicator, {0, 0}, 0.0f, 1.0f, WHITE);

@@ -4,6 +4,7 @@
 #include "soundManager.h"
 #include "inputManager.h"
 #include "sceneManager.h"
+#include "constants.h"
 
 CharacterFactory* CharacterFactory::factory = nullptr;
 
@@ -24,7 +25,7 @@ CharacterFactory::CharacterFactory() {
         {GYM, PUB, SHOP},
         "assets/images/characters/banshee/banshee_front.png",
         "assets/images/characters/banshee/banshee_side.png",
-        {GetScreenWidth()/2, GetScreenHeight()/2}
+        {SCREEN_WIDTH/2, SCREEN_HEIGHT/2}
     );
 
     paddy = new Character(
@@ -35,7 +36,7 @@ CharacterFactory::CharacterFactory() {
         {PUB},
         "assets/images/characters/paddy/paddy_front.png",
         "assets/images/characters/paddy/paddy_side.png",
-        {GetScreenWidth() - 200, 150}
+        {SCREEN_WIDTH - 200, 150}
     );
 
     pooka = new Character(
@@ -46,7 +47,7 @@ CharacterFactory::CharacterFactory() {
         {SHOP, PUB, GYM},
         "assets/images/characters/pooka/pooka_front.png",
         "assets/images/characters/pooka/pooka_side.png",
-        {GetScreenWidth()/2 + 75, GetScreenHeight()/2}
+        {SCREEN_WIDTH/2 + 75, SCREEN_HEIGHT/2}
     );
 
     dullahan = new Character(
@@ -57,7 +58,7 @@ CharacterFactory::CharacterFactory() {
         {PUB, GYM, SHOP},
         "assets/images/characters/dullahan/dullahan_front.png",
         "assets/images/characters/dullahan/dullahan_side.png",
-        {GetScreenWidth()/2 - 75, GetScreenHeight()/2}
+        {SCREEN_WIDTH/2 - 75, SCREEN_HEIGHT/2}
     );
 
     shopkeeper = new Character(
@@ -68,7 +69,7 @@ CharacterFactory::CharacterFactory() {
         {SHOP},
         "assets/images/characters/side/sentra.png",
         "assets/images/characters/side/sentra.png",
-        {GetScreenWidth()/2, 100}
+        {SCREEN_WIDTH/2, 100}
     );
 
     cook = new Character(

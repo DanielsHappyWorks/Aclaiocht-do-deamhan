@@ -7,6 +7,7 @@
 #include "fontManager.h"
 #include "soundManager.h"
 #include "menuScene.h"
+#include "mouseManager.h"
 
 // When set to true renders in-game debug options
 #define DEBUG false
@@ -16,9 +17,14 @@ Game::Game()
     screenWidth = 800;
     screenHeight = 600;
 
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+
     InitWindow(screenWidth, screenHeight, "Exercise Your Demons");
     Image icon = LoadImage("assets/images/icons/icon.png");
     SetWindowIcon(icon);
+
+    target = LoadRenderTexture(screenWidth, screenHeight);
+
     SetTargetFPS(60);
 
     GuiSetFont(FontManager::GetInstance()->getFont());
@@ -27,6 +33,7 @@ Game::Game()
 
 Game::~Game()
 {
+    UnloadRenderTexture(target);
     CloseWindow();
 }
 
@@ -43,11 +50,14 @@ void Game::update()
     }
 
     currentScene->update();
+
+    MouseManager::GetInstance()->update();
 }
 
 void Game::draw()
 {
-    BeginDrawing();
+    // Stretch contents of the window
+    BeginTextureMode(target);
     ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
 
     currentScene->draw();
@@ -73,11 +83,20 @@ void Game::draw()
         }
     }
 
+    MouseManager::GetInstance()->draw();
+
     if (DEBUG) {
         currentScene->debug();
         DrawFPS(screenWidth - 80, 10);
     }
 
+    EndTextureMode();
+
+    BeginDrawing();
+        ClearBackground(RAYWHITE);
+        //TODO figure out why the texture does not stretch properly
+        // Draw the target texture to the screen, stretching it to fit the window
+        DrawTexturePro(target.texture, (Rectangle){ 0, 0, (float)target.texture.width, (float)-target.texture.height }, (Rectangle){ 0, 0, (float)GetScreenWidth(), (float)GetScreenHeight() }, (Vector2){ 0, 0 }, 0.0f, WHITE);
     EndDrawing();
 }
 

@@ -1,5 +1,6 @@
 #include "endOfDemoScene.h"
 #include "fontManager.h"
+#include "constants.h"
 
 EndOfDemoScene::EndOfDemoScene() {
     background = LoadTexture("assets/images/locations/char_sel.png");
@@ -18,11 +19,11 @@ void EndOfDemoScene::draw() {
 
     std::string text = "Thank You For Playing The DEMO!";
     float textCenter = MeasureTextEx(FontManager::GetInstance()->getFontHeaders(), text.c_str(), 40, FontManager::GetInstance()->getSpacing()).x/2;
-    DrawTextEx(FontManager::GetInstance()->getFontHeaders(), text.c_str(), {(float)GetScreenWidth()/2 - textCenter, (float)GetScreenHeight()/2 - 40}, 40, FontManager::GetInstance()->getSpacing(), DARKGREEN);
+    DrawTextEx(FontManager::GetInstance()->getFontHeaders(), text.c_str(), {(float)SCREEN_WIDTH/2 - textCenter, (float)SCREEN_HEIGHT/2 - 40}, 40, FontManager::GetInstance()->getSpacing(), DARKGREEN);
 
     std::string text_exit = "Press Esc to Exit";
     float textCenter_exit = MeasureTextEx(FontManager::GetInstance()->getFont(), text_exit.c_str(), 25, FontManager::GetInstance()->getSpacing()).x/2;
-    DrawTextEx(FontManager::GetInstance()->getFont(), text_exit.c_str(), {(float)GetScreenWidth()/2 - textCenter_exit, (float)GetScreenHeight()/2 + 20}, 25, FontManager::GetInstance()->getSpacing(), DARKGREEN);
+    DrawTextEx(FontManager::GetInstance()->getFont(), text_exit.c_str(), {(float)SCREEN_WIDTH/2 - textCenter_exit, (float)SCREEN_HEIGHT/2 + 20}, 25, FontManager::GetInstance()->getSpacing(), DARKGREEN);
 }
 
 bool EndOfDemoScene::isDone() {

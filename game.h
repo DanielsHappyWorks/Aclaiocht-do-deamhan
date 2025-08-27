@@ -7,6 +7,9 @@ class Game {
         int screenWidth;
         int screenHeight;
 
+        RenderTexture2D target;
+        Vector2 mousePos;
+
         Scene* currentScene;
         Scene* overlayScene;
 

@@ -8,6 +8,7 @@
 #include "rayxtend.h"
 #include "fontManager.h"
 #include "soundManager.h"
+#include "constants.h"
 
 CharacterSelectScene::CharacterSelectScene()
 {
@@ -45,13 +46,13 @@ CharacterSelectScene::~CharacterSelectScene()
 
 void CharacterSelectScene::update()
 {
-    if (InputManager::GetInstance()->isClickRect({(float)GetScreenWidth() / 3 - maleBody.width / 2, 100, (float)maleBody.width, (float)maleBody.height}))
+    if (InputManager::GetInstance()->isClickRect({(float)SCREEN_WIDTH / 3 - maleBody.width / 2, 100, (float)maleBody.width, (float)maleBody.height}))
     {
         SoundManager::GetInstance()->playSound(SFX_SWIPE);
         toggleSliderActive = false;
         selectedGender = false;
     }
-    else if (InputManager::GetInstance()->isClickRect({(float)GetScreenWidth() / 3 * 2 - femaleBody.width / 2, 100, (float)femaleBody.width, (float)femaleBody.height}))
+    else if (InputManager::GetInstance()->isClickRect({(float)SCREEN_WIDTH / 3 * 2 - femaleBody.width / 2, 100, (float)femaleBody.width, (float)femaleBody.height}))
     {
         SoundManager::GetInstance()->playSound(SFX_SWIPE);
         toggleSliderActive = true;
@@ -63,9 +64,9 @@ void CharacterSelectScene::update()
     cloud_two_pos.x += GetFrameTime() * 15.0f;
     cloud_three_pos.x += GetFrameTime() * 20.0f;
 
-    if (cloud_one_pos.x - sun.width/2*cloud_one_scale >= GetScreenWidth()) cloud_one_pos.x = 0 - sun.width/2*cloud_one_scale;
-    if (cloud_two_pos.x - sun.width/2*cloud_two_scale >= GetScreenWidth()) cloud_two_pos.x = 0 - sun.width/2*cloud_two_scale;
-    if (cloud_three_pos.x - sun.width/2*cloud_three_scale >= GetScreenWidth()) cloud_three_pos.x = 0 - sun.width/2*cloud_three_scale;
+    if (cloud_one_pos.x - sun.width/2*cloud_one_scale >= SCREEN_WIDTH) cloud_one_pos.x = 0 - sun.width/2*cloud_one_scale;
+    if (cloud_two_pos.x - sun.width/2*cloud_two_scale >= SCREEN_WIDTH) cloud_two_pos.x = 0 - sun.width/2*cloud_two_scale;
+    if (cloud_three_pos.x - sun.width/2*cloud_three_scale >= SCREEN_WIDTH) cloud_three_pos.x = 0 - sun.width/2*cloud_three_scale;
 }
 
 void CharacterSelectScene::draw()
@@ -77,34 +78,34 @@ void CharacterSelectScene::draw()
     DrawTextureFromCentre(cloud_three, cloud_three_pos, cloud_three_scale, 0.0f, WHITE);
 
     if (!selectedGender)
-        DrawTextureFromCentre(sun, {(float)GetScreenWidth() / 3, 200}, 0.4f, sun_rotation, WHITE);
-    DrawTextureEx(maleBody, (Vector2){GetScreenWidth() / 3 - maleBody.width / 2, 140}, 0.0f, 1.0f, WHITE);
+        DrawTextureFromCentre(sun, {(float)SCREEN_WIDTH / 3, 200}, 0.4f, sun_rotation, WHITE);
+    DrawTextureEx(maleBody, (Vector2){SCREEN_WIDTH / 3 - maleBody.width / 2, 140}, 0.0f, 1.0f, WHITE);
 
     if (selectedGender)
-        DrawTextureFromCentre(sun, {(float)GetScreenWidth() / 3 * 2, 200}, 0.4f, sun_rotation, WHITE);
-    DrawTextureEx(femaleBody, (Vector2){GetScreenWidth() / 3 * 2 - femaleBody.width / 2, 140}, 0.0f, 1.0f, WHITE);
+        DrawTextureFromCentre(sun, {(float)SCREEN_WIDTH / 3 * 2, 200}, 0.4f, sun_rotation, WHITE);
+    DrawTextureEx(femaleBody, (Vector2){SCREEN_WIDTH / 3 * 2 - femaleBody.width / 2, 140}, 0.0f, 1.0f, WHITE);
 
     bool isPaused = SceneManager::GetInstance()->getSceneOverlay() != nullptr;
 
-    if (GuiToggleSlider((Rectangle){GetScreenWidth() / 2 - 80, 360, 140, 30}, "Male;Female", &toggleSliderActive) == true && !isPaused) {
+    if (GuiToggleSlider((Rectangle){SCREEN_WIDTH / 2 - 80, 360, 140, 30}, "Male;Female", &toggleSliderActive) == true && !isPaused) {
         SoundManager::GetInstance()->playSound(SFX_SWIPE);
         selectedGender = !selectedGender;
     }
 
     // GuiTextBox does not respect allignment for cursor when editing so lets left allign it while this happens
     textBoxEditMode == true ? GuiSetStyle(TEXTBOX, TEXT_ALIGNMENT, TEXT_ALIGN_LEFT) : GuiSetStyle(TEXTBOX, TEXT_ALIGNMENT, TEXT_ALIGN_CENTER);
-    if (GuiTextBox((Rectangle){GetScreenWidth() / 2 - 80, 400, 140, 30}, name, 25, textBoxEditMode) && !isPaused) {
+    if (GuiTextBox((Rectangle){SCREEN_WIDTH / 2 - 80, 400, 140, 30}, name, 25, textBoxEditMode) && !isPaused) {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         textBoxEditMode = !textBoxEditMode;
     }
 
-    if (GuiButton((Rectangle){GetScreenWidth() / 2 - 80, 440, 140, 30}, "Play Game") && !isPaused) {
+    if (GuiButton((Rectangle){SCREEN_WIDTH / 2 - 80, 440, 140, 30}, "Play Game") && !isPaused) {
         SoundManager::GetInstance()->playSound(SFX_CLICK);
         characterCompleted = true;
     }
 
     DrawTextEx(FontManager::GetInstance()->getFontHeaders(), "Exercise your Demons!", {120, 35}, 60, FontManager::GetInstance()->getSpacing(), DARKGREEN);
-    DrawTextEx(FontManager::GetInstance()->getFontItal(), "@BoopDood", {(float)GetScreenWidth() - 130, (float)GetScreenHeight() - 30}, 18, FontManager::GetInstance()->getSpacing(), DARKGREEN);
+    DrawTextEx(FontManager::GetInstance()->getFontItal(), "@BoopDood", {(float)SCREEN_WIDTH - 130, (float)SCREEN_HEIGHT - 30}, 18, FontManager::GetInstance()->getSpacing(), DARKGREEN);
 }
 
 bool CharacterSelectScene::isDone()

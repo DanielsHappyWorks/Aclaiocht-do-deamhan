@@ -1,5 +1,6 @@
 #include "narrativeScene.h"
 #include "gameState.h"
+#include "constants.h"
 
 NarrativeScene::NarrativeScene(std::vector<NarrativeNode*> narrativeElements) {
     NarrativeScene(narrativeElements, nullptr);
@@ -63,17 +64,17 @@ void NarrativeScene::draw() {
         return;
     }
 
-    DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), color);
+    DrawRectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, color);
 
     if (characters.size() == 1){
-        DrawTextureFromCentre(characters[0]->getFront(), {(float)GetScreenWidth()/2, (float)GetScreenHeight()/2}, 2.0f, 0.0f, WHITE);
+        DrawTextureFromCentre(characters[0]->getFront(), {(float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2}, 2.0f, 0.0f, WHITE);
     } else if (characters.size() == 2) {
-        DrawTextureFromCentre(characters[0]->getFront(), {(float)GetScreenWidth()/3, (float)GetScreenHeight()/2}, 2.0f, 0.0f, WHITE);
-        DrawTextureFromCentre(characters[1]->getFront(), {(float)GetScreenWidth()/3 * 2, (float)GetScreenHeight()/2}, 2.0f, 0.0f, WHITE);
+        DrawTextureFromCentre(characters[0]->getFront(), {(float)SCREEN_WIDTH/3, (float)SCREEN_HEIGHT/2}, 2.0f, 0.0f, WHITE);
+        DrawTextureFromCentre(characters[1]->getFront(), {(float)SCREEN_WIDTH/3 * 2, (float)SCREEN_HEIGHT/2}, 2.0f, 0.0f, WHITE);
     } else if (characters.size() == 3){
-        DrawTextureFromCentre(characters[0]->getFront(), {(float)GetScreenWidth()/4, (float)GetScreenHeight()/2}, 2.0f, 0.0f, WHITE);
-        DrawTextureFromCentre(characters[1]->getFront(), {(float)GetScreenWidth()/2, (float)GetScreenHeight()/2}, 2.0f, 0.0f, WHITE);
-        DrawTextureFromCentre(characters[2]->getFront(), {(float)GetScreenWidth()/4 * 3, (float)GetScreenHeight()/2}, 2.0f, 0.0f, WHITE);
+        DrawTextureFromCentre(characters[0]->getFront(), {(float)SCREEN_WIDTH/4, (float)SCREEN_HEIGHT/2}, 2.0f, 0.0f, WHITE);
+        DrawTextureFromCentre(characters[1]->getFront(), {(float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2}, 2.0f, 0.0f, WHITE);
+        DrawTextureFromCentre(characters[2]->getFront(), {(float)SCREEN_WIDTH/4 * 3, (float)SCREEN_HEIGHT/2}, 2.0f, 0.0f, WHITE);
     }
     
 

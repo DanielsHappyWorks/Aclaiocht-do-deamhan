@@ -3,6 +3,7 @@
 #include "inputManager.h"
 #include "rayxtend.h"
 #include "soundManager.h"
+#include "constants.h"
 
 Player* Player::player = nullptr;
 
@@ -87,12 +88,12 @@ Vector2 Player::move(Vector2 playerPos, float playerSpeed, float playerScale) {
         nextPos.y = playerSprite.height * playerScale;
     }
 
-    if (nextPos.x >= GetScreenWidth() - playerSprite.width/2 * playerScale) {
-        nextPos.x = GetScreenWidth() - playerSprite.width/2 * playerScale;
+    if (nextPos.x >= SCREEN_WIDTH - playerSprite.width/2 * playerScale) {
+        nextPos.x = SCREEN_WIDTH - playerSprite.width/2 * playerScale;
     }
 
-    if (nextPos.y >= GetScreenHeight()) {
-        nextPos.y = GetScreenHeight();
+    if (nextPos.y >= SCREEN_HEIGHT) {
+        nextPos.y = SCREEN_HEIGHT;
     }
 
     Player::GetInstance()->animateCharacter(movement, playerPos, nextPos);

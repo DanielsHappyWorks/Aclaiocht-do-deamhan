@@ -7,6 +7,10 @@ class OptionsScene : public SceneOverlay {
         float volume;
         float volumeSound;
         float volumeMusic;
+        int currentResolutionIndex = 0;
+        int NewResolutionIndex = 0;
+        bool resolutionEditMode = false;
+        bool fullscreen = false;
     public:
         OptionsScene();
         ~OptionsScene();
